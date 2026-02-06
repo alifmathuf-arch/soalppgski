@@ -1,100 +1,186 @@
 *{
 box-sizing:border-box;
+font-family:Segoe UI,Roboto,sans-serif;
 }
 
 body{
-font-family:Arial, sans-serif;
-background:#0b2545;
 margin:0;
-padding:15px;
+min-height:100vh;
+
+background:
+linear-gradient(135deg,#0f172a,#1e3a8a,#14b8a6);
+
+display:flex;
+justify-content:center;
+align-items:center;
 color:#fff;
 }
 
+
+/* ===== CARD ===== */
+
 .card{
-background:#134074;
-padding:20px;
-border-radius:12px;
-max-width:500px;
-width:100%;
-margin:auto;
-box-shadow:0 0 12px rgba(0,0,0,0.3);
+
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+
+padding:30px;
+width:95%;
+max-width:420px;
+
+border-radius:18px;
+
+box-shadow:
+0 20px 40px rgba(0,0,0,0.35);
+
+text-align:center;
+animation:fadeIn .5s ease;
 }
+
+
+/* ===== LOGO ===== */
+
+.logo{
+width:110px;
+margin-bottom:10px;
+}
+
+
+/* ===== TITLE ===== */
+
+h2{
+margin:10px 0 20px;
+font-weight:600;
+}
+
+
+/* ===== INPUT ===== */
+
+input{
+width:100%;
+padding:14px;
+margin:10px 0;
+
+border:none;
+border-radius:10px;
+
+font-size:15px;
+background:#f3f4f6;
+color:#111;
+}
+
+
+/* ===== BUTTON ===== */
+
+button{
+
+width:100%;
+padding:14px;
+margin-top:15px;
+
+border:none;
+border-radius:12px;
+
+font-size:16px;
+font-weight:600;
+
+cursor:pointer;
+
+background:
+linear-gradient(135deg,#14b8a6,#0ea5e9);
+
+color:white;
+
+transition:.25s;
+}
+
+button:hover{
+
+transform:translateY(-2px);
+
+box-shadow:
+0 8px 18px rgba(0,0,0,0.25);
+}
+
+
+/* ===== QUIZ ===== */
+
+.header{
+display:flex;
+justify-content:center;
+margin-bottom:15px;
+font-weight:bold;
+}
+
+
+/* ===== OPSI ===== */
+
+.opsi{
+
+background:#ffffff;
+color:#111;
+
+padding:14px;
+margin:8px 0;
+
+border-radius:10px;
+cursor:pointer;
+
+transition:.2s;
+}
+
+.opsi:hover{
+background:#e0f2fe;
+}
+
+.selected{
+background:#14b8a6 !important;
+color:white;
+}
+
+
+/* ===== NAV ===== */
+
+.nav{
+display:flex;
+gap:10px;
+margin-top:15px;
+}
+
+.nav button{
+flex:1;
+}
+
+
+/* ===== FINISH BTN ===== */
+
+.finishBtn{
+background:#22c55e;
+display:none;
+}
+
+
+/* ===== RESULT ===== */
+
+#hasil{
+white-space:pre-line;
+font-size:18px;
+margin-top:10px;
+}
+
+
+/* ===== UTIL ===== */
 
 .hidden{
 display:none;
 }
 
-.logo{
-width:120px;
-display:block;
-margin:10px auto;
-}
 
-h2,h3{
-text-align:center;
-margin:10px 0;
-}
+/* ===== ANIMATION ===== */
 
-input{
-width:100%;
-padding:14px;
-margin:8px 0;
-border:none;
-border-radius:8px;
-font-size:16px;
-display:block;
-}
+@keyframes fadeIn{
 
-button{
-width:100%;
-padding:14px;
-margin-top:10px;
-border:none;
-border-radius:8px;
-background:#1dd3b0;
-color:#002b36;
-font-size:16px;
-font-weight:bold;
-cursor:pointer;
-display:block;
-}
+from{opacity:0; transform:translateY(10px);}
+to{opacity:1; transform:translateY(0);}
 
-button:hover{
-opacity:0.9;
-}
-
-.opsi{
-padding:12px;
-margin:6px 0;
-background:#1b4965;
-border-radius:8px;
-cursor:pointer;
-}
-
-.opsi.selected{
-background:#1dd3b0;
-color:#002b36;
-}
-
-.header{
-text-align:center;
-font-weight:bold;
-margin:10px 0;
-font-size:18px;
-}
-
-.nav{
-display:flex;
-gap:10px;
-}
-
-.finishBtn{
-background:#ffb703;
-color:black;
-}
-
-@media(max-width:600px){
-.card{
-padding:15px;
-}
 }
