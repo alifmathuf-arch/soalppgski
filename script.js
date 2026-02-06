@@ -194,35 +194,25 @@ selesai();
 
 
 // SELESAI
-function selesai() {
-  // hentikan timer
-  if(timerInterval) clearInterval(timerInterval);
+function selesai(){
+
+  clearInterval(timerInterval);
 
   let skor = 0;
   let benar = 0;
 
-  soalUjian.forEach((s, i) => {
-    if (jawaban[i] && jawaban[i] === s.a) {
+  soalUjian.forEach((s,i)=>{
+    if(jawaban[i] === s.a){
       skor += 2;  // nilai per soal
       benar++;
     }
   });
 
-  // sembunyikan halaman quiz
   document.getElementById("quizPage").classList.add("hidden");
+  document.getElementById("resultPage").classList.remove("hidden");
 
-  // tampilkan halaman hasil
-  const resultPage = document.getElementById("resultPage");
-  resultPage.classList.remove("hidden");
-
-  // tampilkan detail
-  document.getElementById("hasilDetail").innerHTML =
-`${peserta} (${kelas})<br>
-Jawaban benar: ${benar} dari ${soalUjian.length} soal`;
-
-  // tampilkan skor akhir
-  document.getElementById("hasilSkor").innerHTML =
-`<div class="scoreLabel">Nilai Akhir</div>
-${skor}`;
+  // Tampilkan data
+  document.getElementById("pesertaNama").innerText = peserta;
+  document.getElementById("pesertaKelas").innerText = kelas;
+  document.getElementById("hasilSkor").innerText = skor;
 }
-
