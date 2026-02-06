@@ -201,8 +201,20 @@ margin:10px 0;
 }
 
 .finishBtn{
-background:#22c55e;
-display:none;
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border:none;
+  border-radius: 12px;
+  background: linear-gradient(135deg,#22c55e,#16a34a); /* hijau */
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.finishBtn:hover{
+  transform: translateY(-2px);
 }
 
 .hidden{
@@ -288,3 +300,4 @@ display:none;
 .gagal .scoreBox{
   color: #ef4444;
 }
+
