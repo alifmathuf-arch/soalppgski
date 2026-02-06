@@ -1,26 +1,24 @@
 *{
-box-sizing:border-box;
-font-family:Segoe UI,Roboto,sans-serif;
+  box-sizing:border-box;
+  font-family:Segoe UI,Roboto,sans-serif;
+  margin:0;
+  padding:0;
 }
 
 body{
   margin:0;
   min-height:100vh;
-
   display:flex;
   flex-direction:column;
   align-items:center;
-  justify-content:flex-start; /* jangan center, supaya konten di atas */
-
-  padding:20px 10px; /* kurangi padding atas/bawah */
+  justify-content:flex-start;
+  padding:20px 10px;
   color:white;
-
   background: linear-gradient(135deg,#0f172a,#1e3a8a,#14b8a6);
 }
 
-/* Card/halaman depan */
+/* CARD */
 .card{
-  margin-bottom:20px; /* beri jarak ke footer */
   width:95%;
   max-width:420px;
   padding:25px;
@@ -29,177 +27,158 @@ body{
   backdrop-filter:blur(12px);
   box-shadow:0 20px 40px rgba(0,0,0,.35);
   text-align:center;
+  margin-bottom:20px; /* jarak ke footer */
 }
 
 /* LOGO */
-
 .logo{
-width:110px;
-margin-bottom:10px;
+  width:110px;
+  margin-bottom:10px;
 }
 
 /* INPUT */
-
 input{
-width:100%;
-padding:12px;
-margin:8px 0;
-
-border:none;
-border-radius:10px;
-
-background:#f8fafc;
-color:#111;
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border:none;
+  border-radius:10px;
+  background:#f8fafc;
+  color:#111;
 }
 
-/* BUTTON */
-
+/* BUTTON UMUM */
 button{
-width:100%;
-padding:12px;
-margin-top:12px;
-
-border:none;
-border-radius:12px;
-
-font-weight:600;
-cursor:pointer;
-
-background:linear-gradient(135deg,#14b8a6,#0ea5e9);
-color:white;
-
-transition:.2s;
+  width:100%;
+  padding:12px;
+  margin-top:12px;
+  border:none;
+  border-radius:12px;
+  font-weight:600;
+  cursor:pointer;
+  background:linear-gradient(135deg,#14b8a6,#0ea5e9);
+  color:white;
+  transition:.2s;
 }
 
 button:hover{
-transform:translateY(-2px);
+  transform:translateY(-2px);
 }
 
 /* MODE BUTTON */
-
 .modeWrap{
-display:flex;
-gap:8px;
-margin-bottom:10px;
+  display:flex;
+  gap:8px;
+  margin-bottom:10px;
 }
 
 .mode{
-flex:1;
-background:#334155;
+  flex:1;
+  background:#334155;
 }
 
 .mode.active{
-background:#22c55e;
+  background:#22c55e;
 }
 
 /* HEADER */
-
 .header{
-text-align:center;
-font-weight:bold;
-margin-bottom:10px;
+  text-align:center;
+  font-weight:bold;
+  margin-bottom:10px;
 }
 
 /* PROGRESS */
-
 .progressWrap{
-width:420px;
-max-width:95vw;
-
-margin:auto;
-
-background:#1e293b;
-border-radius:10px;
-overflow:hidden;
+  width:420px;
+  max-width:95vw;
+  margin:auto;
+  background:#1e293b;
+  border-radius:10px;
+  overflow:hidden;
 }
 
 #progressBar{
-height:8px;
-width:0%;
-background:#22c55e;
-transition:.3s;
+  height:8px;
+  width:0%;
+  background:#22c55e;
+  transition:.3s;
 }
 
 /* GRID WRAP */
-
 .gridWrap{
-width:420px;
-max-width:95vw;
-margin:auto;
+  width:420px;
+  max-width:95vw;
+  margin:auto;
 }
 
 #gridSoal{
-display:grid;
-grid-template-columns:repeat(10,1fr);
-gap:5px;
-margin:10px 0;
+  display:grid;
+  grid-template-columns:repeat(10,1fr);
+  gap:5px;
+  margin:10px 0;
 }
 
 .gridBtn{
-background:#334155;
-padding:6px;
-border-radius:6px;
-font-size:12px;
-cursor:pointer;
+  background:#334155;
+  padding:6px;
+  border-radius:6px;
+  font-size:12px;
+  cursor:pointer;
 }
 
 .gridDone{
-background:#22c55e;
+  background:#22c55e;
 }
 
 /* OPSI */
-
 .opsi{
-background:#f8fafc;
-color:#111;
-
-padding:12px;
-margin:6px 0;
-
-border-radius:10px;
-cursor:pointer;
+  background:#f8fafc;
+  color:#111;
+  padding:12px;
+  margin:6px 0;
+  border-radius:10px;
+  cursor:pointer;
 }
 
 .opsi:hover{
-background:#e0f2fe;
+  background:#e0f2fe;
 }
 
 .selected{
-background:#14b8a6!important;
-color:white;
+  background:#14b8a6!important;
+  color:white;
 }
 
 /* NAV */
-
 .nav{
-display:flex;
-gap:8px;
-margin-top:10px;
+  display:flex;
+  gap:8px;
+  margin-top:10px;
 }
 
 .nav button{
-flex:1;
+  flex:1;
 }
 
+/* FOOTER */
 .footer{
-  text-align: center;
-  font-size: 12px;
-  color: #ddd;
-  padding: 12px;
-
-  width: 100%;
-  max-width: 420px;
-
-  margin-top: auto; /* ini membuat footer selalu di bawah */
+  text-align:center;
+  font-size:12px;
+  color:#ddd;
+  padding:12px;
+  width:100%;
+  max-width:420px;
+  margin-top:auto; /* selalu di bawah */
 }
 
 /* RESULT */
-
 #hasil{
-white-space:pre-line;
-margin:10px 0;
+  white-space:pre-line;
+  margin:10px 0;
 }
 
+/* TOMBOL SELESAI */
 .finishBtn{
   width: 100%;
   padding: 12px;
@@ -218,10 +197,10 @@ margin:10px 0;
 }
 
 .hidden{
-display:none;
+  display:none;
 }
 
-/* Card Hasil */
+/* CARD HASIL */
 .resultTitle{
   font-size: 24px;
   font-weight: bold;
@@ -265,23 +244,6 @@ display:none;
   transition: all 0.5s ease;
 }
 
-.finishBtn{
-  width: 100%;
-  padding: 12px;
-  margin-top: 20px;
-  border:none;
-  border-radius: 12px;
-  background: linear-gradient(135deg,#14b8a6,#0ea5e9);
-  color:white;
-  font-weight:600;
-  cursor:pointer;
-  transition:.2s;
-}
-
-.finishBtn:hover{
-  transform: translateY(-2px);
-}
-
 /* LULUS / GAGAL */
 .lulus{
   border-color: #22c55e;
@@ -300,4 +262,3 @@ display:none;
 .gagal .scoreBox{
   color: #ef4444;
 }
-
