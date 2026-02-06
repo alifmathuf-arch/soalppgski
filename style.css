@@ -16,7 +16,6 @@ align-items:center;
 color:white;
 }
 
-
 /* CARD */
 
 .card{
@@ -28,14 +27,10 @@ width:95%;
 max-width:420px;
 
 border-radius:18px;
-
 box-shadow:0 20px 40px rgba(0,0,0,.35);
 
 text-align:center;
-
-animation:fadeIn .4s ease;
 }
-
 
 /* LOGO */
 
@@ -44,10 +39,9 @@ width:110px;
 margin-bottom:10px;
 }
 
-
 /* INPUT */
 
-input,select{
+input{
 width:100%;
 padding:12px;
 margin:8px 0;
@@ -58,7 +52,6 @@ border-radius:10px;
 background:#f1f5f9;
 color:#111;
 }
-
 
 /* BUTTON */
 
@@ -71,11 +64,9 @@ border:none;
 border-radius:12px;
 
 font-weight:600;
-
 cursor:pointer;
 
 background:linear-gradient(135deg,#14b8a6,#0ea5e9);
-
 color:white;
 
 transition:.2s;
@@ -83,25 +74,44 @@ transition:.2s;
 
 button:hover{
 transform:translateY(-2px);
-box-shadow:0 8px 18px rgba(0,0,0,.3);
 }
 
+/* MODE BUTTON */
+
+.modeWrap{
+display:flex;
+gap:8px;
+margin-bottom:10px;
+}
+
+.mode{
+flex:1;
+background:#334155;
+}
+
+.mode.active{
+background:#22c55e;
+}
 
 /* HEADER */
 
 .header{
+text-align:center;
 font-weight:bold;
 margin-bottom:10px;
 }
 
-
 /* PROGRESS */
 
 .progressWrap{
+width:420px;
+max-width:95vw;
+
+margin:auto;
+
 background:#1e293b;
 border-radius:10px;
 overflow:hidden;
-margin-bottom:8px;
 }
 
 #progressBar{
@@ -111,6 +121,32 @@ background:#22c55e;
 transition:.3s;
 }
 
+/* GRID WRAP */
+
+.gridWrap{
+width:420px;
+max-width:95vw;
+margin:auto;
+}
+
+#gridSoal{
+display:grid;
+grid-template-columns:repeat(10,1fr);
+gap:5px;
+margin:10px 0;
+}
+
+.gridBtn{
+background:#334155;
+padding:6px;
+border-radius:6px;
+font-size:12px;
+cursor:pointer;
+}
+
+.gridDone{
+background:#22c55e;
+}
 
 /* OPSI */
 
@@ -123,8 +159,6 @@ margin:6px 0;
 
 border-radius:10px;
 cursor:pointer;
-
-transition:.2s;
 }
 
 .opsi:hover{
@@ -135,7 +169,6 @@ background:#e0f2fe;
 background:#14b8a6!important;
 color:white;
 }
-
 
 /* NAV */
 
@@ -149,29 +182,6 @@ margin-top:10px;
 flex:1;
 }
 
-
-/* GRID */
-
-#gridSoal{
-display:grid;
-grid-template-columns:repeat(10,1fr);
-gap:4px;
-margin:8px 0;
-}
-
-.gridBtn{
-background:#334155;
-padding:5px;
-border-radius:6px;
-font-size:12px;
-cursor:pointer;
-}
-
-.gridDone{
-background:#22c55e;
-}
-
-
 /* RESULT */
 
 #hasil{
@@ -184,17 +194,6 @@ background:#22c55e;
 display:none;
 }
 
-
-/* UTIL */
-
 .hidden{
 display:none;
-}
-
-
-/* ANIMATION */
-
-@keyframes fadeIn{
-from{opacity:0; transform:translateY(10px);}
-to{opacity:1; transform:translateY(0);}
 }
