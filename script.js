@@ -195,18 +195,15 @@ selesai();
 
 // SELESAI
 function selesai() {
-
   // hentikan timer
-  clearInterval(timerInterval);
+  if(timerInterval) clearInterval(timerInterval);
 
-  // hitung skor
   let skor = 0;
   let benar = 0;
 
   soalUjian.forEach((s, i) => {
-    // pastikan jawaban ada
-    if (jawaban[i] === s.a) {
-      skor += 2;       // atau sesuai nilai per soal
+    if (jawaban[i] && jawaban[i] === s.a) {
+      skor += 2;  // nilai per soal
       benar++;
     }
   });
@@ -215,7 +212,8 @@ function selesai() {
   document.getElementById("quizPage").classList.add("hidden");
 
   // tampilkan halaman hasil
-  document.getElementById("resultPage").classList.remove("hidden");
+  const resultPage = document.getElementById("resultPage");
+  resultPage.classList.remove("hidden");
 
   // tampilkan detail
   document.getElementById("hasilDetail").innerHTML =
@@ -226,5 +224,5 @@ Jawaban benar: ${benar} dari ${soalUjian.length} soal`;
   document.getElementById("hasilSkor").innerHTML =
 `<div class="scoreLabel">Nilai Akhir</div>
 ${skor}`;
-
 }
+
