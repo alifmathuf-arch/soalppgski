@@ -2,7 +2,7 @@ let bankSoal=[];
 let soalUjian=[];
 let jawaban=[];
 
-let peserta="",kelas="",mode="ujian";
+let peserta="",kelas="",mode="latihan";
 let index=0;
 
 let waktu=50*60;
@@ -10,31 +10,42 @@ let timer;
 
 
 // LOAD SOAL
-
 fetch("soal.json")
 .then(r=>r.json())
 .then(d=>bankSoal=d)
 .catch(()=>alert("Soal gagal dimuat"));
 
 
-// MULAI
+// MODE SELECT
+function setMode(m){
 
+mode=m;
+
+document.getElementById("btnLatihan").classList.remove("active");
+document.getElementById("btnUjian").classList.remove("active");
+
+if(m==="latihan")
+document.getElementById("btnLatihan").classList.add("active");
+
+else
+document.getElementById("btnUjian").classList.add("active");
+
+}
+
+
+// MULAI
 function mulaiUjian(){
 
-let nama=document.getElementById("nama");
-let kelasInput=document.getElementById("kelas");
-let modeInput=document.getElementById("mode");
+let nama=document.getElementById("nama").value.trim();
+let kelasInput=document.getElementById("kelas").value.trim();
 
-if(!nama||!kelasInput||!modeInput)return;
-
-peserta=nama.value.trim();
-kelas=kelasInput.value.trim();
-mode=modeInput.value;
-
-if(!peserta||!kelas){
+if(!nama||!kelasInput){
 alert("Isi nama & kelas");
 return;
 }
+
+peserta=nama;
+kelas=kelasInput;
 
 acak();
 
@@ -50,8 +61,7 @@ timerStart();
 }
 
 
-// ACAK SOAL
-
+// ACAK
 function acak(){
 
 let temp=[...bankSoal];
@@ -65,8 +75,7 @@ jawaban=new Array(j).fill(null);
 }
 
 
-// TAMPIL SOAL
-
+// TAMPIL
 function tampil(){
 
 let s=soalUjian[index];
@@ -102,15 +111,12 @@ document.querySelector(".finishBtn").style.display=
 
 
 // PILIH
-
 function pilih(i){
 
 jawaban[index]=i;
 
 if(mode==="latihan"){
-
 alert(i===soalUjian[index].a?"✔ Benar":"✘ Salah");
-
 }
 
 tampil();
@@ -119,7 +125,6 @@ tampil();
 
 
 // NAV
-
 function nextSoal(){
 if(index<soalUjian.length-1){index++;tampil();}
 }
@@ -130,18 +135,15 @@ if(index>0){index--;tampil();}
 
 
 // PROGRESS
-
 function updateProgress(){
 
 let p=((index+1)/soalUjian.length)*100;
-
 document.getElementById("progressBar").style.width=p+"%";
 
 }
 
 
 // GRID
-
 function updateGrid(){
 
 let html="";
@@ -150,8 +152,9 @@ for(let i=0;i<soalUjian.length;i++){
 
 let done=jawaban[i]!=null?"gridDone":"";
 
-html+=`<div class="gridBtn ${done}"
-onclick="lompat(${i})">${i+1}</div>`;
+html+=`<div class="gridBtn ${done}" onclick="lompat(${i})">
+${i+1}
+</div>`;
 
 }
 
@@ -166,7 +169,6 @@ tampil();
 
 
 // TIMER
-
 function timerStart(){
 
 clearInterval(timer);
@@ -192,7 +194,6 @@ selesai();
 
 
 // SELESAI
-
 function selesai(){
 
 clearInterval(timer);
@@ -210,38 +211,5 @@ document.getElementById("hasil").innerText=
 `${peserta} (${kelas})
 
 Skor: ${skor}/${soalUjian.length}`;
-
-saveRank(peserta,skor);
-showRank();
-
-}
-
-
-// LEADERBOARD
-
-function saveRank(n,s){
-
-let data=JSON.parse(localStorage.getItem("rank")||"[]");
-
-data.push({n,s});
-data.sort((a,b)=>b.s-a.s);
-
-data=data.slice(0,5);
-
-localStorage.setItem("rank",JSON.stringify(data));
-
-}
-
-function showRank(){
-
-let data=JSON.parse(localStorage.getItem("rank")||"[]");
-
-let html="";
-
-data.forEach((d,i)=>{
-html+=`${i+1}. ${d.n} — ${d.s}<br>`;
-});
-
-document.getElementById("leaderboard").innerHTML=html;
 
 }
