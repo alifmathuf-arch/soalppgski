@@ -7,38 +7,37 @@ body{
 margin:0;
 min-height:100vh;
 
-background:
-linear-gradient(135deg,#0f172a,#1e3a8a,#14b8a6);
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#14b8a6);
 
 display:flex;
 justify-content:center;
 align-items:center;
-color:#fff;
+
+color:white;
 }
 
 
-/* ===== CARD ===== */
+/* CARD */
 
 .card{
-
 background:rgba(255,255,255,0.08);
 backdrop-filter:blur(12px);
 
-padding:30px;
+padding:25px;
 width:95%;
 max-width:420px;
 
 border-radius:18px;
 
-box-shadow:
-0 20px 40px rgba(0,0,0,0.35);
+box-shadow:0 20px 40px rgba(0,0,0,.35);
 
 text-align:center;
-animation:fadeIn .5s ease;
+
+animation:fadeIn .4s ease;
 }
 
 
-/* ===== LOGO ===== */
+/* LOGO */
 
 .logo{
 width:110px;
@@ -46,82 +45,81 @@ margin-bottom:10px;
 }
 
 
-/* ===== TITLE ===== */
+/* INPUT */
 
-h2{
-margin:10px 0 20px;
-font-weight:600;
-}
-
-
-/* ===== INPUT ===== */
-
-input{
+input,select{
 width:100%;
-padding:14px;
-margin:10px 0;
+padding:12px;
+margin:8px 0;
 
 border:none;
 border-radius:10px;
 
-font-size:15px;
-background:#f3f4f6;
+background:#f1f5f9;
 color:#111;
 }
 
 
-/* ===== BUTTON ===== */
+/* BUTTON */
 
 button{
-
 width:100%;
-padding:14px;
-margin-top:15px;
+padding:12px;
+margin-top:12px;
 
 border:none;
 border-radius:12px;
 
-font-size:16px;
 font-weight:600;
 
 cursor:pointer;
 
-background:
-linear-gradient(135deg,#14b8a6,#0ea5e9);
+background:linear-gradient(135deg,#14b8a6,#0ea5e9);
 
 color:white;
 
-transition:.25s;
+transition:.2s;
 }
 
 button:hover{
-
 transform:translateY(-2px);
-
-box-shadow:
-0 8px 18px rgba(0,0,0,0.25);
+box-shadow:0 8px 18px rgba(0,0,0,.3);
 }
 
 
-/* ===== QUIZ ===== */
+/* HEADER */
 
 .header{
-display:flex;
-justify-content:center;
-margin-bottom:15px;
 font-weight:bold;
+margin-bottom:10px;
 }
 
 
-/* ===== OPSI ===== */
+/* PROGRESS */
+
+.progressWrap{
+background:#1e293b;
+border-radius:10px;
+overflow:hidden;
+margin-bottom:8px;
+}
+
+#progressBar{
+height:8px;
+width:0%;
+background:#22c55e;
+transition:.3s;
+}
+
+
+/* OPSI */
 
 .opsi{
-
-background:#ffffff;
+background:white;
 color:#111;
 
-padding:14px;
-margin:8px 0;
+padding:12px;
+margin:6px 0;
 
 border-radius:10px;
 cursor:pointer;
@@ -134,17 +132,17 @@ background:#e0f2fe;
 }
 
 .selected{
-background:#14b8a6 !important;
+background:#14b8a6!important;
 color:white;
 }
 
 
-/* ===== NAV ===== */
+/* NAV */
 
 .nav{
 display:flex;
-gap:10px;
-margin-top:15px;
+gap:8px;
+margin-top:10px;
 }
 
 .nav button{
@@ -152,7 +150,34 @@ flex:1;
 }
 
 
-/* ===== FINISH BTN ===== */
+/* GRID */
+
+#gridSoal{
+display:grid;
+grid-template-columns:repeat(10,1fr);
+gap:4px;
+margin:8px 0;
+}
+
+.gridBtn{
+background:#334155;
+padding:5px;
+border-radius:6px;
+font-size:12px;
+cursor:pointer;
+}
+
+.gridDone{
+background:#22c55e;
+}
+
+
+/* RESULT */
+
+#hasil{
+white-space:pre-line;
+margin:10px 0;
+}
 
 .finishBtn{
 background:#22c55e;
@@ -160,77 +185,16 @@ display:none;
 }
 
 
-/* ===== RESULT ===== */
-
-#hasil{
-white-space:pre-line;
-font-size:18px;
-margin-top:10px;
-}
-
-
-/* ===== UTIL ===== */
+/* UTIL */
 
 .hidden{
 display:none;
 }
 
 
-/* ===== ANIMATION ===== */
+/* ANIMATION */
 
 @keyframes fadeIn{
-
 from{opacity:0; transform:translateY(10px);}
 to{opacity:1; transform:translateY(0);}
-
-}
-
-/* progress bar */
-
-.progressWrap{
-background:#1e293b;
-border-radius:10px;
-overflow:hidden;
-margin-bottom:10px;
-}
-
-#progressBar{
-height:10px;
-width:0%;
-background:#22c55e;
-transition:.3s;
-}
-
-/* grid soal */
-
-#gridSoal{
-display:grid;
-grid-template-columns:repeat(10,1fr);
-gap:5px;
-margin:10px 0;
-}
-
-.gridBtn{
-padding:6px;
-background:#334155;
-border-radius:6px;
-cursor:pointer;
-font-size:12px;
-}
-
-.gridDone{
-background:#22c55e;
-}
-
-/* animation */
-
-.card{
-transition:.25s;
-}
-
-/* leaderboard */
-
-#leaderboard{
-font-size:14px;
-margin-top:10px;
 }
