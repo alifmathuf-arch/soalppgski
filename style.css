@@ -209,3 +209,19 @@ display:none;
 .hidden{
 display:none;
 }
+
+.scoreBox{
+margin:15px 0;
+padding:20px;
+
+background:rgba(255,255,255,0.15);
+border-radius:15px;
+
+font-size:28px;
+font-weight:bold;
+}
+
+.scoreLabel{
+font-size:14px;
+opacity:.9;
+}
