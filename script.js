@@ -90,7 +90,21 @@ ${opsi}
 
 document.getElementById("opsi").innerHTML = opsiHTML;
 
+
+// =====================
+// TOMBOL SELESAI
+// =====================
+
+let finishBtn = document.querySelector(".finishBtn");
+
+if (index === 49) {
+finishBtn.style.display = "block";
+} else {
+finishBtn.style.display = "none";
 }
+
+}
+
 
 
 // =============================
@@ -179,3 +193,4 @@ document.getElementById("hasil").innerText =
 Skor: ${skor} / 50`;
 
 }
+
