@@ -3,25 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-
-<title>LATIHAN UP PPG SKI BATCH IV 2025</title>
-
+<title>LATIHAN UP PPG SKI 2025</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- LOGIN PAGE -->
+<!-- LOGIN -->
 <div id="loginPage" class="card">
 
 <img src="logo.png" class="logo">
 
 <h2>LATIHAN UP PPG SKI</h2>
 
-<select id="mode">
-<option value="ujian">Mode Ujian</option>
-<option value="latihan">Mode Latihan</option>
-</select>
+<div class="modeWrap">
+<button id="btnLatihan" class="mode active" onclick="setMode('latihan')">
+Mode Latihan
+</button>
+
+<button id="btnUjian" class="mode" onclick="setMode('ujian')">
+Mode Ujian
+</button>
+</div>
 
 <input id="nama" placeholder="Nama Peserta">
 <input id="kelas" placeholder="Kelas">
@@ -31,7 +34,7 @@
 </div>
 
 
-<!-- QUIZ PAGE -->
+<!-- QUIZ -->
 <div id="quizPage" class="hidden">
 
 <div class="header">
@@ -42,7 +45,10 @@
 <div id="progressBar"></div>
 </div>
 
+<!-- GRID (dibungkus agar presisi) -->
+<div class="gridWrap">
 <div id="gridSoal"></div>
+</div>
 
 <div class="card">
 
@@ -62,7 +68,7 @@
 </div>
 
 
-<!-- RESULT PAGE -->
+<!-- RESULT -->
 <div id="resultPage" class="card hidden">
 
 <h2>Hasil Ujian</h2>
