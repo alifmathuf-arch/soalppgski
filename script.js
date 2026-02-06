@@ -198,20 +198,24 @@ function selesai(){
 
 clearInterval(timer);
 
-let skor=0;
+let benar = 0;
 
 soalUjian.forEach((s,i)=>{
-if(jawaban[i]===s.a) skor+= 2;
+  if(jawaban[i] === s.a){
+    skor += 2;
+    benar++;
+  }
 });
 
 document.getElementById("quizPage").classList.add("hidden");
 document.getElementById("resultPage").classList.remove("hidden");
 
-document.getElementById("hasil").innerText=
-`${peserta} (${kelas})
+document.getElementById("hasilDetail").innerHTML =
+`${peserta} (${kelas})<br>
+Jawaban benar: ${benar} dari ${soalUjian.length} soal`;
 
-Skor: ${skor}/${soalUjian.length}`;
+document.getElementById("hasilSkor").innerHTML =
+`<div class="scoreLabel">Nilai Akhir</div>
+${skor}`;
 
 }
-
-
