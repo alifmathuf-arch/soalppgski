@@ -2,6 +2,19 @@
 // VAR GLOBAL
 // =============================
 
+let bankSoal = [];
+
+fetch("soal.json")
+.then(res => res.json())
+.then(data => {
+bankSoal = data;
+console.log("Soal berhasil dimuat:", bankSoal.length);
+})
+.catch(err => alert("Soal gagal dimuat"));
+
+
+
+
 let peserta = "";
 let kelas = "";
 
@@ -193,4 +206,5 @@ document.getElementById("hasil").innerText =
 Skor: ${skor} / 50`;
 
 }
+
 
