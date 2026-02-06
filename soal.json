@@ -1,610 +1,112 @@
 [
   {
-    "id": 1,
-    "pertanyaan": "Disajikan deskripsi materi tentang kondisi dan peradaban Jazirah Arab pra Islam. Seorang guru merancang beberapa tujuan pembelajaran berikut:\n\n1. Menganalisis struktur sosial masyarakat Arab pra Islam\n2. Menghargai datangnya Islam sebagai rahmat bagi semesta\n3. Menyajikan video digital tentang perubahan budaya Arab\n4. Menunjukkan sikap menolak perilaku jahiliyah\n5. Mengelompokkan faktor politik pra Islam\n\nBerdasarkan tujuan pembelajaran di atas, ranah sikap yang paling sesuai dengan indikator meningkatkan keimanan, ketakwaan, dan akhlak mulia adalah …",
-    "opsi": {
-      "A": "1 dan 3",
-      "B": "1 dan 5",
-      "C": "2 dan 4",
-      "D": "3 dan 5",
-      "E": "2 dan 5"
-    },
-    "jawaban": "C"
+    "q": "Disajikan deskripsi materi tentang kondisi dan peradaban Jazirah Arab pra Islam. Seorang guru merancang beberapa tujuan pembelajaran berikut: 1) Menganalisis struktur sosial masyarakat Arab pra Islam, 2) Menghargai datangnya Islam sebagai rahmat bagi semesta, 3) Menyajikan video digital tentang perubahan budaya Arab, 4) Menunjukkan sikap menolak perilaku jahiliyah, 5) Mengelompokkan faktor politik pra Islam. Berdasarkan tujuan pembelajaran tersebut, ranah sikap yang paling sesuai dengan indikator meningkatkan keimanan, ketakwaan, dan akhlak mulia adalah …",
+    "o": [
+      "1 dan 3",
+      "1 dan 5",
+      "2 dan 4",
+      "3 dan 5",
+      "2 dan 5"
+    ],
+    "a": 2
   },
   {
-    "id": 2,
-    "pertanyaan": "Sebelum hijrah ke Madinah, Nabi Muhammad SAW menghadapi berbagai tantangan di Mekkah, seperti penentangan kaum Quraisy, tekanan sosial, dan intimidasi terhadap para sahabat. Meskipun demikian, beliau tetap konsisten menyampaikan dakwah dengan penuh kesabaran dan strategi yang bijak.\n\nGuru ingin agar siswa tidak sekadar memahami peristiwa sejarah, tetapi juga mampu berpikir kritis terhadap strategi dakwah Nabi Muhammad SAW di Mekkah.\n\nRumusan tujuan pembelajaran ranah pengetahuan yang paling sesuai dengan indikator berpikir kritis adalah …",
-    "opsi": {
-      "A": "Peserta didik dapat menghafalkan kronologi dakwah Nabi Muhammad di Mekkah.",
-      "B": "Peserta didik dapat membandingkan strategi dakwah Nabi Muhammad dengan tokoh lain.",
-      "C": "Peserta didik dapat menjelaskan proses dakwah Nabi Muhammad sebelum hijrah ke Madinah.",
-      "D": "Peserta didik dapat menganalisis tantangan dakwah Nabi Muhammad di Mekkah.",
-      "E": "Peserta didik dapat menyebutkan nama-nama sahabat yang mendukung Nabi Muhammad di Mekkah."
-    },
-    "jawaban": "D"
+    "q": "Sebelum hijrah ke Madinah, Nabi Muhammad SAW menghadapi berbagai tantangan di Mekkah, seperti penentangan kaum Quraisy, tekanan sosial, dan intimidasi terhadap para sahabat. Guru ingin agar peserta didik tidak hanya memahami peristiwa sejarah, tetapi juga mampu berpikir kritis terhadap strategi dakwah Nabi Muhammad SAW di Mekkah. Rumusan tujuan pembelajaran ranah pengetahuan yang paling sesuai dengan indikator berpikir kritis adalah …",
+    "o": [
+      "Peserta didik dapat menghafalkan kronologi dakwah Nabi Muhammad SAW di Mekkah",
+      "Peserta didik dapat membandingkan strategi dakwah Nabi Muhammad SAW dengan tokoh lain",
+      "Peserta didik dapat menjelaskan proses dakwah Nabi Muhammad SAW sebelum hijrah ke Madinah",
+      "Peserta didik dapat menganalisis tantangan dakwah Nabi Muhammad SAW di Mekkah",
+      "Peserta didik dapat menyebutkan nama sahabat yang mendukung Nabi Muhammad SAW di Mekkah"
+    ],
+    "a": 3
   },
   {
-    "id": 3,
-    "pertanyaan": "Pada masa Khalifah Abu Bakar, sistem pemerintahan dipusatkan untuk menjaga persatuan umat, mengatasi kemurtadan (riddah), dan menyusun strategi pertahanan negara. Kepemimpinan beliau menekankan kerja sama antarkabilah dalam menjaga stabilitas umat.\n\nGuru ingin menyusun tujuan pembelajaran ranah keterampilan agar peserta didik mampu mengaplikasikan nilai kerja sama dalam aktivitas belajar kolaboratif.\n\nRumusan tujuan pembelajaran ranah keterampilan yang paling sesuai dengan indikator peserta didik memiliki semangat gotong royong adalah …",
-    "opsi": {
-      "A": "Peserta didik dapat menyusun laporan tentang strategi politik Abu Bakar dengan rinci.",
-      "B": "Peserta didik dapat mempresentasikan hasil analisis sistem pemerintahan Abu Bakar secara individu.",
-      "C": "Peserta didik dapat membuat peta konsep digital mengenai pemerintahan Abu Bakar.",
-      "D": "Peserta didik dapat merancang proyek kolaboratif berbasis teknologi untuk meneladani Abu Bakar.",
-      "E": "Peserta didik dapat menyalin catatan tentang kebijakan Abu Bakar dalam mengatasi riddah."
-    },
-    "jawaban": "D"
+    "q": "Pada masa pemerintahan Khalifah Abu Bakar Ash-Shiddiq, umat Islam menghadapi tantangan besar berupa kemurtadan dan perpecahan. Kepemimpinan Abu Bakar menekankan kerja sama dan persatuan umat. Guru ingin mengembangkan tujuan pembelajaran ranah keterampilan yang menumbuhkan sikap gotong royong. Rumusan tujuan pembelajaran yang paling tepat adalah …",
+    "o": [
+      "Peserta didik dapat menjelaskan kebijakan Abu Bakar dalam mengatasi riddah",
+      "Peserta didik dapat menyajikan laporan individu tentang kepemimpinan Abu Bakar",
+      "Peserta didik dapat membuat peta konsep pemerintahan Abu Bakar",
+      "Peserta didik dapat merancang proyek kolaboratif untuk meneladani kepemimpinan Abu Bakar",
+      "Peserta didik dapat menghafalkan kebijakan Abu Bakar Ash-Shiddiq"
+    ],
+    "a": 3
   },
   {
-    "id": 4,
-    "pertanyaan": "Perhatikan penjelasan berikut:\n\n1. Teori masuknya Islam dari Gujarat dengan bukti batu nisan bercorak India\n2. Teori masuknya Islam dari Mekkah dengan bukti hubungan ulama dan haji\n3. Teori masuknya Islam dari Persia dengan bukti tradisi Tabot dan Asyura\n4. Teori masuknya Islam dari Cina dengan bukti seni ukir dan kaligrafi\n\nGuru meminta siswa menyusun poster digital kolaboratif yang menampilkan teori masuknya Islam beserta tradisi yang dihasilkannya untuk menumbuhkan sikap penerimaan terhadap keragaman tradisi.\n\nRumusan tujuan pembelajaran ranah sikap yang paling sesuai adalah …",
-    "opsi": {
-      "A": "Peserta didik dapat menghafalkan nama-nama teori masuknya Islam di Asia Tenggara.",
-      "B": "Peserta didik dapat menyalin ulang tabel teori masuknya Islam dengan bukti tradisinya.",
-      "C": "Peserta didik dapat menjelaskan hubungan antara teori masuknya Islam dan bukti sejarahnya.",
-      "D": "Peserta didik dapat membuat poster digital kolaboratif penerimaan tradisi masuknya Islam.",
-      "E": "Peserta didik dapat menyebutkan contoh tradisi dari teori Persia atau Cina."
-    },
-    "jawaban": "D"
+    "q": "Masuknya Islam ke Nusantara dijelaskan melalui beberapa teori, antara lain teori Gujarat, Mekkah, Persia, dan Cina. Setiap teori memiliki bukti sejarah dan tradisi yang berkembang di masyarakat. Guru meminta peserta didik membuat poster digital kolaboratif untuk menumbuhkan sikap penerimaan terhadap keberagaman tradisi. Tujuan pembelajaran ranah sikap yang paling sesuai adalah …",
+    "o": [
+      "Peserta didik dapat menghafalkan teori masuknya Islam ke Nusantara",
+      "Peserta didik dapat menyebutkan bukti dari setiap teori masuknya Islam",
+      "Peserta didik dapat menjelaskan hubungan teori dan bukti sejarah",
+      "Peserta didik dapat membuat poster digital penerimaan keberagaman tradisi masuknya Islam",
+      "Peserta didik dapat mengelompokkan teori masuknya Islam"
+    ],
+    "a": 3
   },
   {
-    "id": 5,
-    "pertanyaan": "Berikut beberapa aspek pemerintahan Dinasti Ayubiyah:\n\n1. Politik: penguatan militer berdampak pada stabilitas wilayah\n2. Pendidikan: pendirian madrasah berdampak pada perkembangan ilmu pengetahuan\n3. Sosial-budaya: toleransi masyarakat multikultural berdampak pada keharmonisan sosial\n4. Ekonomi: perdagangan internasional berdampak pada kesejahteraan masyarakat\n\nBerdasarkan data tersebut, rumusan indikator tujuan pembelajaran ranah pengetahuan yang paling mencerminkan kemampuan berpikir dinamis dan inovatif adalah …",
-    "opsi": {
-      "A": "Mengidentifikasi kebijakan politik Dinasti Ayubiyah yang berhubungan dengan stabilitas wilayah.",
-      "B": "Menyusun ringkasan dampak kebijakan sosial Dinasti Ayubiyah.",
-      "C": "Menganalisis hubungan antara kebijakan ekonomi Dinasti Ayubiyah dan kesejahteraan masyarakat.",
-      "D": "Merancang model pemerintahan modern Dinasti Ayubiyah berbasis media interaktif.",
-      "E": "Menyebutkan manfaat pendirian madrasah pada masa Dinasti Ayubiyah."
-    },
-    "jawaban": "C"
+    "q": "Dinasti Ayyubiyah dikenal memiliki kebijakan politik, sosial, ekonomi, dan pendidikan yang berpengaruh terhadap masyarakat. Guru ingin mengembangkan indikator tujuan pembelajaran ranah pengetahuan yang mencerminkan kemampuan berpikir dinamis dan inovatif. Rumusan indikator yang paling tepat adalah …",
+    "o": [
+      "Mengidentifikasi kebijakan politik Dinasti Ayyubiyah",
+      "Menyebutkan dampak sosial Dinasti Ayyubiyah",
+      "Menganalisis hubungan kebijakan ekonomi Dinasti Ayyubiyah dengan kesejahteraan masyarakat",
+      "Menghafalkan kebijakan Dinasti Ayyubiyah",
+      "Menjelaskan latar belakang berdirinya Dinasti Ayyubiyah"
+    ],
+    "a": 2
   },
   {
-    "id": 6,
-    "pertanyaan": "Dalam sebuah kelas, guru membagi siswa menjadi beberapa kelompok dan memberikan akses pada artikel digital serta peta interaktif jazirah Arab. Siswa diminta mengidentifikasi masalah utama kehidupan bangsa Arab pra Islam seperti peperangan antarsuku, sistem kabilah, dan penyembahan berhala, lalu mendiskusikan pengaruhnya terhadap perilaku sosial.\n\nJika guru ingin merumuskan tujuan pembelajaran yang selaras dengan kegiatan tersebut, rumusan yang paling sesuai adalah …",
-    "opsi": {
-      "A": "Mengidentifikasi masalah utama dalam kehidupan masyarakat Arab pra Islam.",
-      "B": "Menguraikan bentuk-bentuk kepercayaan bangsa Arab pra Islam.",
-      "C": "Menganalisis sistem kabilah terhadap interaksi sosial Arab pra Islam.",
-      "D": "Menyebutkan bentuk peperangan antarsuku di jazirah Arab pra Islam.",
-      "E": "Menghafalkan letak geografis kota-kota penting Arab pra Islam."
-    },
-    "jawaban": "C"
+    "q": "Dalam pembelajaran tentang kondisi bangsa Arab pra Islam, guru membagi peserta didik ke dalam kelompok dan meminta mereka mendiskusikan konflik antarsuku serta dampaknya terhadap kehidupan sosial. Tujuan pembelajaran yang paling sesuai dengan kegiatan tersebut adalah …",
+    "o": [
+      "Menyebutkan bentuk peperangan antarsuku Arab pra Islam",
+      "Mengidentifikasi masalah utama kehidupan masyarakat Arab pra Islam",
+      "Menganalisis dampak konflik antarsuku terhadap kehidupan sosial bangsa Arab pra Islam",
+      "Menghafalkan nama suku-suku Arab pra Islam",
+      "Menjelaskan kondisi geografis Jazirah Arab"
+    ],
+    "a": 2
   },
   {
-    "id": 7,
-    "pertanyaan": "Guru SKI meminta siswa membuat mind map online tentang kondisi sosio-kultural Madinah pra Hijrah. Mind map tersebut menunjukkan struktur sosial masyarakat seperti Aus, Khazraj, dan komunitas Yahudi serta hubungan antar kelompok.\n\nTujuan pembelajaran HOTS yang paling tepat untuk mendukung kegiatan tersebut adalah …",
-    "opsi": {
-      "A": "Menyebutkan kelompok masyarakat yang hidup di Madinah pra Hijrah.",
-      "B": "Menguraikan peran komunitas Yahudi dalam bidang ekonomi Madinah pra Hijrah.",
-      "C": "Menganalisis struktur sosial Madinah pra Hijrah dan Piagam Madinah.",
-      "D": "Menjelaskan kondisi geografis kota Madinah pada masa pra Hijrah.",
-      "E": "Menghafalkan tradisi suku Aus dan Khazraj."
-    },
-    "jawaban": "C"
+    "q": "Guru meminta peserta didik membuat mind map digital tentang kondisi sosial masyarakat Madinah sebelum hijrah Nabi Muhammad SAW, meliputi suku Aus, Khazraj, dan komunitas Yahudi. Tujuan pembelajaran HOTS yang paling tepat adalah …",
+    "o": [
+      "Menyebutkan kelompok masyarakat Madinah pra hijrah",
+      "Menjelaskan kondisi geografis Madinah",
+      "Menganalisis struktur sosial masyarakat Madinah pra hijrah",
+      "Menghafalkan tradisi suku Aus dan Khazraj",
+      "Menuliskan kembali isi buku teks"
+    ],
+    "a": 2
   },
   {
-    "id": 8,
-    "pertanyaan": "Seorang guru SKI melakukan evaluasi pembelajaran materi Khulafaur Rasyidin dengan pendekatan Differentiation Based Learning (DBL). Peserta didik dengan kemampuan analitis tinggi diminta menganalisis kebijakan kepemimpinan Abu Bakar dan Umar bin Khattab, sedangkan peserta didik lain diberikan studi kasus sederhana.\n\nRumusan evaluasi tujuan pembelajaran yang paling tepat adalah …",
-    "opsi": {
-      "A": "Peserta didik mampu menyebutkan tahun pemerintahan Abu Bakar dan Umar bin Khattab.",
-      "B": "Peserta didik mampu menghafal nama kebijakan Abu Bakar dan Umar bin Khattab.",
-      "C": "Peserta didik menganalisis kepemimpinan Abu Bakar dan Umar bin Khattab sesuai tingkat kemampuan belajar.",
-      "D": "Peserta didik mampu menyalin kembali biografi Abu Bakar dan Umar bin Khattab.",
-      "E": "Peserta didik mampu menjawab soal pilihan ganda yang sama tanpa penyesuaian."
-    },
-    "jawaban": "C"
+    "q": "Guru menerapkan pembelajaran berdiferensiasi pada materi kepemimpinan Khulafaur Rasyidin. Peserta didik dengan kemampuan tinggi diminta menganalisis kebijakan, sementara yang lain diberikan studi kasus sederhana. Rumusan tujuan evaluasi pembelajaran yang paling tepat adalah …",
+    "o": [
+      "Peserta didik menghafalkan masa pemerintahan Khulafaur Rasyidin",
+      "Peserta didik menjawab soal pilihan ganda yang sama",
+      "Peserta didik menganalisis kepemimpinan Khulafaur Rasyidin sesuai tingkat kemampuan",
+      "Peserta didik menyalin biografi Khulafaur Rasyidin",
+      "Peserta didik menyebutkan nama-nama Khulafaur Rasyidin"
+    ],
+    "a": 2
   },
   {
-    "id": 9,
-    "pertanyaan": "Seorang guru SKI merencanakan pembelajaran tentang perkembangan ilmu pengetahuan pada masa kepemimpinan Utsman bin Affan dengan menggunakan peta konsep digital.\n\nAlur materi ajar yang paling tepat sesuai karakteristik peserta didik adalah …",
-    "opsi": {
-      "A": "Menjelaskan latar belakang sosial politik Utsman bin Affan lalu membandingkannya dengan era modern.",
-      "B": "Menguraikan kodifikasi Al-Qur'an, dampaknya pada pendidikan, dan pengaruhnya terhadap perkembangan ilmu pengetahuan.",
-      "C": "Mengidentifikasi kebijakan politik Utsman bin Affan lalu membandingkannya dengan Umar bin Khattab.",
-      "D": "Membahas strategi militer Utsman bin Affan dan mengaitkannya dengan konflik modern.",
-      "E": "Mendeskripsikan silsilah keluarga Utsman bin Affan dan legitimasi kepemimpinannya."
-    },
-    "jawaban": "B"
+    "q": "Pada masa pemerintahan Utsman bin Affan, dilakukan kodifikasi Al-Qur'an yang berdampak besar pada perkembangan ilmu pengetahuan Islam. Guru ingin menyusun alur materi ajar yang tepat sesuai karakteristik peserta didik. Alur materi yang paling sesuai adalah …",
+    "o": [
+      "Membahas silsilah keluarga Utsman bin Affan",
+      "Menjelaskan kodifikasi Al-Qur'an dan dampaknya terhadap perkembangan ilmu pengetahuan",
+      "Menganalisis strategi militer Utsman bin Affan",
+      "Membandingkan pemerintahan Utsman dan Umar secara umum",
+      "Menghafalkan tahun wafat Utsman bin Affan"
+    ],
+    "a": 1
   },
   {
-    "id": 10,
-    "pertanyaan": "Guru SKI melaksanakan pembelajaran sejarah masuknya Islam di berbagai wilayah dunia dengan pendekatan Deep Learning (DL). Fokus utama pada Indonesia, dilanjutkan pengayaan Asia Tenggara, Afrika, Eropa, Amerika, dan Australia.\n\nAlur materi ajar yang paling tepat digunakan adalah …",
-    "opsi": {
-      "A": "Menyajikan kronologi masuknya Islam di Indonesia saja.",
-      "B": "Memulai dengan hafalan tahun dan tokoh setiap wilayah.",
-      "C": "Menjelaskan penyebaran Islam secara umum, analisis di Indonesia, lalu perbandingan global.",
-      "D": "Menampilkan video singkat tanpa diskusi lanjutan.",
-      "E": "Menjelaskan satu wilayah secara rinci dan mengabaikan lainnya."
-    },
-    "jawaban": "C"
-  }
-]
-[
-  {
-    "id": 11,
-    "pertanyaan": "Dalam diskusi kelas berbasis teknologi, guru menuliskan tiga faktor penyebab keruntuhan Dinasti Ayyubiyah, yaitu perebutan kekuasaan internal, lemahnya integrasi politik, dan tekanan dari luar berupa Perang Salib. Guru meminta siswa menyusun urutan alur pembelajaran yang logis.\n\nAlur materi ajar yang tepat untuk membantu siswa mengevaluasi tujuan pembelajaran adalah …",
-    "opsi": {
-      "A": "Tekanan luar dari Perang Salib – lemahnya integrasi politik – perebutan kekuasaan internal.",
-      "B": "Perebutan kekuasaan internal – lemahnya integrasi politik – tekanan luar dari Perang Salib.",
-      "C": "Lemahnya integrasi politik – tekanan luar dari Perang Salib – berdirinya Dinasti Mamluk.",
-      "D": "Tekanan luar dari Perang Salib – berdirinya Dinasti Mamluk – lemahnya persatuan politik.",
-      "E": "Perebutan kekuasaan internal – berdirinya Dinasti Mamluk – konflik sosial Mesir."
-    },
-    "jawaban": "B"
-  },
-  {
-    "id": 12,
-    "pertanyaan": "Dalam program P5 bertema kebinekaan global, guru meminta siswa membandingkan sikap toleransi di masyarakat lokal dengan praktik toleransi di negara lain. Siswa menuliskan hasil analisis tersebut di Padlet digital.\n\nPengembangan materi ajar nilai-nilai P5 yang sesuai dalam tujuan pembelajaran adalah …",
-    "opsi": {
-      "A": "Siswa dapat mengidentifikasi contoh sikap toleransi dalam masyarakat lokal.",
-      "B": "Siswa dapat menganalisis perbedaan dan persamaan praktik toleransi lokal dan global.",
-      "C": "Siswa dapat menyebutkan nilai-nilai kebinekaan dalam Pancasila.",
-      "D": "Siswa dapat menilai kelebihan sikap toleransi bangsa Indonesia dibanding bangsa lain.",
-      "E": "Siswa dapat menjelaskan sejarah kebinekaan Indonesia secara kronologis."
-    },
-    "jawaban": "B"
-  },
-  {
-    "id": 13,
-    "pertanyaan": "Seorang guru SKI melaksanakan program Penguatan Profil Pelajar Rahmatan lil ‘Alamin (PPRA) dengan tema kepedulian lingkungan. Siswa melakukan observasi kebersihan sekolah dan mengunggah laporan analisis dalam bentuk poster digital.\n\nPengembangan materi ajar PPRA yang paling tepat untuk tujuan pembelajaran tersebut adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan aturan kebersihan sekolah dalam bentuk poster.",
-      "B": "Siswa dapat mendeskripsikan makna kebersihan menurut Islam.",
-      "C": "Siswa dapat menganalisis pentingnya kepedulian lingkungan perspektif Islam.",
-      "D": "Siswa dapat menilai kelemahan kebersihan sekolah dibanding sekolah lain.",
-      "E": "Siswa dapat menguraikan sejarah kebersihan dalam peradaban Islam."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 14,
-    "pertanyaan": "Dalam program moderasi beragama di sekolah, guru meminta siswa menyaksikan video praktik gotong royong antarumat beragama di masyarakat. Setelah itu, siswa membuat poster digital yang menunjukkan pesan Islam sebagai agama rahmatan lil ‘alamin.\n\nPengembangan materi ajar nilai Islam sebagai agama moderat yang paling sesuai adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan manfaat gotong royong antarumat beragama.",
-      "B": "Siswa dapat menjelaskan ajaran Islam tentang rahmatan lil ‘alamin.",
-      "C": "Siswa dapat menganalisis praktik gotong royong dengan mengaitkan nilai wasathiyah.",
-      "D": "Siswa dapat menilai kelebihan dan kekurangan toleransi di masyarakat modern.",
-      "E": "Siswa dapat menguraikan sejarah toleransi antarumat beragama pada masa Nabi."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 15,
-    "pertanyaan": "Guru SKI mengajak siswa membuat poster digital setelah menonton video tentang kerja sama lintas agama dalam penanganan bencana alam. Guru menekankan bahwa alasan implementasi moderasi beragama harus tampak jelas dalam materi ajar.\n\nAlasan pengembangan materi ajar nilai Islam sebagai agama wasathiyah yang paling sesuai adalah …",
-    "opsi": {
-      "A": "Agar siswa dapat menyebutkan contoh kerja sama lintas agama di masyarakat.",
-      "B": "Agar siswa mampu menjelaskan pentingnya solidaritas dalam Islam.",
-      "C": "Agar siswa dapat menilai kerja sama lintas agama sebagai implementasi moderasi beragama.",
-      "D": "Agar siswa memahami sejarah kerja sama umat Islam dengan non-Muslim pada masa Nabi.",
-      "E": "Agar siswa menguraikan hikmah musibah dalam perspektif Islam."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 16,
-    "pertanyaan": "Guru SKI ingin mengajarkan materi Peradaban Bangsa Arab Pra-Islam dengan pendekatan Problem-Based Learning (PBL). Masalah yang diangkat adalah konflik antarsuku Arab pra-Islam yang menyebabkan kesenjangan sosial. Guru ingin siswa menemukan nilai persatuan dan hukum yang adil.\n\nRancangan pembelajaran berbasis masalah yang paling tepat adalah …",
-    "opsi": {
-      "A": "Membuat siswa membaca teks konflik antarsuku lalu menghafalnya.",
-      "B": "Menugaskan siswa menjelaskan ringkasan sejarah pra-Islam tanpa mengaitkan masalah nyata.",
-      "C": "Mengarahkan siswa menganalisis konflik suku pra-Islam lalu merancang solusinya.",
-      "D": "Menyampaikan ceramah tentang sistem sosial Arab pra-Islam tanpa diskusi.",
-      "E": "Menugaskan siswa membuat soal latihan pilihan ganda tentang sejarah pra-Islam."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 17,
-    "pertanyaan": "Dalam pembelajaran PBL tentang peristiwa hijrah Nabi Muhammad SAW ke Yatsrib, mahasiswa diminta menganalisis tekanan Quraisy di Makkah dan strategi perubahan sosial melalui hijrah.\n\nRancangan pembelajaran berbasis masalah yang paling tepat adalah …",
-    "opsi": {
-      "A": "Siswa membuat daftar nama sahabat yang berhijrah bersama Nabi.",
-      "B": "Siswa membaca buku cetak tentang hijrah lalu menyalinnya.",
-      "C": "Siswa melakukan studi strategi hijrah dan menciptakan strategi kepemimpinan.",
-      "D": "Guru menyampaikan ceramah tentang strategi Nabi dalam berdakwah.",
-      "E": "Siswa mengerjakan soal latihan tertulis tentang alasan hijrah."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 18,
-    "pertanyaan": "Guru SKI ingin mengajarkan materi akhir pemerintahan Khalifah Abu Bakar Ash-Shiddiq dengan pendekatan Problem-Based Learning (PBL). Guru berharap hasil belajar diwujudkan dalam produk digital yang menunjukkan analisis kepemimpinan.\n\nRancangan pembelajaran berbasis masalah yang paling tepat adalah …",
-    "opsi": {
-      "A": "Siswa menghafalkan kronologi wafatnya Abu Bakar.",
-      "B": "Siswa membuat catatan ringkas kebijakan Abu Bakar sebelum wafat.",
-      "C": "Siswa menganalisis kebijakan Abu Bakar lalu menciptakan infografis kepemimpinannya.",
-      "D": "Guru memberikan ceramah panjang tanpa aktivitas siswa.",
-      "E": "Siswa menjawab soal pilihan ganda terkait masa pemerintahan Abu Bakar."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 19,
-    "pertanyaan": "Guru SKI akan mengajarkan materi akhir pemerintahan Utsman bin Affan. Kelas memiliki kemampuan beragam, sebagian unggul keterampilan digital dan sebagian unggul diskusi lisan. Guru ingin pembelajaran berbasis perbedaan individu melalui produk digital.\n\nRancangan pembelajaran yang paling tepat adalah …",
-    "opsi": {
-      "A": "Semua siswa membuat catatan ringkas dari buku teks tentang wafatnya Utsman.",
-      "B": "Guru membagi kelas menjadi kelompok sama tanpa mempertimbangkan kemampuan.",
-      "C": "Siswa membuat e-book kepemimpinan Utsman dan podcast diskusi kepemimpinannya.",
-      "D": "Guru menjelaskan peristiwa wafat Utsman dengan ceramah panjang.",
-      "E": "Semua siswa mengerjakan soal pilihan ganda yang sama."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 20,
-    "pertanyaan": "Seorang guru SKI akan mengajarkan materi Strategi Dakwah Walisongo di Jawa. Siswa beragam: ada yang unggul seni, teknologi, dan menulis. Guru ingin pembelajaran berbasis perbedaan individu agar siswa dapat mengkreasi produk sesuai potensinya.\n\nRancangan pembelajaran yang paling tepat adalah …",
-    "opsi": {
-      "A": "Semua siswa membuat ringkasan tulisan tangan tentang dakwah Walisongo.",
-      "B": "Siswa membuat poster digital, esai reflektif, dan video animasi dakwah Walisongo.",
-      "C": "Semua siswa hanya mendengarkan ceramah guru.",
-      "D": "Guru memberikan kuis pilihan ganda yang sama untuk semua siswa.",
-      "E": "Semua siswa wajib membuat pidato dengan format dan isi yang sama."
-    },
-    "jawaban": "B"
-  }
-]
-[
-  {
-    "id": 21,
-    "pertanyaan": "Guru SKI merancang pembelajaran materi Piagam Madinah dengan pendekatan literasi digital. Siswa diminta membaca dokumen Piagam Madinah, kemudian mendiskusikan prinsip keadilan, persatuan, dan toleransi yang terkandung di dalamnya.\n\nTujuan pembelajaran ranah pengetahuan yang paling sesuai dengan kegiatan tersebut adalah …",
-    "opsi": {
-      "A": "Siswa dapat menghafalkan isi pasal-pasal Piagam Madinah.",
-      "B": "Siswa dapat menyebutkan tokoh-tokoh yang terlibat dalam Piagam Madinah.",
-      "C": "Siswa dapat menganalisis prinsip keadilan dan toleransi dalam Piagam Madinah.",
-      "D": "Siswa dapat menyalin kembali teks Piagam Madinah secara lengkap.",
-      "E": "Siswa dapat menjelaskan tahun disusunnya Piagam Madinah."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 22,
-    "pertanyaan": "Dalam pembelajaran sejarah Islam, guru meminta siswa membandingkan sistem pemerintahan pada masa Nabi Muhammad SAW di Madinah dengan sistem pemerintahan modern melalui diskusi kelompok dan presentasi digital.\n\nIndikator tujuan pembelajaran HOTS yang paling tepat adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan ciri-ciri pemerintahan Nabi Muhammad SAW.",
-      "B": "Siswa dapat menjelaskan struktur pemerintahan modern.",
-      "C": "Siswa dapat membandingkan sistem pemerintahan Nabi Muhammad SAW dan pemerintahan modern.",
-      "D": "Siswa dapat menghafalkan istilah-istilah pemerintahan Islam.",
-      "E": "Siswa dapat menuliskan kembali materi dari buku teks."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 23,
-    "pertanyaan": "Guru SKI memberikan tugas proyek kepada siswa untuk membuat video singkat tentang peran Masjid Nabawi sebagai pusat ibadah, pendidikan, dan sosial pada masa Nabi Muhammad SAW.\n\nTujuan pembelajaran ranah keterampilan yang paling sesuai adalah …",
-    "opsi": {
-      "A": "Siswa dapat menjelaskan fungsi Masjid Nabawi secara lisan.",
-      "B": "Siswa dapat mengidentifikasi sejarah pembangunan Masjid Nabawi.",
-      "C": "Siswa dapat memproduksi video digital tentang peran Masjid Nabawi.",
-      "D": "Siswa dapat menyebutkan tokoh yang membangun Masjid Nabawi.",
-      "E": "Siswa dapat menghafalkan tahun pembangunan Masjid Nabawi."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 24,
-    "pertanyaan": "Dalam materi Khulafaur Rasyidin, guru meminta siswa menganalisis kebijakan Umar bin Khattab terkait administrasi negara dan kesejahteraan masyarakat melalui studi kasus.\n\nRumusan tujuan pembelajaran yang paling sesuai dengan indikator berpikir kritis adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan nama kebijakan Umar bin Khattab.",
-      "B": "Siswa dapat menghafalkan wilayah kekuasaan Umar bin Khattab.",
-      "C": "Siswa dapat menganalisis dampak kebijakan Umar bin Khattab terhadap kesejahteraan masyarakat.",
-      "D": "Siswa dapat menyalin kembali catatan kebijakan Umar bin Khattab.",
-      "E": "Siswa dapat menjelaskan silsilah keluarga Umar bin Khattab."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 25,
-    "pertanyaan": "Guru SKI mengintegrasikan pembelajaran sejarah Dinasti Umayyah dengan penguatan karakter. Siswa diminta mendiskusikan dampak perluasan wilayah terhadap interaksi budaya dan toleransi.\n\nTujuan pembelajaran ranah sikap yang paling tepat adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan wilayah kekuasaan Dinasti Umayyah.",
-      "B": "Siswa dapat menjelaskan latar belakang berdirinya Dinasti Umayyah.",
-      "C": "Siswa dapat menunjukkan sikap menghargai keragaman budaya akibat interaksi antarwilayah.",
-      "D": "Siswa dapat menguraikan kronologi perluasan wilayah Dinasti Umayyah.",
-      "E": "Siswa dapat menghafalkan nama-nama khalifah Dinasti Umayyah."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 26,
-    "pertanyaan": "Dalam pembelajaran Dinasti Abbasiyah, guru meminta siswa mengkaji peran Baitul Hikmah melalui sumber digital dan jurnal singkat.\n\nIndikator tujuan pembelajaran ranah pengetahuan yang paling tepat adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan pendiri Baitul Hikmah.",
-      "B": "Siswa dapat menjelaskan fungsi Baitul Hikmah dalam perkembangan ilmu pengetahuan.",
-      "C": "Siswa dapat menghafalkan tahun berdirinya Baitul Hikmah.",
-      "D": "Siswa dapat menyalin teks tentang Baitul Hikmah dari buku.",
-      "E": "Siswa dapat menyebutkan nama ilmuwan tanpa penjelasan."
-    },
-    "jawaban": "B"
-  },
-  {
-    "id": 27,
-    "pertanyaan": "Guru SKI mengajak siswa membuat infografis digital tentang faktor kemajuan peradaban Islam pada masa Abbasiyah, seperti dukungan pemerintah, penerjemahan ilmu, dan toleransi budaya.\n\nTujuan pembelajaran yang paling sesuai dengan kegiatan tersebut adalah …",
-    "opsi": {
-      "A": "Siswa dapat menghafalkan faktor-faktor kemajuan peradaban Islam.",
-      "B": "Siswa dapat menjelaskan secara lisan kemajuan Dinasti Abbasiyah.",
-      "C": "Siswa dapat menyajikan analisis faktor kemajuan peradaban Islam dalam bentuk infografis.",
-      "D": "Siswa dapat menyalin ulang tabel faktor kemajuan peradaban Islam.",
-      "E": "Siswa dapat menyebutkan nama khalifah Dinasti Abbasiyah."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 28,
-    "pertanyaan": "Dalam pembelajaran sejarah Islam di Nusantara, guru meminta siswa membandingkan strategi dakwah Walisongo di Jawa dengan metode dakwah modern melalui diskusi kelompok.\n\nIndikator tujuan pembelajaran HOTS yang paling tepat adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan nama-nama Walisongo.",
-      "B": "Siswa dapat menjelaskan strategi dakwah Walisongo.",
-      "C": "Siswa dapat membandingkan strategi dakwah Walisongo dan dakwah modern.",
-      "D": "Siswa dapat menghafalkan lokasi penyebaran dakwah Walisongo.",
-      "E": "Siswa dapat menuliskan kembali cerita Walisongo."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 29,
-    "pertanyaan": "Guru SKI mengintegrasikan materi kerajaan Islam di Nusantara dengan projek literasi sejarah. Siswa diminta membuat artikel digital tentang kontribusi Kerajaan Samudra Pasai dalam penyebaran Islam.\n\nTujuan pembelajaran ranah keterampilan yang paling sesuai adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan letak Kerajaan Samudra Pasai.",
-      "B": "Siswa dapat menjelaskan silsilah raja-raja Samudra Pasai.",
-      "C": "Siswa dapat menulis artikel digital tentang kontribusi Kerajaan Samudra Pasai.",
-      "D": "Siswa dapat menghafalkan tahun berdirinya Kerajaan Samudra Pasai.",
-      "E": "Siswa dapat menyalin teks sejarah dari buku."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 30,
-    "pertanyaan": "Dalam pembelajaran reflektif, guru meminta siswa menilai relevansi nilai-nilai kepemimpinan Sultan Hasanuddin dengan kehidupan pelajar masa kini melalui esai digital.\n\nTujuan pembelajaran yang paling tepat adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan biografi Sultan Hasanuddin.",
-      "B": "Siswa dapat menjelaskan latar belakang Perang Makassar.",
-      "C": "Siswa dapat menilai relevansi nilai kepemimpinan Sultan Hasanuddin dalam kehidupan modern.",
-      "D": "Siswa dapat menghafalkan tahun wafat Sultan Hasanuddin.",
-      "E": "Siswa dapat menyalin kembali materi dari buku teks."
-    },
-    "jawaban": "C"
-  }
-]
-[
-  {
-    "id": 31,
-    "pertanyaan": "Guru SKI mengaitkan materi masuknya Islam ke Nusantara dengan pendekatan inkuiri. Siswa diminta menelaah beberapa sumber digital tentang teori Gujarat, Mekkah, Persia, dan Cina, kemudian menarik kesimpulan berdasarkan bukti sejarah.\n\nTujuan pembelajaran ranah pengetahuan yang paling sesuai adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan nama-nama teori masuknya Islam ke Nusantara.",
-      "B": "Siswa dapat menjelaskan pengertian teori Gujarat dan Mekkah.",
-      "C": "Siswa dapat menganalisis teori masuknya Islam ke Nusantara berdasarkan bukti sejarah.",
-      "D": "Siswa dapat menghafalkan tokoh-tokoh pendukung teori masuknya Islam.",
-      "E": "Siswa dapat menyalin tabel teori masuknya Islam ke Nusantara."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 32,
-    "pertanyaan": "Dalam pembelajaran berbasis proyek, guru meminta siswa membuat pameran virtual tentang kerajaan-kerajaan Islam di Nusantara dengan menonjolkan nilai toleransi dan akulturasi budaya.\n\nTujuan pembelajaran ranah sikap yang paling tepat adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan nama kerajaan-kerajaan Islam di Nusantara.",
-      "B": "Siswa dapat menjelaskan latar belakang berdirinya kerajaan Islam.",
-      "C": "Siswa dapat menunjukkan sikap menghargai keberagaman budaya dalam sejarah Islam Nusantara.",
-      "D": "Siswa dapat menghafalkan tahun berdirinya kerajaan Islam.",
-      "E": "Siswa dapat menyalin kembali materi dari buku teks."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 33,
-    "pertanyaan": "Guru SKI merancang pembelajaran diferensiasi pada materi peran ulama Nusantara. Sebagian siswa diminta menulis esai, sebagian membuat video, dan sebagian membuat poster digital.\n\nTujuan pembelajaran ranah keterampilan yang paling sesuai adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan nama ulama Nusantara.",
-      "B": "Siswa dapat menjelaskan peran ulama Nusantara secara lisan.",
-      "C": "Siswa dapat menyajikan peran ulama Nusantara melalui berbagai media kreatif.",
-      "D": "Siswa dapat menghafalkan tahun kelahiran ulama Nusantara.",
-      "E": "Siswa dapat menyalin teks biografi ulama Nusantara."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 34,
-    "pertanyaan": "Dalam pembelajaran reflektif sejarah kolonialisme, guru mengajak siswa menganalisis peran tokoh-tokoh Islam dalam perlawanan terhadap penjajahan dan dampaknya bagi semangat kebangsaan.\n\nIndikator tujuan pembelajaran HOTS yang paling tepat adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan nama tokoh perlawanan Islam.",
-      "B": "Siswa dapat menjelaskan latar belakang penjajahan di Indonesia.",
-      "C": "Siswa dapat menganalisis peran tokoh Islam dalam perlawanan terhadap penjajahan.",
-      "D": "Siswa dapat menghafalkan tahun terjadinya perlawanan.",
-      "E": "Siswa dapat menuliskan kembali cerita perlawanan dari buku."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 35,
-    "pertanyaan": "Guru SKI mengintegrasikan materi pergerakan nasional dengan nilai persatuan. Siswa diminta mendiskusikan kontribusi organisasi Islam dalam memperjuangkan kemerdekaan Indonesia.\n\nTujuan pembelajaran ranah sikap yang paling sesuai adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan nama organisasi Islam pada masa pergerakan nasional.",
-      "B": "Siswa dapat menjelaskan tujuan organisasi Islam dalam pergerakan nasional.",
-      "C": "Siswa dapat menunjukkan sikap menghargai semangat persatuan dalam perjuangan bangsa.",
-      "D": "Siswa dapat menghafalkan tahun berdirinya organisasi Islam.",
-      "E": "Siswa dapat menyalin kembali materi dari buku teks."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 36,
-    "pertanyaan": "Dalam pembelajaran berbasis studi kasus, guru meminta siswa menganalisis peran ulama dalam proses perumusan dasar negara Indonesia dan kaitannya dengan nilai-nilai Islam.\n\nTujuan pembelajaran ranah pengetahuan yang paling tepat adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan nama ulama yang terlibat dalam perumusan dasar negara.",
-      "B": "Siswa dapat menjelaskan kronologi sidang BPUPKI.",
-      "C": "Siswa dapat menganalisis peran ulama dalam perumusan dasar negara Indonesia.",
-      "D": "Siswa dapat menghafalkan tanggal peristiwa perumusan dasar negara.",
-      "E": "Siswa dapat menyalin teks pidato tokoh ulama."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 37,
-    "pertanyaan": "Guru SKI meminta siswa membuat refleksi digital tentang kontribusi tokoh-tokoh Islam dalam mempertahankan kemerdekaan Indonesia pasca Proklamasi.\n\nTujuan pembelajaran ranah keterampilan yang paling sesuai adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan nama tokoh Islam pasca Proklamasi.",
-      "B": "Siswa dapat menjelaskan peristiwa pasca Proklamasi secara lisan.",
-      "C": "Siswa dapat menyusun refleksi digital tentang kontribusi tokoh Islam pasca Proklamasi.",
-      "D": "Siswa dapat menghafalkan tanggal peristiwa penting pasca Proklamasi.",
-      "E": "Siswa dapat menyalin kembali materi dari buku teks."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 38,
-    "pertanyaan": "Dalam pembelajaran kontekstual, guru meminta siswa mengaitkan nilai-nilai perjuangan tokoh Islam masa kemerdekaan dengan tantangan kehidupan pelajar masa kini.\n\nIndikator tujuan pembelajaran HOTS yang paling tepat adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan nilai-nilai perjuangan tokoh Islam.",
-      "B": "Siswa dapat menjelaskan sejarah kemerdekaan Indonesia.",
-      "C": "Siswa dapat mengaitkan nilai perjuangan tokoh Islam dengan kehidupan masa kini.",
-      "D": "Siswa dapat menghafalkan biografi tokoh Islam masa kemerdekaan.",
-      "E": "Siswa dapat menuliskan kembali materi dari buku teks."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 39,
-    "pertanyaan": "Guru SKI mengajak siswa membuat proyek kolaboratif tentang perkembangan Islam di Indonesia pada era modern dengan memanfaatkan berbagai sumber digital.\n\nTujuan pembelajaran ranah keterampilan yang paling tepat adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan ciri perkembangan Islam di Indonesia era modern.",
-      "B": "Siswa dapat menjelaskan faktor perkembangan Islam di Indonesia.",
-      "C": "Siswa dapat menyajikan proyek kolaboratif tentang perkembangan Islam di Indonesia era modern.",
-      "D": "Siswa dapat menghafalkan tahun peristiwa perkembangan Islam modern.",
-      "E": "Siswa dapat menyalin kembali materi dari buku teks."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 40,
-    "pertanyaan": "Dalam pembelajaran reflektif, guru meminta siswa menilai peran organisasi Islam kontemporer dalam menjaga persatuan dan keutuhan bangsa Indonesia melalui diskusi dan esai digital.\n\nTujuan pembelajaran yang paling tepat adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan nama organisasi Islam kontemporer.",
-      "B": "Siswa dapat menjelaskan sejarah berdirinya organisasi Islam kontemporer.",
-      "C": "Siswa dapat menilai peran organisasi Islam kontemporer dalam menjaga persatuan bangsa.",
-      "D": "Siswa dapat menghafalkan tahun berdirinya organisasi Islam kontemporer.",
-      "E": "Siswa dapat menyalin kembali materi dari buku teks."
-    },
-    "jawaban": "C"
-  }
-]
-[
-  {
-    "id": 41,
-    "pertanyaan": "Guru SKI mengaitkan materi perkembangan Islam di Indonesia dengan isu toleransi beragama di masyarakat modern. Siswa diminta membaca artikel digital tentang praktik toleransi antarumat beragama di Indonesia dan mendiskusikannya dalam kelompok.\n\nTujuan pembelajaran ranah sikap yang paling sesuai dengan kegiatan tersebut adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan contoh praktik toleransi beragama di Indonesia.",
-      "B": "Siswa dapat menjelaskan pengertian toleransi beragama.",
-      "C": "Siswa dapat menunjukkan sikap toleran dalam kehidupan bermasyarakat.",
-      "D": "Siswa dapat menghafalkan peraturan tentang kebebasan beragama.",
-      "E": "Siswa dapat menyalin kembali artikel toleransi beragama."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 42,
-    "pertanyaan": "Dalam pembelajaran berbasis literasi digital, guru meminta siswa menganalisis pengaruh media sosial terhadap pemahaman keislaman generasi muda melalui diskusi dan laporan singkat.\n\nTujuan pembelajaran ranah pengetahuan yang paling tepat adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan jenis-jenis media sosial.",
-      "B": "Siswa dapat menjelaskan fungsi media sosial.",
-      "C": "Siswa dapat menganalisis pengaruh media sosial terhadap pemahaman keislaman generasi muda.",
-      "D": "Siswa dapat menghafalkan istilah-istilah media sosial.",
-      "E": "Siswa dapat menyalin kembali materi dari buku teks."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 43,
-    "pertanyaan": "Guru SKI mengajak siswa membuat kampanye digital tentang nilai Islam rahmatan lil ‘alamin dalam kehidupan bermasyarakat melalui poster atau video.\n\nTujuan pembelajaran ranah keterampilan yang paling sesuai adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan pengertian Islam rahmatan lil ‘alamin.",
-      "B": "Siswa dapat menjelaskan dalil tentang Islam rahmatan lil ‘alamin.",
-      "C": "Siswa dapat menghasilkan kampanye digital tentang nilai Islam rahmatan lil ‘alamin.",
-      "D": "Siswa dapat menghafalkan ayat Al-Qur’an tentang rahmat.",
-      "E": "Siswa dapat menyalin kembali materi dari buku teks."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 44,
-    "pertanyaan": "Dalam pembelajaran reflektif, guru meminta siswa mengevaluasi tantangan dakwah Islam di era globalisasi, seperti arus informasi dan budaya populer, melalui esai digital.\n\nIndikator tujuan pembelajaran HOTS yang paling tepat adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan tantangan dakwah Islam di era globalisasi.",
-      "B": "Siswa dapat menjelaskan pengertian globalisasi.",
-      "C": "Siswa dapat mengevaluasi tantangan dakwah Islam di era globalisasi.",
-      "D": "Siswa dapat menghafalkan contoh dakwah Islam modern.",
-      "E": "Siswa dapat menyalin kembali materi dari buku teks."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 45,
-    "pertanyaan": "Guru SKI mengintegrasikan pembelajaran kewarganegaraan dengan nilai Islam melalui diskusi tentang peran umat Islam dalam menjaga keutuhan Negara Kesatuan Republik Indonesia.\n\nTujuan pembelajaran ranah sikap yang paling sesuai adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan kewajiban warga negara Indonesia.",
-      "B": "Siswa dapat menjelaskan konsep NKRI.",
-      "C": "Siswa dapat menunjukkan sikap tanggung jawab sebagai warga negara yang berlandaskan nilai Islam.",
-      "D": "Siswa dapat menghafalkan pasal-pasal UUD 1945.",
-      "E": "Siswa dapat menyalin kembali materi dari buku teks."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 46,
-    "pertanyaan": "Dalam pembelajaran berbasis proyek, guru meminta siswa merancang solusi digital untuk mencegah radikalisme dengan mengedepankan nilai moderasi beragama.\n\nTujuan pembelajaran ranah keterampilan yang paling tepat adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan pengertian radikalisme.",
-      "B": "Siswa dapat menjelaskan ciri-ciri radikalisme.",
-      "C": "Siswa dapat merancang solusi digital pencegahan radikalisme berbasis moderasi beragama.",
-      "D": "Siswa dapat menghafalkan contoh kasus radikalisme.",
-      "E": "Siswa dapat menyalin kembali materi dari buku teks."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 47,
-    "pertanyaan": "Guru SKI mengajak siswa melakukan refleksi tentang peran pelajar Muslim dalam membangun perdamaian dunia melalui diskusi dan jurnal reflektif.\n\nTujuan pembelajaran ranah sikap yang paling tepat adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan contoh konflik dunia.",
-      "B": "Siswa dapat menjelaskan pengertian perdamaian dunia.",
-      "C": "Siswa dapat menunjukkan sikap cinta damai sebagai pelajar Muslim.",
-      "D": "Siswa dapat menghafalkan tokoh-tokoh perdamaian dunia.",
-      "E": "Siswa dapat menyalin kembali materi dari buku teks."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 48,
-    "pertanyaan": "Dalam pembelajaran kontekstual, guru meminta siswa menganalisis peran teknologi dalam mendukung dakwah Islam di era digital melalui studi kasus.\n\nTujuan pembelajaran ranah pengetahuan yang paling sesuai adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan jenis teknologi digital.",
-      "B": "Siswa dapat menjelaskan pengertian dakwah digital.",
-      "C": "Siswa dapat menganalisis peran teknologi dalam dakwah Islam di era digital.",
-      "D": "Siswa dapat menghafalkan contoh media dakwah digital.",
-      "E": "Siswa dapat menyalin kembali materi dari buku teks."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 49,
-    "pertanyaan": "Guru SKI mengintegrasikan pembelajaran literasi dengan nilai Islam melalui tugas menulis opini tentang etika berkomunikasi di media sosial menurut perspektif Islam.\n\nTujuan pembelajaran HOTS yang paling tepat adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan etika berkomunikasi di media sosial.",
-      "B": "Siswa dapat menjelaskan dalil tentang etika komunikasi.",
-      "C": "Siswa dapat menilai etika berkomunikasi di media sosial menurut perspektif Islam.",
-      "D": "Siswa dapat menghafalkan ayat tentang komunikasi.",
-      "E": "Siswa dapat menyalin kembali materi dari buku teks."
-    },
-    "jawaban": "C"
-  },
-  {
-    "id": 50,
-    "pertanyaan": "Dalam pembelajaran penutup, guru meminta siswa melakukan refleksi akhir semester tentang penerapan nilai-nilai sejarah Islam dalam kehidupan sehari-hari melalui jurnal digital.\n\nTujuan pembelajaran yang paling sesuai adalah …",
-    "opsi": {
-      "A": "Siswa dapat menyebutkan materi sejarah Islam yang telah dipelajari.",
-      "B": "Siswa dapat menjelaskan kembali isi jurnal secara lisan.",
-      "C": "Siswa dapat merefleksikan penerapan nilai-nilai sejarah Islam dalam kehidupan sehari-hari.",
-      "D": "Siswa dapat menghafalkan rangkuman materi semester.",
-      "E": "Siswa dapat menyalin kembali materi dari buku teks."
-    },
-    "jawaban": "C"
+    "q": "Guru mengajarkan materi penyebaran Islam di berbagai wilayah dunia dengan pendekatan deep learning, dimulai dari Indonesia kemudian diperluas ke Asia Tenggara dan dunia. Alur materi ajar yang paling tepat adalah …",
+    "o": [
+      "Menjelaskan penyebaran Islam secara umum tanpa fokus wilayah",
+      "Menghafalkan tahun masuknya Islam di setiap wilayah",
+      "Menganalisis penyebaran Islam di Indonesia lalu membandingkannya dengan wilayah lain",
+      "Menyajikan video tanpa diskusi lanjutan",
+      "Membahas satu wilayah secara rinci dan mengabaikan wilayah lain"
+    ],
+    "a": 2
   }
 ]
