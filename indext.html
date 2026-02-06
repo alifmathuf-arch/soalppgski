@@ -13,6 +13,11 @@
 <img src="logo.png" class="logo">
 <h2>LATIHAN UP PPG SKI BATCH IV 2025</h2>
 
+  <select id="mode">
+<option value="ujian">Mode Ujian</option>
+<option value="latihan">Mode Latihan</option>
+</select>
+
 <input type="text" id="nama" placeholder="Nama Peserta">
 <button onclick="mulaiUjian()">Mulai Ujian</button>
 </div>
@@ -22,6 +27,11 @@
 <div class="header">
 <span id="timer">Waktu: 50:00</span>
 </div>
+<div class="progressWrap">
+<div id="progressBar"></div>
+</div>
+
+<div id="gridSoal"></div>
 
 <div class="card">
 <h3 id="nomor"></h3>
@@ -42,12 +52,15 @@
 <p id="hasil"></p>
 <button onclick="location.reload()">Ulangi</button>
 </div>
+<h3>Leaderboard</h3>
+<div id="leaderboard"></div>
 
 <script src="banksoal.js"></script>
 <script src="script.js"></script>
 
 </body>
 </html>
+
 
 
 
