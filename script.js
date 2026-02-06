@@ -193,31 +193,40 @@ selesai();
 }
 
 
-// SELESAI
-function selesai(){
+// =======================
+// FUNGSI SELESAI UJIAN
+// =======================
+function selesai(e){
 
-if(!confirm("Apakah Anda yakin ingin mengakhiri ujian?")){
-return;
-}
+  // cegah tombol submit form
+  if (e) e.preventDefault();
 
-clearInterval(timerInterval);
+  // konfirmasi selesai
+  if (!confirm("Apakah Anda yakin ingin mengakhiri ujian?")) {
+    return;
+  }
 
-/* kode selesai lama tetap di bawah */
+  // hentikan timer
+  clearInterval(timerInterval);
 
-let skor=0;
+  // hitung skor
+  let skor = 0;
 
-soalUjian.forEach((s,i)=>{
-if(jawaban[i]===s.a) skor+= 2;
-});
+  soalUjian.forEach((s, i) => {
+    if (jawaban[i] === s.a) skor += 2;
+  });
 
-document.getElementById("quizPage").classList.add("hidden");
-document.getElementById("resultPage").classList.remove("hidden");
+  // sembunyikan halaman ujian
+  document.getElementById("quizPage").classList.add("hidden");
 
-document.getElementById("hasil").innerText=
+  // tampilkan hasil
+  document.getElementById("resultPage").classList.remove("hidden");
+
+  // tampilkan skor
+  document.getElementById("hasil").innerText =
 `${peserta} (${kelas})
 
 Skor: ${skor}/${soalUjian.length}`;
-
 }
 
 
