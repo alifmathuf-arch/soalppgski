@@ -6,16 +6,23 @@
 <title>LATIHAN SOAL UP PPG</title>
 <link rel="stylesheet" href="style.css">
 </head>
+<body class="light">
 
-<body>
+<!-- MODE SIANG / MALAM -->
+<div class="modeToggle">
+  <label>
+    <input type="checkbox" id="toggleMode" onchange="toggleMode()">
+    Mode Malam
+  </label>
+</div>
 
 <!-- LOGIN PAGE -->
 <div id="loginPage" class="card">
+
   <img src="logo.png" class="logo" alt="Logo Madrasah">
   <h2>LATIHAN SOAL UP PPG</h2>
-  <p>Bank Soal Try Out Sesuai Kisi-Kisi UP</p>
+  <p>Soal SJT & PCK Sesuai Kisi-Kisi UP</p>
 
-  <!-- MODE SELECTION -->
   <div class="modeWrap">
     <button id="btnLatihan" class="mode active" onclick="setMode('latihan')">Mode Latihan</button>
     <button id="btnUjian" class="mode" onclick="setMode('ujian')">Mode Ujian</button>
@@ -38,12 +45,10 @@
     <div id="progressBar"></div>
   </div>
 
-  <!-- GRID SOAL -->
   <div class="gridWrap">
     <div id="gridSoal"></div>
   </div>
 
-  <!-- CARD SOAL -->
   <div class="card">
     <h3 id="nomor"></h3>
     <p id="soal"></p>
@@ -97,6 +102,6 @@
 
 <script src="script.js"></script>
 </body>
+  <!-- TIMER MENGAPUNG -->
+<span id="timer">Waktu: 120:00</span>
 </html>
-
-
