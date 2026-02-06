@@ -1,7 +1,7 @@
 // ==========================
 // GLOBAL
 // ==========================
-
+let mode="ujian";
 let bankSoal = [];
 let soalUjian = [];
 let jawaban = [];
@@ -44,7 +44,7 @@ function mulaiUjian(){
         alert("Soal belum siap… tunggu sebentar");
         return;
     }
-
+    mode=document.getElementById("mode").value;
     peserta = document.getElementById("nama").value.trim();
     kelas = document.getElementById("kelas").value.trim();
 
@@ -63,6 +63,8 @@ function mulaiUjian(){
 
     tampilkanSoal();
     mulaiTimer();
+    updateProgress();
+    updateGrid();
 
 }
 
@@ -84,6 +86,40 @@ function acakSoal(){
 
 }
 
+function updateProgress(){
+
+let persen =
+((index+1)/soalUjian.length)*100;
+
+document.getElementById("progressBar")
+.style.width=persen+"%";
+
+}
+function updateGrid(){
+
+let html="";
+
+for(let i=0;i<soalUjian.length;i++){
+
+let done=jawaban[i]!=null?"gridDone":"";
+
+html+=`
+<div class="gridBtn ${done}"
+onclick="lompat(${i})">${i+1}</div>`;
+
+}
+
+document.getElementById("gridSoal")
+.innerHTML=html;
+
+}
+
+function lompat(i){
+
+index=i;
+tampilkanSoal();
+
+}
 
 // ==========================
 // TAMPIL SOAL
@@ -132,6 +168,22 @@ function pilih(i){
 
 }
 
+function pilih(i){
+
+jawaban[index]=i;
+
+if(mode==="latihan"){
+
+let benar=
+i===soalUjian[index].a;
+
+alert(benar?"✔ Benar":"✘ Salah");
+
+}
+
+tampilkanSoal();
+
+}
 
 // ==========================
 // NAVIGASI
@@ -205,5 +257,41 @@ function selesai(){
 `${peserta} (${kelas})
 
 Skor: ${skor}/${soalUjian.length}`;
+simpanLeaderboard(peserta,skor);
+tampilLeaderboard();
+
+}
+
+function simpanLeaderboard(nama,skor){
+
+let data=
+JSON.parse(localStorage.getItem("rank")||"[]");
+
+data.push({nama,skor});
+
+data.sort((a,b)=>b.skor-a.skor);
+
+data=data.slice(0,5);
+
+localStorage.setItem("rank",
+JSON.stringify(data));
+
+}
+
+function tampilLeaderboard(){
+
+let data=
+JSON.parse(localStorage.getItem("rank")||"[]");
+
+let html="";
+
+data.forEach((d,i)=>{
+
+html+=`${i+1}. ${d.nama} — ${d.skor}<br>`;
+
+});
+
+document.getElementById("leaderboard")
+.innerHTML=html;
 
 }
