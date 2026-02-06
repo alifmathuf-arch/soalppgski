@@ -192,7 +192,9 @@ document.getElementById("resultPage").classList.remove("hidden");
 document.getElementById("hasil").innerText=
 `${peserta} (${kelas})
 
-Skor: ${skor}/50`;
+Skor: ${skor}/${soalUjian.length}
+
 
 }
+
 
