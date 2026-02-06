@@ -3,30 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Latihan Soal UP PPG SKI Batch IV 2025</title>
+
+<title>LATIHAN UP PPG SKI BATCH IV 2025</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- LOGIN -->
+<!-- LOGIN PAGE -->
 <div id="loginPage" class="card">
+
 <img src="logo.png" class="logo">
 
-<h2>Latihan Soal UP PPG SKI Batch IV 2025</h2>
+<h2>LATIHAN UP PPG SKI</h2>
 
-<input type="text" id="nama" placeholder="Nama Peserta">
-<input type="text" id="kelas" placeholder="Kelas">
+<select id="mode">
+<option value="ujian">Mode Ujian</option>
+<option value="latihan">Mode Latihan</option>
+</select>
+
+<input id="nama" placeholder="Nama Peserta">
+<input id="kelas" placeholder="Kelas">
 
 <button onclick="mulaiUjian()">Mulai Ujian</button>
+
 </div>
 
-<!-- QUIZ -->
+
+<!-- QUIZ PAGE -->
 <div id="quizPage" class="hidden">
 
 <div class="header">
 <span id="timer">Waktu: 50:00</span>
 </div>
+
+<div class="progressWrap">
+<div id="progressBar"></div>
+</div>
+
+<div id="gridSoal"></div>
 
 <div class="card">
 
@@ -36,25 +52,31 @@
 <div id="opsi"></div>
 
 <div class="nav">
-<button onclick="prevSoal()">← Sebelumnya</button>
-<button onclick="nextSoal()">Berikutnya →</button>
+<button onclick="prevSoal()">←</button>
+<button onclick="nextSoal()">→</button>
 </div>
 
-<button class="finishBtn" onclick="selesai()">Selesai Ujian</button>
+<button class="finishBtn" onclick="selesai()">Selesai</button>
 
 </div>
 </div>
 
-<!-- HASIL -->
+
+<!-- RESULT PAGE -->
 <div id="resultPage" class="card hidden">
+
 <h2>Hasil Ujian</h2>
+
 <p id="hasil"></p>
+
+<h3>Leaderboard</h3>
+<div id="leaderboard"></div>
+
 <button onclick="location.reload()">Ulangi</button>
+
 </div>
-  
+
 <script src="script.js"></script>
 
 </body>
 </html>
-
-
