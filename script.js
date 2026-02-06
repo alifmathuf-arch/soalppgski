@@ -198,20 +198,18 @@ selesai();
 // =======================
 function selesai(){
 
-  if (!confirm("Apakah Anda yakin ingin mengakhiri ujian?")) return;
+clearInterval(timerInterval);
 
-  clearInterval(timerInterval);
+let skor = 0;
 
-  let skor = 0;
+soalUjian.forEach((s,i)=>{
+if(jawaban[i] === s.a) skor += 2;
+});
 
-  soalUjian.forEach((s,i)=>{
-    if(jawaban[i] === s.a) skor += 2;
-  });
+document.getElementById("quizPage").classList.add("hidden");
+document.getElementById("resultPage").classList.remove("hidden");
 
-  document.getElementById("quizPage").classList.add("hidden");
-  document.getElementById("resultPage").classList.remove("hidden");
-
-  document.getElementById("hasil").innerText =
+document.getElementById("hasil").innerText =
 `${peserta} (${kelas})
 
 Skor: ${skor}/${soalUjian.length}`;
