@@ -208,11 +208,24 @@ function selesai(){
     }
   });
 
+  // sembunyikan halaman quiz
   document.getElementById("quizPage").classList.add("hidden");
   document.getElementById("resultPage").classList.remove("hidden");
 
-  // Tampilkan data
+  // tampilkan nama & kelas
   document.getElementById("pesertaNama").innerText = peserta;
   document.getElementById("pesertaKelas").innerText = kelas;
+
+  // tampilkan skor
   document.getElementById("hasilSkor").innerText = skor;
+
+  // tentukan lulus atau gagal
+  const resultFrame = document.getElementById("resultFrame");
+  if(skor >= 80){
+    resultFrame.classList.add("lulus");
+    resultFrame.classList.remove("gagal");
+  } else {
+    resultFrame.classList.add("gagal");
+    resultFrame.classList.remove("lulus");
+  }
 }
