@@ -5,8 +5,11 @@ let jawaban = [];
 let peserta = "", kelas = "", mode = "latihan";
 let index = 0;
 
-let waktu = 120 * 60; // 120 menit
+let waktu = 120 * 60; // 120 menit default
 let timer;
+
+// JUMLAH SOAL MODE LATIHAN
+const JUMLAH_LATIHAN = 10;
 
 // LOAD SOAL
 fetch("soal.json")
@@ -14,9 +17,10 @@ fetch("soal.json")
   .then(d => bankSoal = d)
   .catch(() => alert("Soal gagal dimuat"));
 
-// MODE SELECT
+// SET MODE LATIHAN / UJIAN
 function setMode(m) {
   mode = m;
+
   document.getElementById("btnLatihan").classList.remove("active");
   document.getElementById("btnUjian").classList.remove("active");
 
@@ -37,28 +41,31 @@ function mulaiUjian() {
   peserta = nama;
   kelas = kelasInput;
 
-  acak();
+  acakSoal();
   index = 0;
+
+  // waktu default bisa beda untuk mode ujian vs latihan
   waktu = 120 * 60;
 
   document.getElementById("loginPage").classList.add("hidden");
   document.getElementById("quizPage").classList.remove("hidden");
 
-  tampil();
+  tampilSoal();
   timerStart();
 }
 
-// ACAK SOAL
-function acak() {
+// ACAK SOAL SESUAI MODE
+function acakSoal() {
   let temp = [...bankSoal];
   temp.sort(() => Math.random() - 0.5);
-  let j = Math.min(120, temp.length);
-  soalUjian = temp.slice(0, j);
-  jawaban = new Array(j).fill(null);
+
+  let jumlah = mode === "latihan" ? Math.min(JUMLAH_LATIHAN, temp.length) : Math.min(120, temp.length);
+  soalUjian = temp.slice(0, jumlah);
+  jawaban = new Array(jumlah).fill(null);
 }
 
-// TAMPIL SOAL
-function tampil() {
+// TAMPILKAN SOAL
+function tampilSoal() {
   let s = soalUjian[index];
 
   document.getElementById("nomor").innerText =
@@ -72,7 +79,7 @@ function tampil() {
   s.o.forEach((o, i) => {
     let sel = jawaban[index] === i ? "selected" : "";
     html += `
-      <div class="opsi ${sel}" onclick="pilih(${i})">
+      <div class="opsi ${sel}" onclick="pilihJawaban(${i})">
         <b>${huruf[i]}.</b> ${o}
       </div>`;
   });
@@ -88,20 +95,20 @@ function tampil() {
 }
 
 // PILIH JAWABAN
-function pilih(i) {
+function pilihJawaban(i) {
   jawaban[index] = i;
 
-  // update skor realtime jika mode latihan
+  // untuk mode latihan langsung kasih alert
   if (mode === "latihan") {
     alert(i === soalUjian[index].a ? "✔ Benar" : "✘ Salah");
   }
 
-  tampil();
+  tampilSoal();
 }
 
 // NAVIGASI
-function nextSoal() { if (index < soalUjian.length - 1) { index++; tampil(); } }
-function prevSoal() { if (index > 0) { index--; tampil(); } }
+function nextSoal() { if (index < soalUjian.length - 1) { index++; tampilSoal(); } }
+function prevSoal() { if (index > 0) { index--; tampilSoal(); } }
 
 // PROGRESS BAR
 function updateProgress() {
@@ -114,14 +121,14 @@ function updateGrid() {
   let html = "";
   for (let i = 0; i < soalUjian.length; i++) {
     let done = jawaban[i] != null ? "gridDone" : "";
-    html += `<div class="gridBtn ${done}" onclick="lompat(${i})">${i + 1}</div>`;
+    html += `<div class="gridBtn ${done}" onclick="lompatSoal(${i})">${i + 1}</div>`;
   }
   document.getElementById("gridSoal").innerHTML = html;
 }
 
-function lompat(i) {
+function lompatSoal(i) {
   index = i;
-  tampil();
+  tampilSoal();
 }
 
 // TIMER
@@ -150,24 +157,25 @@ function selesai() {
 
   soalUjian.forEach((s, i) => {
     if (jawaban[i] === s.a) {
-      skor += 2; // nilai per soal
+      skor += 2;
       benar++;
     }
   });
 
+  // sembunyikan quiz
   document.getElementById("quizPage").classList.add("hidden");
   document.getElementById("resultPage").classList.remove("hidden");
 
-  // tampilkan nama & kelas
+  // tampilkan info peserta
   document.getElementById("pesertaNama").innerText = peserta;
   document.getElementById("pesertaKelas").innerText = kelas;
 
-  // tampilkan skor & jawaban benar
+  // skor & jawaban benar
   document.getElementById("hasilSkor").innerText = skor;
   document.getElementById("hasilDetail").innerText =
     `Jawaban benar: ${benar} dari ${soalUjian.length} soal`;
 
-  // tentukan lulus / gagal
+  // lulus / gagal
   const resultFrame = document.getElementById("resultFrame");
   if (skor >= 80) {
     resultFrame.classList.add("lulus");
