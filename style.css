@@ -1,8 +1,12 @@
+*{
+box-sizing:border-box;
+}
+
 body{
-font-family:Arial;
+font-family:Arial, sans-serif;
 background:#0b2545;
 margin:0;
-padding:10px;
+padding:15px;
 color:#fff;
 }
 
@@ -11,19 +15,25 @@ background:#134074;
 padding:20px;
 border-radius:12px;
 max-width:500px;
+width:100%;
 margin:auto;
 box-shadow:0 0 12px rgba(0,0,0,0.3);
 }
 
-.hidden{display:none;}
+.hidden{
+display:none;
+}
 
 .logo{
-width:130px;
+width:120px;
 display:block;
 margin:10px auto;
 }
 
-h2,h3{ text-align:center; }
+h2,h3{
+text-align:center;
+margin:10px 0;
+}
 
 input{
 width:100%;
@@ -32,6 +42,7 @@ margin:8px 0;
 border:none;
 border-radius:8px;
 font-size:16px;
+display:block;
 }
 
 button{
@@ -45,9 +56,12 @@ color:#002b36;
 font-size:16px;
 font-weight:bold;
 cursor:pointer;
+display:block;
 }
 
-button:hover{opacity:0.9;}
+button:hover{
+opacity:0.9;
+}
 
 .opsi{
 padding:12px;
@@ -65,7 +79,7 @@ color:#002b36;
 .header{
 text-align:center;
 font-weight:bold;
-margin:10px;
+margin:10px 0;
 font-size:18px;
 }
 
@@ -77,9 +91,10 @@ gap:10px;
 .finishBtn{
 background:#ffb703;
 color:black;
-margin-top:15px;
 }
 
 @media(max-width:600px){
-.card{padding:15px;}
+.card{
+padding:15px;
+}
 }
