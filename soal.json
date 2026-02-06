@@ -1,12 +1,52 @@
 [
   {
-    "q": "Seorang guru merancang beberapa tujuan pembelajaran berikut:",
+    "q": "Berdasarkan tujuan pembelajaran di atas ranah sikap yang paling sesuai dengan indikator meningkatkan keimanan, ketakwaan, dan akhlak mulia adalah …",
     "o": [
-      "1.Menganalisis struktur sosial masyarakat Arab pra Islam",
-      "2.Menghargai datangnya Islam sebagai rahmat bagi semesta",
-      "3.Menyajikan video digital tentang perubahan budaya Arab",
-      "4.Menunjukkan sikap menolak perilaku jahiliyah"
+      "1 dan 3",
+      "1 dan 5",
+      "2 dan 4",
+      "3 dan 5"
     ],
     "a": 2
+  },
+  {
+    "q": "Rumusan tujuan pembelajaran ranah pengetahuan yang paling sesuai dengan indikator berpikir kritis adalah …",
+    "o": [
+      "Peserta didik dapat menghafalkan kronologi dakwah Nabi Muhammad di Mekkah.",
+      "Peserta didik dapat membandingkan strategi dakwah Nabi Muhammad dengan tokoh lain.",
+      "Peserta didik dapat menjelaskan proses dakwah Nabi Muhammad sebelum hijrah ke Madinah.",
+      "Peserta didik dapat menganalisis tantangan dakwah Nabi Muhammad di Mekkah."
+    ],
+    "a": 3
+  },
+  {
+    "q": "Rumusan tujuan pembelajaran ranah keterampilan yang paling sesuai dengan indikator peserta didik memiliki semangat gotong royong adalah …",
+    "o": [
+      "Peserta didik dapat menyusun laporan tentang strategi politik Abu Bakar dengan rinci.",
+      "Peserta didik dapat mempresentasikan hasil analisis sistem pemerintahan Abu Bakar secara individu.",
+      "Peserta didik dapat membuat peta konsep digital mengenai pemerintahan Abu Bakar.",
+      "Peserta didik dapat merancang proyek kolaboratif berbasis teknologi untuk meneladani Abu Bakar."
+    ],
+    "a": 3
+  },
+  {
+    "q": "Guru meminta siswa menyusun poster digital kolaboratif yang menampilkan teori masuknya Islam beserta tradisi yang dihasilkannya untuk menumbuhkan sikap penerimaan terhadap keragaman tradisi. Rumusan tujuan pembelajaran ranah sikap yang paling sesuai adalah …",
+    "o": [
+      "Peserta didik dapat menghafalkan nama-nama teori masuknya Islam di Asia Tenggara.",
+      "Peserta didik dapat menyalin ulang tabel teori masuknya Islam dengan bukti tradisinya.",
+      "Peserta didik dapat menjelaskan hubungan antara teori masuknya Islam dan bukti sejarahnya.",
+      "Peserta didik dapat membuat poster digital kolaboratif penerimaan tradisi masuknya Islam."
+    ],
+    "a": 3
+  },
+  {
+    "q": "Berdasarkan data di atas, rumusan indikator tujuan pembelajaran ranah pengetahuan yang paling mencerminkan kemampuan berpikir dinamis dan inovatif adalah …",
+    "o": [
+      "Mengidentifikasi kebijakan politik Dinasti Ayubiyah yang berhubungan dengan stabilitas wilayah.",
+      "Menyusun ringkasan tentang dampak kebijakan sosial Dinasti Ayubiyah terhadap masyarakat multikultural.",
+      "Menganalisis hubungan antara kebijakan ekonomi Dinasti Ayubiyah dan kesejahteraan masyarakat.",
+      "Merancang model pemerintahan modern Dinasti Ayubiyah berbasis media interaktif."
+    ],
+    "a": 3
   }
 ]
