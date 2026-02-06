@@ -1,4 +1,5 @@
 let peserta="";
+let kelas="";
 let soalUjian=[];
 let jawaban=[];
 let index=0;
@@ -6,9 +7,19 @@ let waktu=50*60;
 
 function mulaiUjian(){
 peserta=document.getElementById("nama").value;
-if(!peserta) return alert("Isi nama dulu!");
+kelas=document.getElementById("kelas").value;
+
+if(!peserta || !kelas)
+return alert("Isi nama dan kelas!");
 
 acakSoal();
+
+document.getElementById("loginPage").classList.add("hidden");
+document.getElementById("quizPage").classList.remove("hidden");
+
+tampilkanSoal();
+timer();
+}
 
 document.getElementById("loginPage").classList.add("hidden");
 document.getElementById("quizPage").classList.remove("hidden");
@@ -77,5 +88,8 @@ document.getElementById("quizPage").classList.add("hidden");
 document.getElementById("resultPage").classList.remove("hidden");
 
 document.getElementById("hasil").innerText=
-`${peserta}, skor kamu: ${skor}/50`;
+`${peserta} (${kelas})
+Skor kamu: ${skor}/50`;
+
 }
+
