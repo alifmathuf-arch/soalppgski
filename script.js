@@ -99,4 +99,83 @@ document.getElementById("opsi").innerHTML = opsiHTML;
 
 function pilihJawaban(i) {
 
-jawaban[index]
+jawaban[index] = i;
+tampilkanSoal();
+
+}
+
+
+// =============================
+// NAVIGASI
+// =============================
+
+function nextSoal() {
+
+if (index < 49) {
+index++;
+tampilkanSoal();
+}
+
+}
+
+function prevSoal() {
+
+if (index > 0) {
+index--;
+tampilkanSoal();
+}
+
+}
+
+
+// =============================
+// TIMER
+// =============================
+
+function mulaiTimer() {
+
+timerInterval = setInterval(() => {
+
+waktu--;
+
+let menit = Math.floor(waktu / 60);
+let detik = waktu % 60;
+
+document.getElementById("timer").innerText =
+"Waktu: " + menit + ":" + (detik < 10 ? "0" : "") + detik;
+
+if (waktu <= 0) {
+clearInterval(timerInterval);
+selesai();
+}
+
+}, 1000);
+
+}
+
+
+// =============================
+// SELESAI UJIAN
+// =============================
+
+function selesai() {
+
+clearInterval(timerInterval);
+
+// hitung skor
+let skor = 0;
+
+soalUjian.forEach((s, i) => {
+if (jawaban[i] === s.a) skor++;
+});
+
+// tampil hasil
+document.getElementById("quizPage").classList.add("hidden");
+document.getElementById("resultPage").classList.remove("hidden");
+
+document.getElementById("hasil").innerText =
+`${peserta} (${kelas})
+
+Skor: ${skor} / 50`;
+
+}
