@@ -1,33 +1,40 @@
+/* Reset & font */
 *{
   box-sizing:border-box;
   font-family:Segoe UI,Roboto,sans-serif;
-  margin:0;
-  padding:0;
 }
 
-body{
-  margin:0;
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:flex-start;
-  padding:20px 10px;
-  color:white;
+/* BODY LIGHT / DARK */
+body.light{
   background: linear-gradient(135deg,#0f172a,#1e3a8a,#14b8a6);
+  color: #fff;
+}
+body.dark{
+  background: linear-gradient(135deg,#1a1a1a,#333,#555);
+  color: #eee;
+}
+
+/* MODE TOGGLE */
+.modeToggle{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+  font-size: 14px;
+  color: #fff;
 }
 
 /* CARD */
 .card{
+  margin-bottom:20px;
   width:95%;
   max-width:420px;
   padding:25px;
   border-radius:18px;
-  background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(12px);
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
   box-shadow:0 20px 40px rgba(0,0,0,.35);
   text-align:center;
-  margin-bottom:20px; /* jarak ke footer */
 }
 
 /* LOGO */
@@ -47,7 +54,7 @@ input{
   color:#111;
 }
 
-/* BUTTON UMUM */
+/* BUTTON */
 button{
   width:100%;
   padding:12px;
@@ -60,78 +67,11 @@ button{
   color:white;
   transition:.2s;
 }
-
 button:hover{
   transform:translateY(-2px);
 }
 
-/* MODE BUTTON */
-.modeWrap{
-  display:flex;
-  gap:8px;
-  margin-bottom:10px;
-}
-
-.mode{
-  flex:1;
-  background:#334155;
-}
-
-.mode.active{
-  background:#22c55e;
-}
-
-/* HEADER */
-.header{
-  text-align:center;
-  font-weight:bold;
-  margin-bottom:10px;
-}
-
-/* PROGRESS */
-.progressWrap{
-  width:420px;
-  max-width:95vw;
-  margin:auto;
-  background:#1e293b;
-  border-radius:10px;
-  overflow:hidden;
-}
-
-#progressBar{
-  height:8px;
-  width:0%;
-  background:#22c55e;
-  transition:.3s;
-}
-
-/* GRID WRAP */
-.gridWrap{
-  width:420px;
-  max-width:95vw;
-  margin:auto;
-}
-
-#gridSoal{
-  display:grid;
-  grid-template-columns:repeat(10,1fr);
-  gap:5px;
-  margin:10px 0;
-}
-
-.gridBtn{
-  background:#334155;
-  padding:6px;
-  border-radius:6px;
-  font-size:12px;
-  cursor:pointer;
-}
-
-.gridDone{
-  background:#22c55e;
-}
-
-/* OPSI */
+/* NAV & OPSI */
 .opsi{
   background:#f8fafc;
   color:#111;
@@ -140,108 +80,100 @@ button:hover{
   border-radius:10px;
   cursor:pointer;
 }
-
-.opsi:hover{
-  background:#e0f2fe;
-}
-
 .selected{
   background:#14b8a6!important;
   color:white;
 }
 
-/* NAV */
-.nav{
-  display:flex;
-  gap:8px;
-  margin-top:10px;
+/* PROGRESS BAR */
+.progressWrap{
+  width:420px;
+  max-width:95vw;
+  margin:auto;
+  background:#1e293b;
+  border-radius:10px;
+  overflow:hidden;
 }
-
-.nav button{
-  flex:1;
+#progressBar{
+  height:8px;
+  width:0%;
+  background:#22c55e;
+  transition:.3s;
 }
 
 /* FOOTER */
 .footer{
-  text-align:center;
-  font-size:12px;
-  color:#ddd;
-  padding:12px;
-  width:100%;
-  max-width:420px;
-  margin-top:auto; /* selalu di bawah */
+  text-align: center;
+  font-size: 12px;
+  color: #ddd;
+  padding: 12px;
+  width: 100%;
+  max-width: 420px;
+  margin-top: auto;
 }
 
 /* RESULT */
-#hasil{
-  white-space:pre-line;
-  margin:10px 0;
-}
-
-/* TOMBOL SELESAI */
-.finishBtn{
-  width: 100%;
-  padding: 12px;
-  margin-top: 20px;
-  border:none;
-  border-radius: 12px;
-  background: linear-gradient(135deg,#22c55e,#16a34a); /* hijau */
-  color:white;
-  font-weight:600;
-  cursor:pointer;
-  transition:.2s;
-}
-
-.finishBtn:hover{
-  transform: translateY(-2px);
-}
-
-.hidden{
-  display:none;
-}
-
-/* Card Hasil */
 .resultFrame{
-  background: rgba(255,255,255,0.15); /* lebih terang */
+  background: rgba(255,255,255,0.15);
   backdrop-filter: blur(8px);
   padding: 20px;
   border-radius: 20px;
   border: 2px solid rgba(255,255,255,0.3);
   box-shadow: 0 6px 15px rgba(0,0,0,0.25);
   text-align: left;
-  transition: all 0.5s ease;
 }
-
 .resultItem{
   margin-bottom: 15px;
   font-size: 16px;
   display:flex;
   justify-content: space-between;
-  color: #fff;
 }
-
 .resultItem .label{
-  font-weight: bold;
-  opacity: 0.9;
+  font-weight:bold;
+  opacity:0.9;
+}
+.scoreBox{
+  font-size: 22px;
+  font-weight:bold;
+  text-align:center;
 }
 
 /* LULUS / GAGAL */
 .lulus{
-  border-color: #22c55e;
+  border-color:#22c55e;
   background: rgba(34,197,94,0.15);
 }
+.lulus /* Timer Mengapung di pojok kanan atas */
 
-.lulus .scoreBox, .lulus #statusKelulusan{
-  color: #22c55e;
+#timer {
+  position: fixed;     /* tetap di layar */
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.6); /* semi-transparan */
+  padding: 8px 12px;
+  border-radius: 12px;
   font-weight: bold;
+  color: #fff;
+  z-index: 1000;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
+/* Responsif untuk HP kecil */
+@media (max-width: 480px){
+  #timer{
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}scoreBox, .lulus #statusKelulusan{
+  color:#22c55e;
+  font-weight:bold;
+}
 .gagal{
-  border-color: #ef4444;
+  border-color:#ef4444;
   background: rgba(239,68,68,0.15);
 }
-
 .gagal .scoreBox, .gagal #statusKelulusan{
-  color: #ef4444;
-  font-weight: bold;
+  color:#ef4444;
+  font-weight:bold;
 }
