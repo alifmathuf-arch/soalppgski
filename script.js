@@ -5,7 +5,7 @@ let jawaban=[];
 let peserta="",kelas="",mode="latihan";
 let index=0;
 
-let waktu=50*60;
+let waktu=120*60;
 let timer;
 
 
@@ -213,3 +213,4 @@ document.getElementById("hasil").innerText=
 Skor: ${skor}/${soalUjian.length}`;
 
 }
+
