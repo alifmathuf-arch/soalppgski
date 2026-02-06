@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ujian Online Madrasah</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="loginPage" class="card">
+<img src="logo.png" class="logo">
+<h2>Ujian Online Madrasah</h2>
+
+<input type="text" id="nama" placeholder="Nama Peserta">
+<button onclick="mulaiUjian()">Mulai Ujian</button>
+</div>
+
+<div id="quizPage" class="hidden">
+
+<div class="header">
+<span id="timer">Waktu: 50:00</span>
+</div>
+
+<div class="card">
+<h3 id="nomor"></h3>
+<p id="soal"></p>
+
+<div id="opsi"></div>
+
+<div class="nav">
+<button onclick="prevSoal()">←</button>
+<button onclick="nextSoal()">→</button>
+</div>
+</div>
+
+</div>
+
+<div id="resultPage" class="card hidden">
+<h2>Hasil Ujian</h2>
+<p id="hasil"></p>
+<button onclick="location.reload()">Ulangi</button>
+</div>
+
+<script src="banksoal.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
