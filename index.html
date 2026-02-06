@@ -9,14 +9,19 @@
 
 <body>
 
+<!-- LOGIN -->
 <div id="loginPage" class="card">
 <img src="logo.png" class="logo">
+
 <h2>Ujian Online Madrasah</h2>
 
 <input type="text" id="nama" placeholder="Nama Peserta">
+<input type="text" id="kelas" placeholder="Kelas">
+
 <button onclick="mulaiUjian()">Mulai Ujian</button>
 </div>
 
+<!-- QUIZ -->
 <div id="quizPage" class="hidden">
 
 <div class="header">
@@ -24,19 +29,23 @@
 </div>
 
 <div class="card">
+
 <h3 id="nomor"></h3>
 <p id="soal"></p>
 
 <div id="opsi"></div>
 
 <div class="nav">
-<button onclick="prevSoal()">←</button>
-<button onclick="nextSoal()">→</button>
+<button onclick="prevSoal()">← Sebelumnya</button>
+<button onclick="nextSoal()">Berikutnya →</button>
+</div>
+
+<button class="finishBtn" onclick="selesai()">Selesai Ujian</button>
+
 </div>
 </div>
 
-</div>
-
+<!-- HASIL -->
 <div id="resultPage" class="card hidden">
 <h2>Hasil Ujian</h2>
 <p id="hasil"></p>
