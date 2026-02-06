@@ -74,9 +74,11 @@ let temp=[...bankSoal];
 
 temp.sort(()=>Math.random()-0.5);
 
-soalUjian=temp.slice(0,50);
+let jumlah = Math.min(50, temp.length);
 
-jawaban=new Array(50).fill(null);
+soalUjian = temp.slice(0, jumlah);
+jawaban = new Array(jumlah).fill(null);
+
 
 }
 
@@ -111,7 +113,9 @@ document.getElementById("opsi").innerHTML=opsiHTML;
 
 let finishBtn=document.querySelector(".finishBtn");
 
-finishBtn.style.display=(index===49)?"block":"none";
+finishBtn.style.display =
+(index === soalUjian.length - 1) ? "block" : "none";
+
 
 }
 
@@ -133,7 +137,8 @@ tampilkanSoal();
 // ==========================
 
 function nextSoal(){
-if(index<49){index++; tampilkanSoal();}
+if(index < soalUjian.length - 1)
+{index++; tampilkanSoal();}
 }
 
 function prevSoal(){
@@ -190,3 +195,4 @@ document.getElementById("hasil").innerText=
 Skor: ${skor}/50`;
 
 }
+
