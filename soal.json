@@ -219,4 +219,115 @@
     ],
     "a": 1
   }
+  ,
+{
+  "q": "Setelah wafatnya Khalifah Ali bin Abi Thalib, kepemimpinan umat Islam beralih kepada Dinasti Umayyah. Perubahan sistem kepemimpinan yang terjadi pada masa ini adalah …",
+  "o": [
+    "Pemilihan pemimpin melalui musyawarah",
+    "Sistem kepemimpinan turun-temurun",
+    "Kepemimpinan berdasarkan usia",
+    "Pemimpin dipilih oleh ulama",
+    "Pemimpin ditunjuk oleh rakyat"
+  ],
+  "a": 1
+},
+{
+  "q": "Khalifah pertama dari Dinasti Umayyah adalah …",
+  "o": [
+    "Yazid bin Muawiyah",
+    "Muawiyah bin Abi Sufyan",
+    "Abdul Malik bin Marwan",
+    "Umar bin Abdul Aziz",
+    "Marwan bin Hakam"
+  ],
+  "a": 1
+},
+{
+  "q": "Salah satu kebijakan penting Muawiyah bin Abi Sufyan dalam bidang pemerintahan adalah …",
+  "o": [
+    "Menghapus sistem administrasi",
+    "Memindahkan pusat pemerintahan ke Madinah",
+    "Menyusun sistem administrasi negara yang rapi",
+    "Menghentikan perluasan wilayah",
+    "Menutup baitul mal"
+  ],
+  "a": 2
+},
+{
+  "q": "Khalifah Umar bin Abdul Aziz dikenal sebagai pemimpin Dinasti Umayyah yang adil. Kebijakan beliau yang mencerminkan keadilan sosial adalah …",
+  "o": [
+    "Memperluas wilayah kekuasaan",
+    "Meningkatkan pajak bagi non-Muslim",
+    "Mengembalikan harta negara yang tidak sah",
+    "Membangun istana megah",
+    "Mengutamakan keluarga kerajaan"
+  ],
+  "a": 2
+},
+{
+  "q": "Salah satu faktor kemajuan peradaban Islam pada masa Dinasti Umayyah adalah …",
+  "o": [
+    "Menutup hubungan dengan bangsa lain",
+    "Mengembangkan ilmu pengetahuan dan administrasi",
+    "Mengurangi aktivitas perdagangan",
+    "Melarang penerjemahan ilmu",
+    "Membatasi pendidikan"
+  ],
+  "a": 1
+},
+{
+  "q": "Berakhirnya Dinasti Umayyah disebabkan oleh beberapa faktor. Faktor utama runtuhnya Dinasti Umayyah adalah …",
+  "o": [
+    "Serangan bangsa Romawi",
+    "Ketidakadilan dan konflik internal",
+    "Bencana alam berkepanjangan",
+    "Kurangnya sumber daya alam",
+    "Penurunan jumlah penduduk"
+  ],
+  "a": 1
+},
+{
+  "q": "Dinasti Abbasiyah menggantikan Dinasti Umayyah dengan pusat pemerintahan di …",
+  "o": [
+    "Mekkah",
+    "Madinah",
+    "Damaskus",
+    "Baghdad",
+    "Kairo"
+  ],
+  "a": 3
+},
+{
+  "q": "Pada masa Dinasti Abbasiyah, perkembangan ilmu pengetahuan sangat pesat. Lembaga yang berperan penting dalam pengembangan ilmu pengetahuan adalah …",
+  "o": [
+    "Darul Arqam",
+    "Baitul Hikmah",
+    "Baitul Mal",
+    "Masjid Nabawi",
+    "Majelis Syura"
+  ],
+  "a": 1
+},
+{
+  "q": "Salah satu bidang ilmu yang berkembang pesat pada masa Dinasti Abbasiyah adalah …",
+  "o": [
+    "Ilmu sihir",
+    "Ilmu astronomi dan kedokteran",
+    "Ilmu ramalan",
+    "Ilmu perdukunan",
+    "Ilmu nujum"
+  ],
+  "a": 1
+},
+{
+  "q": "Hikmah yang dapat diambil dari kemajuan peradaban Islam pada masa Dinasti Abbasiyah adalah …",
+  "o": [
+    "Ilmu pengetahuan tidak penting",
+    "Kemajuan dicapai tanpa usaha",
+    "Pentingnya menuntut ilmu dan toleransi",
+    "Ilmu hanya untuk golongan tertentu",
+    "Kemajuan hanya di bidang militer"
+  ],
+  "a": 2
+}
 ]
