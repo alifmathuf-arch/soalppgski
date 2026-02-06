@@ -189,11 +189,6 @@ white-space:pre-line;
 margin:10px 0;
 }
 
-.finishBtn{
-background:#22c55e;
-display:none;
-}
-
 .footer{
   text-align:center;
   font-size:12px;
@@ -204,8 +199,14 @@ display:none;
   overflow-wrap:break-word;
 }
 
+.finishBtn{
+background:#22c55e;
+display:none;
+}
+
 .hidden{
 display:none;
 }
+
 
 
