@@ -196,7 +196,13 @@ selesai();
 // SELESAI
 function selesai(){
 
-clearInterval(timer);
+if(!confirm("Apakah Anda yakin ingin mengakhiri ujian?")){
+return;
+}
+
+clearInterval(timerInterval);
+
+/* kode selesai lama tetap di bawah */
 
 let skor=0;
 
@@ -213,6 +219,7 @@ document.getElementById("hasil").innerText=
 Skor: ${skor}/${soalUjian.length}`;
 
 }
+
 
 
 
