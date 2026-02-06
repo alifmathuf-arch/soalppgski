@@ -1,100 +1,147 @@
-// ==========================
-// GLOBAL
-// ==========================
-let mode="ujian";
-let bankSoal = [];
-let soalUjian = [];
-let jawaban = [];
+let bankSoal=[];
+let soalUjian=[];
+let jawaban=[];
 
-let peserta = "";
-let kelas = "";
-let index = 0;
+let peserta="",kelas="",mode="ujian";
+let index=0;
 
-let waktu = 50 * 60;
-let timerInterval;
+let waktu=50*60;
+let timer;
 
 
-// ==========================
-// LOAD JSON SOAL
-// ==========================
+// LOAD SOAL
 
 fetch("soal.json")
-.then(res => res.json())
-.then(data => {
-
-    bankSoal = data;
-    console.log("Soal loaded:", bankSoal.length);
-
-})
-.catch(err => {
-
-    alert("Gagal memuat soal.json!");
-    console.error(err);
-
-});
+.then(r=>r.json())
+.then(d=>bankSoal=d)
+.catch(()=>alert("Soal gagal dimuat"));
 
 
-// ==========================
-// MULAI UJIAN
-// ==========================
+// MULAI
 
 function mulaiUjian(){
 
-    if(bankSoal.length === 0){
-        alert("Soal belum siap… tunggu sebentar");
-        return;
-    }
-    mode=document.getElementById("mode").value;
-    peserta = document.getElementById("nama").value.trim();
-    kelas = document.getElementById("kelas").value.trim();
+let nama=document.getElementById("nama");
+let kelasInput=document.getElementById("kelas");
+let modeInput=document.getElementById("mode");
 
-    if(!peserta || !kelas){
-        alert("Isi nama dan kelas!");
-        return;
-    }
+if(!nama||!kelasInput||!modeInput)return;
 
-    index = 0;
-    waktu = 50 * 60;
+peserta=nama.value.trim();
+kelas=kelasInput.value.trim();
+mode=modeInput.value;
 
-    acakSoal();
+if(!peserta||!kelas){
+alert("Isi nama & kelas");
+return;
+}
 
-    document.getElementById("loginPage").classList.add("hidden");
-    document.getElementById("quizPage").classList.remove("hidden");
+acak();
 
-    tampilkanSoal();
-    mulaiTimer();
-    updateProgress();
-    updateGrid();
+index=0;
+waktu=50*60;
+
+document.getElementById("loginPage").classList.add("hidden");
+document.getElementById("quizPage").classList.remove("hidden");
+
+tampil();
+timerStart();
 
 }
 
 
-// ==========================
 // ACAK SOAL
-// ==========================
 
-function acakSoal(){
+function acak(){
 
-    let temp = [...bankSoal];
+let temp=[...bankSoal];
+temp.sort(()=>Math.random()-0.5);
 
-    temp.sort(() => Math.random() - 0.5);
+let j=Math.min(50,temp.length);
 
-    let jumlah = Math.min(50, temp.length);
-
-    soalUjian = temp.slice(0, jumlah);
-    jawaban = new Array(jumlah).fill(null);
+soalUjian=temp.slice(0,j);
+jawaban=new Array(j).fill(null);
 
 }
+
+
+// TAMPIL SOAL
+
+function tampil(){
+
+let s=soalUjian[index];
+
+document.getElementById("nomor").innerText=
+"Soal "+(index+1)+" / "+soalUjian.length;
+
+document.getElementById("soal").innerText=s.q;
+
+let huruf=["A","B","C","D","E"];
+let html="";
+
+s.o.forEach((o,i)=>{
+
+let sel=jawaban[index]===i?"selected":"";
+
+html+=`
+<div class="opsi ${sel}" onclick="pilih(${i})">
+<b>${huruf[i]}.</b> ${o}
+</div>`;
+
+});
+
+document.getElementById("opsi").innerHTML=html;
+
+updateProgress();
+updateGrid();
+
+document.querySelector(".finishBtn").style.display=
+(index===soalUjian.length-1)?"block":"none";
+
+}
+
+
+// PILIH
+
+function pilih(i){
+
+jawaban[index]=i;
+
+if(mode==="latihan"){
+
+alert(i===soalUjian[index].a?"✔ Benar":"✘ Salah");
+
+}
+
+tampil();
+
+}
+
+
+// NAV
+
+function nextSoal(){
+if(index<soalUjian.length-1){index++;tampil();}
+}
+
+function prevSoal(){
+if(index>0){index--;tampil();}
+}
+
+
+// PROGRESS
 
 function updateProgress(){
 
-let persen =
-((index+1)/soalUjian.length)*100;
+let p=((index+1)/soalUjian.length)*100;
 
-document.getElementById("progressBar")
-.style.width=persen+"%";
+document.getElementById("progressBar").style.width=p+"%";
 
 }
+
+
+// GRID
+
 function updateGrid(){
 
 let html="";
@@ -103,195 +150,98 @@ for(let i=0;i<soalUjian.length;i++){
 
 let done=jawaban[i]!=null?"gridDone":"";
 
-html+=`
-<div class="gridBtn ${done}"
+html+=`<div class="gridBtn ${done}"
 onclick="lompat(${i})">${i+1}</div>`;
 
 }
 
-document.getElementById("gridSoal")
-.innerHTML=html;
+document.getElementById("gridSoal").innerHTML=html;
 
 }
 
 function lompat(i){
-
 index=i;
-tampilkanSoal();
-
-}
-
-// ==========================
-// TAMPIL SOAL
-// ==========================
-
-function tampilkanSoal(){
-
-    let s = soalUjian[index];
-
-    document.getElementById("nomor").innerText =
-        "Soal " + (index+1) + " / " + soalUjian.length;
-
-    document.getElementById("soal").innerText = s.q;
-
-    let huruf = ["A","B","C","D","E"];
-    let opsiHTML = "";
-
-    s.o.forEach((opsi,i)=>{
-
-        let selected = jawaban[index] === i ? "selected" : "";
-
-        opsiHTML += `
-        <div class="opsi ${selected}" onclick="pilih(${i})">
-        <b>${huruf[i]}.</b> ${opsi}
-        </div>`;
-    });
-
-    document.getElementById("opsi").innerHTML = opsiHTML;
-
-    let finishBtn = document.querySelector(".finishBtn");
-
-    finishBtn.style.display =
-        (index === soalUjian.length - 1) ? "block" : "none";
-
+tampil();
 }
 
 
-// ==========================
-// PILIH JAWABAN
-// ==========================
-
-function pilih(i){
-
-    jawaban[index] = i;
-    tampilkanSoal();
-
-}
-
-function pilih(i){
-
-jawaban[index]=i;
-
-if(mode==="latihan"){
-
-let benar=
-i===soalUjian[index].a;
-
-alert(benar?"✔ Benar":"✘ Salah");
-
-}
-
-tampilkanSoal();
-
-}
-
-// ==========================
-// NAVIGASI
-// ==========================
-
-function nextSoal(){
-
-    if(index < soalUjian.length - 1){
-        index++;
-        tampilkanSoal();
-    }
-
-}
-
-function prevSoal(){
-
-    if(index > 0){
-        index--;
-        tampilkanSoal();
-    }
-
-}
-
-
-// ==========================
 // TIMER
-// ==========================
 
-function mulaiTimer(){
+function timerStart(){
 
-    clearInterval(timerInterval);
+clearInterval(timer);
 
-    timerInterval = setInterval(()=>{
+timer=setInterval(()=>{
 
-        waktu--;
+waktu--;
 
-        let m = Math.floor(waktu/60);
-        let s = waktu%60;
+let m=Math.floor(waktu/60);
+let s=waktu%60;
 
-        document.getElementById("timer").innerText =
-            "Waktu: " + m + ":" + (s<10?"0":"") + s;
+document.getElementById("timer").innerText=
+"Waktu: "+m+":"+(s<10?"0":"")+s;
 
-        if(waktu <= 0){
-            clearInterval(timerInterval);
-            selesai();
-        }
+if(waktu<=0){
+clearInterval(timer);
+selesai();
+}
 
-    },1000);
+},1000);
 
 }
 
 
-// ==========================
 // SELESAI
-// ==========================
 
 function selesai(){
 
-    clearInterval(timerInterval);
+clearInterval(timer);
 
-    let skor = 0;
+let skor=0;
 
-    soalUjian.forEach((s,i)=>{
-        if(jawaban[i] === s.a) skor++;
-    });
+soalUjian.forEach((s,i)=>{
+if(jawaban[i]===s.a) skor++;
+});
 
-    document.getElementById("quizPage").classList.add("hidden");
-    document.getElementById("resultPage").classList.remove("hidden");
+document.getElementById("quizPage").classList.add("hidden");
+document.getElementById("resultPage").classList.remove("hidden");
 
-    document.getElementById("hasil").innerText =
+document.getElementById("hasil").innerText=
 `${peserta} (${kelas})
 
 Skor: ${skor}/${soalUjian.length}`;
-simpanLeaderboard(peserta,skor);
-tampilLeaderboard();
+
+saveRank(peserta,skor);
+showRank();
 
 }
 
-function simpanLeaderboard(nama,skor){
 
-let data=
-JSON.parse(localStorage.getItem("rank")||"[]");
+// LEADERBOARD
 
-data.push({nama,skor});
+function saveRank(n,s){
 
-data.sort((a,b)=>b.skor-a.skor);
+let data=JSON.parse(localStorage.getItem("rank")||"[]");
+
+data.push({n,s});
+data.sort((a,b)=>b.s-a.s);
 
 data=data.slice(0,5);
 
-localStorage.setItem("rank",
-JSON.stringify(data));
+localStorage.setItem("rank",JSON.stringify(data));
 
 }
 
-function tampilLeaderboard(){
+function showRank(){
 
-let data=
-JSON.parse(localStorage.getItem("rank")||"[]");
+let data=JSON.parse(localStorage.getItem("rank")||"[]");
 
 let html="";
 
 data.forEach((d,i)=>{
-
-html+=`${i+1}. ${d.nama} — ${d.skor}<br>`;
-
+html+=`${i+1}. ${d.n} — ${d.s}<br>`;
 });
 
-document.getElementById("leaderboard")
-.innerHTML=html;
+document.getElementById("leaderboard").innerHTML=html;
 
 }
