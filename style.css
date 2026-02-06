@@ -14,7 +14,7 @@ flex-direction:column;
 align-items:center;
 justify-content:flex-start;
 
-padding:20px 0;
+padding:20px 0 60px;
 color:white;
 }
 
@@ -51,7 +51,7 @@ margin:8px 0;
 border:none;
 border-radius:10px;
 
-background:#f8fafc;
+background:#e2e8f0; /* putih lembut */
 color:#111;
 }
 
@@ -80,141 +80,4 @@ transform:translateY(-2px);
 
 /* MODE BUTTON */
 
-.modeWrap{
-display:flex;
-gap:8px;
-margin-bottom:10px;
-}
-
-.mode{
-flex:1;
-background:#334155;
-}
-
-.mode.active{
-background:#22c55e;
-}
-
-/* HEADER */
-
-.header{
-text-align:center;
-font-weight:bold;
-margin-bottom:10px;
-}
-
-/* PROGRESS */
-
-.progressWrap{
-width:420px;
-max-width:95vw;
-
-margin:auto;
-
-background:#1e293b;
-border-radius:10px;
-overflow:hidden;
-}
-
-#progressBar{
-height:8px;
-width:0%;
-background:#22c55e;
-transition:.3s;
-}
-
-/* GRID WRAP */
-
-.gridWrap{
-width:420px;
-max-width:95vw;
-margin:auto;
-}
-
-#gridSoal{
-display:grid;
-grid-template-columns:repeat(10,1fr);
-gap:5px;
-margin:10px 0;
-}
-
-.gridBtn{
-background:#334155;
-padding:6px;
-border-radius:6px;
-font-size:12px;
-cursor:pointer;
-}
-
-.gridDone{
-background:#22c55e;
-}
-
-/* OPSI */
-
-.opsi{
-background:#f8fafc;
-color:#111;
-
-padding:12px;
-margin:6px 0;
-
-border-radius:10px;
-cursor:pointer;
-}
-
-.opsi:hover{
-background:#e0f2fe;
-}
-
-.selected{
-background:#14b8a6!important;
-color:white;
-}
-
-/* NAV */
-
-.nav{
-display:flex;
-gap:8px;
-margin-top:10px;
-}
-
-.nav button{
-flex:1;
-}
-
-.footer{
-text-align:center;
-font-size:12px;
-color:#ddd;
-padding:10px;
-margin-top:20px;
-width:100%;
-max-width:420px;
-}
-
-/* RESULT */
-
-#hasil{
-white-space:pre-line;
-margin:10px 0;
-}
-
-
-
-.finishBtn{
-background:#22c55e;
-display:none;
-}
-
-.hidden{
-display:none;
-}
-
-
-
-
-
-
-
+.mode
