@@ -184,13 +184,6 @@ margin-top:10px;
 flex:1;
 }
 
-/* RESULT */
-
-#hasil{
-white-space:pre-line;
-margin:10px 0;
-}
-
 .footer{
 text-align:center;
 font-size:12px;
@@ -201,6 +194,15 @@ width:100%;
 max-width:420px;
 }
 
+/* RESULT */
+
+#hasil{
+white-space:pre-line;
+margin:10px 0;
+}
+
+
+
 .finishBtn{
 background:#22c55e;
 display:none;
@@ -209,6 +211,7 @@ display:none;
 .hidden{
 display:none;
 }
+
 
 
 
