@@ -184,3 +184,53 @@ from{opacity:0; transform:translateY(10px);}
 to{opacity:1; transform:translateY(0);}
 
 }
+
+/* progress bar */
+
+.progressWrap{
+background:#1e293b;
+border-radius:10px;
+overflow:hidden;
+margin-bottom:10px;
+}
+
+#progressBar{
+height:10px;
+width:0%;
+background:#22c55e;
+transition:.3s;
+}
+
+/* grid soal */
+
+#gridSoal{
+display:grid;
+grid-template-columns:repeat(10,1fr);
+gap:5px;
+margin:10px 0;
+}
+
+.gridBtn{
+padding:6px;
+background:#334155;
+border-radius:6px;
+cursor:pointer;
+font-size:12px;
+}
+
+.gridDone{
+background:#22c55e;
+}
+
+/* animation */
+
+.card{
+transition:.25s;
+}
+
+/* leaderboard */
+
+#leaderboard{
+font-size:14px;
+margin-top:10px;
+}
