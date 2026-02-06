@@ -148,6 +148,19 @@ function timerStart() {
   }, 1000);
 }
 
+// TOGGLE MODE SIANG / MALAM
+function toggleMode() {
+  const body = document.body;
+  const chk = document.getElementById("toggleMode");
+  if(chk.checked){
+    body.classList.remove("light");
+    body.classList.add("dark");
+  } else {
+    body.classList.remove("dark");
+    body.classList.add("light");
+  }
+}
+
 // SELESAI
 function selesai() {
   clearInterval(timer);
@@ -162,21 +175,20 @@ function selesai() {
     }
   });
 
-  // sembunyikan quiz
   document.getElementById("quizPage").classList.add("hidden");
   document.getElementById("resultPage").classList.remove("hidden");
 
-  // tampilkan info peserta
   document.getElementById("pesertaNama").innerText = peserta;
   document.getElementById("pesertaKelas").innerText = kelas;
 
-  // skor & jawaban benar
   document.getElementById("hasilSkor").innerText = skor;
-  document.getElementById("hasilDetail").innerText =
-    `Jawaban benar: ${benar} dari ${soalUjian.length} soal`;
+  document.getElementById("hasilDetail").innerText = benar; // angka saja
 
-  // lulus / gagal
+  // status kelulusan
   const resultFrame = document.getElementById("resultFrame");
+  const status = skor >= 80 ? "LULUS" : "TIDAK LULUS";
+  document.getElementById("statusKelulusan").innerText = status;
+
   if (skor >= 80) {
     resultFrame.classList.add("lulus");
     resultFrame.classList.remove("gagal");
