@@ -50,7 +50,7 @@ kelas=kelasInput;
 acak();
 
 index=0;
-waktu=50*60;
+waktu=120*60;
 
 document.getElementById("loginPage").classList.add("hidden");
 document.getElementById("quizPage").classList.remove("hidden");
@@ -67,7 +67,7 @@ function acak(){
 let temp=[...bankSoal];
 temp.sort(()=>Math.random()-0.5);
 
-let j=Math.min(50,temp.length);
+let j=Math.min(120,temp.length);
 
 soalUjian=temp.slice(0,j);
 jawaban=new Array(j).fill(null);
@@ -213,4 +213,5 @@ document.getElementById("hasil").innerText=
 Skor: ${skor}/${soalUjian.length}`;
 
 }
+
 
