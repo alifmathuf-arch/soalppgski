@@ -200,9 +200,12 @@ display:none;
   color:#ddd;
   margin-top:20px;
   padding:10px;
+  word-wrap:break-word;
+  overflow-wrap:break-word;
 }
 
 .hidden{
 display:none;
 }
+
 
