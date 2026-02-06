@@ -1,95 +1,102 @@
-let peserta="";
-let kelas="";
-let soalUjian=[];
-let jawaban=[];
-let index=0;
-let waktu=50*60;
+// =============================
+// VAR GLOBAL
+// =============================
 
-function mulaiUjian(){
-peserta=document.getElementById("nama").value;
-kelas=document.getElementById("kelas").value;
+let peserta = "";
+let kelas = "";
 
-if(!peserta || !kelas)
-return alert("Isi nama dan kelas!");
+let soalUjian = [];
+let jawaban = [];
 
+let index = 0;
+let waktu = 50 * 60; // 50 menit
+let timerInterval;
+
+
+// =============================
+// MULAI UJIAN
+// =============================
+
+function mulaiUjian() {
+
+peserta = document.getElementById("nama").value.trim();
+kelas = document.getElementById("kelas").value.trim();
+
+if (!peserta || !kelas) {
+alert("Isi nama dan kelas dulu!");
+return;
+}
+
+// acak soal
 acakSoal();
 
+// pindah halaman
 document.getElementById("loginPage").classList.add("hidden");
 document.getElementById("quizPage").classList.remove("hidden");
 
+// tampil soal pertama
 tampilkanSoal();
-timer();
+
+// mulai timer
+mulaiTimer();
 }
 
-document.getElementById("loginPage").classList.add("hidden");
-document.getElementById("quizPage").classList.remove("hidden");
 
-tampilkanSoal();
-timer();
+// =============================
+// ACAK SOAL
+// =============================
+
+function acakSoal() {
+
+let temp = [...bankSoal];
+
+// shuffle
+temp.sort(() => Math.random() - 0.5);
+
+// ambil 50 soal
+soalUjian = temp.slice(0, 50);
+
+jawaban = new Array(50).fill(null);
+
 }
 
-function acakSoal(){
-let temp=[...bankSoal];
-temp.sort(()=>Math.random()-0.5);
-soalUjian=temp.slice(0,50);
-jawaban=new Array(50).fill(null);
-}
 
-function tampilkanSoal(){
-let s=soalUjian[index];
-document.getElementById("nomor").innerText=`Soal ${index+1}/50`;
-document.getElementById("soal").innerText=s.q;
+// =============================
+// TAMPILKAN SOAL
+// =============================
 
-let opsiHTML="";
-s.o.forEach((o,i)=>{
-opsiHTML+=`
-<div class="opsi ${jawaban[index]==i?"selected":""}"
-onclick="pilih(${i})">${o}</div>`;
+function tampilkanSoal() {
+
+let s = soalUjian[index];
+
+document.getElementById("nomor").innerText =
+"Soal " + (index + 1) + " / 50";
+
+document.getElementById("soal").innerText = s.q;
+
+let opsiHTML = "";
+
+s.o.forEach((opsi, i) => {
+
+let selected = jawaban[index] === i ? "selected" : "";
+
+opsiHTML += `
+<div class="opsi ${selected}" onclick="pilihJawaban(${i})">
+${opsi}
+</div>
+`;
+
 });
 
-document.getElementById("opsi").innerHTML=opsiHTML;
-}
-
-function pilih(i){
-jawaban[index]=i;
-tampilkanSoal();
-}
-
-function nextSoal(){
-if(index<49){index++; tampilkanSoal();}
-}
-
-function prevSoal(){
-if(index>0){index--; tampilkanSoal();}
-}
-
-function timer(){
-let t=setInterval(()=>{
-waktu--;
-let m=Math.floor(waktu/60);
-let s=waktu%60;
-document.getElementById("timer").innerText=
-`Waktu: ${m}:${s<10?"0"+s:s}`;
-
-if(waktu<=0){
-clearInterval(t);
-selesai();
-}
-},1000);
-}
-
-function selesai(){
-let skor=0;
-soalUjian.forEach((s,i)=>{
-if(jawaban[i]==s.a) skor++;
-});
-
-document.getElementById("quizPage").classList.add("hidden");
-document.getElementById("resultPage").classList.remove("hidden");
-
-document.getElementById("hasil").innerText=
-`${peserta} (${kelas})
-Skor kamu: ${skor}/50`;
+document.getElementById("opsi").innerHTML = opsiHTML;
 
 }
 
+
+// =============================
+// PILIH JAWABAN
+// =============================
+
+function pilihJawaban(i) {
+
+jawaban[index]
