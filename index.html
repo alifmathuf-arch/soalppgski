@@ -71,14 +71,26 @@ Mode Ujian
 
 
 <!-- RESULT -->
+<!-- RESULT PAGE -->
 <div id="resultPage" class="card hidden">
-  <h2>HASIL UJIAN</h2>
+  <h2 class="resultTitle">HASIL UJIAN</h2>
 
-  <div id="hasilDetail"></div>
+  <div class="resultFrame">
+    <div class="resultItem">
+      <span class="label">Nama Peserta:</span>
+      <span id="pesertaNama"></span>
+    </div>
+    <div class="resultItem">
+      <span class="label">Kelas:</span>
+      <span id="pesertaKelas"></span>
+    </div>
+    <div class="resultItem scoreBox">
+      <span class="label">SKOR AKHIR</span>
+      <span id="hasilSkor"></span>
+    </div>
+  </div>
 
-  <div id="hasilSkor" class="scoreBox"></div>
-
-  <button onclick="location.reload()">Selesai</button>
+  <button onclick="location.reload()" class="finishBtn">Selesai</button>
 </div>
   
     <!-- FOOTER DI LUAR CARD -->
@@ -91,6 +103,7 @@ Mode Ujian
 
 </body>
 </html>
+
 
 
 
