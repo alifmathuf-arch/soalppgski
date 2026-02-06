@@ -4,71 +4,60 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>LATIHAN SOAL UP PPG</title>
-
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- LOGIN -->
+<!-- LOGIN PAGE -->
 <div id="loginPage" class="card">
+  <img src="logo.png" class="logo" alt="Logo Madrasah">
+  <h2>LATIHAN SOAL UP PPG</h2>
+  <p>Soal SJT & PCK Sesuai Kisi-Kisi UP</p>
 
-<img src="logo.png" class="logo">
+  <!-- MODE SELECTION -->
+  <div class="modeWrap">
+    <button id="btnLatihan" class="mode active" onclick="setMode('latihan')">Mode Latihan</button>
+    <button id="btnUjian" class="mode" onclick="setMode('ujian')">Mode Ujian</button>
+  </div>
 
-<h2>LATIHAN SOAL UP PPG</h2>
-<p>Soal SJT & PCK Sesuai KIsi-Kisi UP</p>
-  
-<div class="modeWrap">
-<button id="btnLatihan" class="mode active" onclick="setMode('latihan')">
-Mode Latihan
-</button>
+  <input id="nama" placeholder="Nama Peserta">
+  <input id="kelas" placeholder="Kelas">
 
-<button id="btnUjian" class="mode" onclick="setMode('ujian')">
-Mode Ujian
-</button>
+  <button onclick="mulaiUjian()">Mulai Ujian</button>
 </div>
 
-<input id="nama" placeholder="Nama Peserta">
-<input id="kelas" placeholder="Kelas">
-
-<button onclick="mulaiUjian()">Mulai Ujian</button>
-
-</div>
-
-
-<!-- QUIZ -->
+<!-- QUIZ PAGE -->
 <div id="quizPage" class="hidden">
 
-<div class="header">
-<span id="timer">Waktu: 120:00</span>
+  <div class="header">
+    <span id="timer">Waktu: 120:00</span>
+  </div>
+
+  <div class="progressWrap">
+    <div id="progressBar"></div>
+  </div>
+
+  <!-- GRID SOAL -->
+  <div class="gridWrap">
+    <div id="gridSoal"></div>
+  </div>
+
+  <!-- CARD SOAL -->
+  <div class="card">
+    <h3 id="nomor"></h3>
+    <p id="soal"></p>
+
+    <div id="opsi"></div>
+
+    <div class="nav">
+      <button onclick="prevSoal()">← Sebelumnya</button>
+      <button onclick="nextSoal()">Selanjutnya →</button>
+    </div>
+
+    <button class="finishBtn" onclick="selesai()">Selesai</button>
+  </div>
 </div>
-
-<div class="progressWrap">
-<div id="progressBar"></div>
-</div>
-
-<!-- GRID (dibungkus agar presisi) -->
-<div class="gridWrap">
-<div id="gridSoal"></div>
-</div>
-
-<div class="card">
-
-<h3 id="nomor"></h3>
-<p id="soal"></p>
-
-<div id="opsi"></div>
-
-<div class="nav">
-<button onclick="prevSoal()">←</button>
-<button onclick="nextSoal()">→</button>
-</div>
-
-<button class="finishBtn" onclick="selesai()">Selesai</button>
-
-</div>
-</div>
-
 
 <!-- RESULT PAGE -->
 <div id="resultPage" class="card hidden">
@@ -84,21 +73,24 @@ Mode Ujian
       <span id="pesertaKelas"></span>
     </div>
     <div class="resultItem scoreBox">
-      <span class="label">SKOR AKHIR</span>
+      <span class="label">SKOR AKHIR:</span>
       <span id="hasilSkor"></span>
+    </div>
+    <div class="resultItem">
+      <span class="label">Jawaban Benar:</span>
+      <span id="hasilDetail"></span>
     </div>
   </div>
 
   <button onclick="location.reload()" class="finishBtn">Selesai</button>
 </div>
-  
-    <!-- FOOTER DI LUAR CARD -->
-  <div class="footer">
-    © 2026 Designed by<br>
-    Koorlas SKI Batch IV 2025 UIN Syahid
-  </div>
-  
-<script src="script.js"></script>
 
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 Designed by<br>
+  Koorlas SKI Batch IV 2025 UIN Syahid
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
