@@ -34,8 +34,10 @@ function mulaiUjian(){
     temp.sort(()=>Math.random()-0.5);
     soalUjian=temp.slice(0,10);
   }else{
-    // semua soal
-    soalUjian=[...soalAll];
+  let temp=[...soalAll];
+  temp.sort(()=>Math.random()-0.5);
+  soalUjian=temp;
+}
   }
   jawaban=new Array(soalUjian.length).fill(null);
   index=0;
@@ -131,4 +133,5 @@ function selesai(){
   if(skor>=80){ frame.classList.add("lulus"); frame.classList.remove("gagal"); }
   else{ frame.classList.add("gagal"); frame.classList.remove("lulus"); }
 }
+
 
