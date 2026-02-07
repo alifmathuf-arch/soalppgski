@@ -10,14 +10,28 @@
 
 <!-- LOGIN PAGE -->
 <div id="loginPage" class="card">
-  <img src="logo.png" class="logo" alt="Logo Madrasah">
-  <h2>LATIHAN SOAL UP PPG</h2>
-  <p>Soal SJT & PCK Sesuai Kisi-Kisi UP</p>
 
-  <!-- MENU PAGE -->
+  <img src="logo.png" class="logo" alt="Logo">
+  <h2>LATIHAN SOAL UP PPG</h2>
+
+  <input id="nama" placeholder="Nama Peserta">
+  <input id="kelas" placeholder="Kelas">
+
+  <button onclick="login()">Login</button>
+
+</div>
+
+<!-- MENU PAGE -->
 <div id="menuPage" class="card hidden">
+
   <h2>Pilih Jenis Soal</h2>
   <p>Silakan pilih tipe ujian</p>
+
+  <button onclick="masukPG()">Soal Pilihan Ganda</button>
+  <button onclick="masukKasus()">Studi Kasus</button>
+
+</div>
+
 
   <!-- STUDI KASUS PAGE -->
 <div id="casePage" class="hidden">
@@ -174,6 +188,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
