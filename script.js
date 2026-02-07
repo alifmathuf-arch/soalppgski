@@ -1,22 +1,24 @@
 // ===============================
 // GLOBAL
 // ===============================
+
 let bankSoal = [];
 let soalUjian = [];
 let jawaban = [];
 
 let peserta = "";
 let kelas = "";
-let mode = "ujian";
 
 let index = 0;
 let waktu = 120 * 60;
 let timer;
 
+const JUMLAH_SOAL = 40;
 
 // ===============================
 // LOAD SOAL
 // ===============================
+
 fetch("soal.json")
   .then(r => r.json())
   .then(d => bankSoal = d)
@@ -24,20 +26,26 @@ fetch("soal.json")
 
 document.addEventListener("DOMContentLoaded", () => {
   hideAll();
-  document.getElementById("loginPage").classList.remove("hidden");
+  document.getElementById("loginPage")?.classList.remove("hidden");
 });
 
 function hideAll(){
-  ["loginPage","menuPage","quizPage","casePage","resultPage"]
-    .forEach(id=>{
-      const el = document.getElementById(id);
-      if(el) el.classList.add("hidden");
-    });
+  [
+    "loginPage",
+    "menuPage",
+    "quizPage",
+    "casePage",
+    "resultPG",
+    "resultKasus"
+  ].forEach(id=>{
+    document.getElementById(id)?.classList.add("hidden");
+  });
 }
 
 // ===============================
 // LOGIN
 // ===============================
+
 function login(){
 
   const namaVal = document.getElementById("nama").value.trim();
@@ -58,6 +66,7 @@ function login(){
 // ===============================
 // MASUK PG
 // ===============================
+
 function masukPG(){
 
   if(bankSoal.length === 0){
@@ -65,10 +74,7 @@ function masukPG(){
     return;
   }
 
-  document.getElementById("menuPage").classList.add("hidden");
-  document.getElementById("casePage").classList.add("hidden");
-  document.getElementById("resultPage").classList.add("hidden");
-
+  hideAll();
   document.getElementById("quizPage").classList.remove("hidden");
 
   acakSoal();
@@ -80,25 +86,23 @@ function masukPG(){
   timerStart();
 }
 
-
-
-
 // ===============================
 // ACAK SOAL
 // ===============================
+
 function acakSoal(){
 
   let temp = [...bankSoal];
   temp.sort(() => Math.random() - 0.5);
 
-
-  soalUjian = temp.slice(0, jumlah);
-  jawaban = new Array(jumlah).fill(null);
+  soalUjian = temp.slice(0, JUMLAH_SOAL);
+  jawaban = new Array(soalUjian.length).fill(null);
 }
 
 // ===============================
 // TAMPILKAN SOAL
 // ===============================
+
 function tampilSoal(){
 
   const s = soalUjian[index];
@@ -132,20 +136,16 @@ function tampilSoal(){
 // ===============================
 // PILIH JAWABAN
 // ===============================
+
 function pilihJawaban(i){
-
   jawaban[index] = i;
-
-  if(mode === "latihan"){
-    alert(i === soalUjian[index].a ? "✔ Benar" : "✘ Salah");
-  }
-
   tampilSoal();
 }
 
 // ===============================
 // NAV
 // ===============================
+
 function nextSoal(){
   if(index < soalUjian.length-1){
     index++;
@@ -163,6 +163,7 @@ function prevSoal(){
 // ===============================
 // PROGRESS
 // ===============================
+
 function updateProgress(){
 
   let p = ((index+1)/soalUjian.length)*100;
@@ -175,6 +176,7 @@ function updateProgress(){
 // ===============================
 // GRID
 // ===============================
+
 function updateGrid(){
 
   let html = "";
@@ -194,8 +196,9 @@ function lompatSoal(i){
 }
 
 // ===============================
-// TIMER
+// TIMER PG
 // ===============================
+
 function timerStart(){
 
   clearInterval(timer);
@@ -212,7 +215,7 @@ function timerStart(){
 
     if(waktu<=0){
       clearInterval(timer);
-      selesai();
+      selesaiPG();
     }
 
   },1000);
@@ -221,37 +224,33 @@ function timerStart(){
 // ===============================
 // SELESAI PG
 // ===============================
-function selesai(){
+
+function selesaiPG(){
 
   clearInterval(timer);
 
-  let skor=0, benar=0;
+  let skor=0;
 
   soalUjian.forEach((s,i)=>{
     if(jawaban[i]===s.a){
       skor+=2;
-      benar++;
     }
   });
 
   hideAll();
- document.getElementById("resultPG").classList.remove("hidden");
-document.getElementById("quizPage").classList.add("hidden");
+  document.getElementById("resultPG").classList.remove("hidden");
 
-  document.getElementById("pesertaNama").innerText = peserta;
-  document.getElementById("pesertaKelas").innerText = kelas;
-
-  document.getElementById("hasilSkor").innerText = skor;
-  document.getElementById("hasilDetail").innerText =
-    `${benar} dari ${soalUjian.length}`;
-
-  document.getElementById("statusKelulusan").innerText =
+  document.getElementById("pgNama").innerText = peserta;
+  document.getElementById("pgKelas").innerText = kelas;
+  document.getElementById("pgSkor").innerText = skor;
+  document.getElementById("pgStatus").innerText =
     skor>=80 ? "LULUS" : "TIDAK LULUS";
 }
 
 // ===============================
 // STUDI KASUS
 // ===============================
+
 const daftarKasus = [
   {judul:"Media Pembelajaran",
    deskripsi:"Ceritakan pengalaman nyata Anda dalam menggunakan media pembelajaran di kelas."},
@@ -267,12 +266,10 @@ let kasusAktif=null;
 
 function masukKasus(){
 
-  document.getElementById("menuPage").classList.add("hidden");
-  document.getElementById("quizPage").classList.add("hidden");
-  document.getElementById("resultPage").classList.add("hidden");
+  hideAll();
 
-  const index = Math.floor(Math.random() * daftarKasus.length);
-  kasusAktif = daftarKasus[index];
+  const idx = Math.floor(Math.random() * daftarKasus.length);
+  kasusAktif = daftarKasus[idx];
 
   document.getElementById("judulKasus").innerText = kasusAktif.judul;
   document.getElementById("deskripsiKasus").innerText = kasusAktif.deskripsi;
@@ -286,11 +283,13 @@ function masukKasus(){
 
   document.getElementById("casePage").classList.remove("hidden");
 
-  startTimerKasus(); // <<< INI
+  startTimerKasus();
 }
 
+// ===============================
+// WORD COUNT
+// ===============================
 
-// hitung kata
 function hitungKataKasus(){
 
   document.querySelectorAll(".caseBox").forEach(box=>{
@@ -308,6 +307,10 @@ function hitungKataKasus(){
 
   });
 }
+
+// ===============================
+// SELESAI KASUS
+// ===============================
 
 function selesaiKasus(){
 
@@ -330,49 +333,34 @@ function selesaiKasus(){
     return;
   }
 
-  document.getElementById("casePage").classList.add("hidden");
- document.getElementById("resultKasus").classList.remove("hidden");
-
+  hideAll();
+  document.getElementById("resultKasus").classList.remove("hidden");
 
   document.getElementById("totalKata").innerText = totalKata;
-  document.getElementById("totalChar").innerText = totalChar;
-
-  document.getElementById("statusKelulusan").innerText =
-    "SELESAI (Studi Kasus)";
+  document.getElementById("totalKarakter").innerText = totalChar;
+  document.getElementById("statusKasus").innerText = "SELESAI";
 }
 
-
-function toggleCase(step){
-
-  document.querySelectorAll(".caseBox").forEach(box=>{
-
-    if(box.dataset.step == step){
-      box.classList.toggle("active");
-    } else {
-      box.classList.remove("active");
-    }
-
-  });
-}
+// ===============================
+// ACCORDION
+// ===============================
 
 function toggleCase(el){
 
   const box = el.closest(".caseBox");
 
-  // tutup semua dulu
   document.querySelectorAll(".caseBox").forEach(b=>{
     if(b !== box){
       b.classList.remove("active");
     }
   });
 
-  // toggle current
   box.classList.toggle("active");
 }
 
-// =======================
+// ===============================
 // TIMER STUDI KASUS
-// =======================
+// ===============================
 
 let waktuKasus = 30 * 60;
 let timerKasus;
@@ -400,13 +388,10 @@ function startTimerKasus(){
 }
 
 function updateTimerKasus(){
+
   let m = Math.floor(waktuKasus / 60);
   let s = waktuKasus % 60;
 
   document.getElementById("caseTimer").innerText =
     `⏳ ${m}:${s < 10 ? "0" : ""}${s}`;
 }
-
-
-
-
