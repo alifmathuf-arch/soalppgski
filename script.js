@@ -1,21 +1,19 @@
 let bankSoal=[];
-let soalAll = [];
 let soalUjian=[];
 let jawaban=[];
+
 let peserta="",kelas="",mode="latihan";
 let index=0;
-let waktu=10*60;
+
+let waktu=120*60;
 let timer;
 
 
 // LOAD SOAL
 fetch("soal.json")
-  .then(r=>r.json())
-  .then(d=>{
-    soalAll = d;   // PASTI SET
-  })
-  .catch(()=>alert("Soal gagal dimuat"));
-
+.then(r=>r.json())
+.then(d=>bankSoal=d)
+.catch(()=>alert("Soal gagal dimuat"));
 
 
 // MODE SELECT
@@ -37,10 +35,6 @@ document.getElementById("btnUjian").classList.add("active");
 
 // MULAI
 function mulaiUjian(){
-if(!soalAll.length){
- alert("Soal belum siap, tunggu sebentar...");
- return;
-}
 
 let nama=document.getElementById("nama").value.trim();
 let kelasInput=document.getElementById("kelas").value.trim();
@@ -56,12 +50,7 @@ kelas=kelasInput;
 acak();
 
 index=0;
-if(mode==="latihan"){
-  waktu = 10 * 60;
-}else{
-  waktu = 120 * 60;
-}
-
+waktu=120*60;
 
 document.getElementById("loginPage").classList.add("hidden");
 document.getElementById("quizPage").classList.remove("hidden");
