@@ -162,15 +162,14 @@ function saveSession(){
     soalUjian
   }));
 }  tampil();
-}
 
 // NAV
 function nextSoal(){ if(index<soalUjian.length-1)index++;
 saveSession();
- } }
+ } 
 function prevSoal(){ if(index>0)index++;
 saveSession();
-; } }
+; } 
 
 // PROGRESS
 function updateProgress(){
@@ -252,10 +251,9 @@ function konfirmasiSelesai(){
     waktu,
     jawaban,
     soalUjian
-  }));
+  });
 }
-  }
-}
+
 function drawChart(benar,salah,kosong){
  const c=document.getElementById("chart");
  const x=c.getContext("2d");
@@ -284,6 +282,7 @@ window.onload=()=>{
     }
   }
 };
+    
 function restoreSession(d){
   peserta=d.peserta;
   kelas=d.kelas;
@@ -313,4 +312,5 @@ document.getElementById("hasilPersen").innerText=persen;
 document.getElementById("hasilWaktu").innerText=
  Math.floor(waktu/60)+":"+("0"+waktu%60).slice(-2);
 }
+
 
