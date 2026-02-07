@@ -193,23 +193,26 @@ selesai();
 }
 
 
-// SELESAI
+// =======================
+// FUNGSI SELESAI UJIAN
+// =======================
 function selesai(){
 
-clearInterval(timer);
+  if (!confirm("Apakah Anda yakin ingin mengakhiri ujian?")) return;
 
-let skor=0;
+  clearInterval(timerInterval);
 
-soalUjian.forEach((s,i)=>{
-if(jawaban[i]===s.a) skor+= 2;
-});
+  let skor = 0;
 
-document.getElementById("quizPage").classList.add("hidden");
-document.getElementById("resultPage").classList.remove("hidden");
+  soalUjian.forEach((s,i)=>{
+    if(jawaban[i] === s.a) skor += 2;
+  });
 
-document.getElementById("hasil").innerText=
+  document.getElementById("quizPage").classList.add("hidden");
+  document.getElementById("resultPage").classList.remove("hidden");
+
+  document.getElementById("hasil").innerText =
 `${peserta} (${kelas})
 
 Skor: ${skor}/${soalUjian.length}`;
-
 }
