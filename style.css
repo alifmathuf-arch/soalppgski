@@ -256,6 +256,50 @@ button:hover{
 /* textarea studi kasus */
 .case
 
+/* ===== ACCORDION STUDI KASUS ===== */
+
+.caseHeader{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  cursor:pointer;
+}
+
+.caseNumber{
+  width:34px;
+  height:34px;
+  background:#14b8a6;
+  color:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+}
+
+.caseContent{
+  display:none;
+  margin-top:12px;
+}
+
+.caseBox.active .caseContent{
+  display:block;
+}
+
+.caseBox.active{
+  outline:2px solid rgba(34,197,94,.5);
+}
+
+/* smooth */
+.caseContent{
+  animation:fadeIn .25s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(-5px);}
+  to{opacity:1;}
+}
+
 
 
 
