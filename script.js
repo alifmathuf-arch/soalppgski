@@ -2,7 +2,7 @@ let soalUjian=[];
 let jawaban=[];
 let peserta="", kelas="", mode="latihan";
 let index=0;
-let waktu=10*60;
+let waktu=120*60;
 let timer;
 
 // LOAD SOAL
@@ -38,8 +38,15 @@ function mulaiUjian(){
     soalUjian=[...soalAll];
   }
   jawaban=new Array(soalUjian.length).fill(null);
-  index=0;
-  waktu=120*60;
+index=0;
+
+// SET DURASI BERDASARKAN MODE
+if(mode==="latihan"){
+  waktu = 10 * 60;   // 10 menit
+}else{
+  waktu = 120 * 60; // 120 menit
+}
+
 
   document.getElementById("loginPage").classList.add("hidden");
   document.getElementById("quizPage").classList.remove("hidden");
@@ -131,4 +138,5 @@ function selesai(){
   if(skor>=80){ frame.classList.add("lulus"); frame.classList.remove("gagal"); }
   else{ frame.classList.add("gagal"); frame.classList.remove("lulus"); }
 }
+
 
