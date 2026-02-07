@@ -289,3 +289,117 @@ body.dark {
     padding: 6px 10px;
   }
 }
+
+/* ==============================
+   LOGIN PAGE UPDATE
+============================== */
+
+/* Card login */
+#loginPage {
+  width: 95%;
+  max-width: 420px;
+  padding: 30px 20px;   /* lebih longgar atas/bawah */
+  border-radius: 18px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.35);
+  text-align: center;
+  margin-bottom: 20px;   /* jarak ke footer */
+}
+
+/* Logo */
+#loginPage .logo {
+  width: 110px;
+  margin-bottom: 15px;
+}
+
+/* Judul login */
+#loginPage h2 {
+  margin-bottom: 12px;   /* jarak ke deskripsi */
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+/* Deskripsi dibawah judul */
+#loginPage p {
+  color: #ddd;           /* putih redup, nyaman di mata */
+  font-size: 14px;
+  margin-bottom: 20px;   /* jarak ke mode button */
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Mode button wrapper */
+#loginPage .modeWrap {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;   /* jarak ke input form */
+}
+
+/* Mode button */
+#loginPage .mode {
+  flex: 1;
+  background: #334155;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+#loginPage .mode.active {
+  background: #22c55e;
+}
+
+/* Input form */
+#loginPage input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: #111;
+  font-size: 14px;
+}
+
+/* Tombol mulai */
+#loginPage button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg,#14b8a6,#0ea5e9);
+  color: white;
+  transition: 0.2s;
+}
+
+#loginPage button:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsif HP */
+@media (max-width: 480px) {
+  #loginPage {
+    padding: 25px 15px;
+  }
+
+  #loginPage h2 {
+    font-size: 22px;
+  }
+
+  #loginPage p {
+    font-size: 13px;
+  }
+
+  #loginPage .mode {
+    padding: 8px;
+    font-size: 13px;
+  }
+}
