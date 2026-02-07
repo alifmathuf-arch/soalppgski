@@ -115,7 +115,7 @@ function prevSoal() { if (index > 0) { index--; tampilSoal(); } }
 // PROGRESS BAR
 function updateProgress() {
   let p = ((index + 1) / soalUjian.length) * 100;
-  document.getElementById("progressBar").style.width = p + "%";
+ 
   document.getElementById("progressPercent").innerText =
   persen + "%";
 
@@ -190,6 +190,7 @@ function selesai() {
     resultFrame.classList.remove("lulus");
   }
 }
+
 
 
 
