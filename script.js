@@ -1,10 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("loginPage").classList.remove("hidden");
-  document.getElementById("menuPage").classList.add("hidden");
-  document.getElementById("quizPage").classList.add("hidden");
-  document.getElementById("casePage").classList.add("hidden");
-  document.getElementById("resultPage").classList.add("hidden");
-});
 
 let bankSoal = [];
 let soalUjian = [];
@@ -25,16 +18,14 @@ fetch("soal.json")
   .then(d => bankSoal = d)
   .catch(() => alert("Soal gagal dimuat"));
 
-// SET MODE LATIHAN / UJIAN
-function setMode(m) {
-  mode = m;
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("loginPage").classList.remove("hidden");
+  document.getElementById("menuPage").classList.add("hidden");
+  document.getElementById("quizPage").classList.add("hidden");
+  document.getElementById("casePage").classList.add("hidden");
+  document.getElementById("resultPage").classList.add("hidden");
+});
 
-  document.getElementById("btnLatihan").classList.remove("active");
-  document.getElementById("btnUjian").classList.remove("active");
-
-  if (m === "latihan") document.getElementById("btnLatihan").classList.add("active");
-  else document.getElementById("btnUjian").classList.add("active");
-}
 
 // MULAI UJIAN
 function mulaiUjian() {
@@ -334,6 +325,7 @@ function masukKasus(){
 
   document.getElementById("casePage").classList.remove("hidden");
 }
+
 
 
 
