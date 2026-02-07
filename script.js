@@ -2,7 +2,7 @@ let soalUjian=[];
 let jawaban=[];
 let peserta="", kelas="", mode="latihan";
 let index=0;
-let waktu=120*60;
+let waktu=10*60;
 let timer;
 
 // LOAD SOAL
@@ -138,5 +138,6 @@ function selesai(){
   if(skor>=80){ frame.classList.add("lulus"); frame.classList.remove("gagal"); }
   else{ frame.classList.add("gagal"); frame.classList.remove("lulus"); }
 }
+
 
 
