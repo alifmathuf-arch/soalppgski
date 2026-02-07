@@ -49,7 +49,7 @@
     <p id="deskripsiKasus"></p>
 
     <div class="caseTopBar">
-  <span id="caseTimer">⏳ 30:00</span>
+  
 </div>
 
     <!-- KOTAK 1 -->
@@ -194,52 +194,32 @@
 
 
 <!-- RESULT PAGE -->
-<div id="resultPage" class="card hidden">
+<div id="resultPG" class="card hidden">
+  <h2>Hasil Pilihan Ganda</h2>
 
-  <h2 class="resultTitle">HASIL UJIAN</h2>
-
-  <div id="resultFrame" class="resultFrame">
-
-    <div class="resultItem">
-      <span class="label">Nama Peserta:</span>
-      <span id="pesertaNama"></span>
-    </div>
-
-    <div class="resultItem">
-      <span class="label">Kelas:</span>
-      <span id="pesertaKelas"></span>
-    </div>
-
-    <div class="resultItem scoreBox">
-      <span class="label">SKOR AKHIR:</span>
-      <div class="resultItem">
-  <span class="label">Total Kata:</span>
-  <span id="totalKata"></span>
-</div>
-
-<div class="resultItem">
-  <span class="label">Total Karakter:</span>
-  <span id="totalChar"></span>
-</div>
-
-      <span id="hasilSkor"></span>
-    </div>
-
-    <div class="resultItem">
-      <span class="label">Jawaban Benar:</span>
-      <span id="hasilDetail"></span>
-    </div>
-
-    <div class="resultItem">
-      <span class="label">Status Kelulusan:</span>
-      <span id="statusKelulusan"></span>
-    </div>
-
+  <div class="resultFrame">
+    <p>Nama: <span id="pgNama"></span></p>
+    <p>Kelas: <span id="pgKelas"></span></p>
+    <p>Skor: <span id="pgSkor"></span></p>
+    <p id="pgStatus"></p>
   </div>
 
-  <button onclick="location.reload()" class="finishBtn">Keluar</button>
+  <button onclick="location.reload()">Keluar</button>
+</div>
+<div id="resultKasus" class="card hidden">
+
+  <h2>Hasil Studi Kasus</h2>
+
+  <div class="resultFrame">
+    <p>Total Kata: <span id="totalKata"></span></p>
+    <p>Total Karakter: <span id="totalKarakter"></span></p>
+    <p>Status: <span id="statusKasus"></span></p>
+  </div>
+
+  <button onclick="location.reload()">Keluar</button>
 </div>
 
+  
 
 <!-- FOOTER -->
 <div class="footer">
@@ -250,5 +230,6 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
