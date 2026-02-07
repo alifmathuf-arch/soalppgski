@@ -22,6 +22,8 @@ function setMode(m){
 
 // MULAI UJIAN
 function mulaiUjian(){
+  if(mode==="ujian"){
+ document.documentElement.requestFullscreen();
   let nama=document.getElementById("nama").value.trim();
   let kelasInput=document.getElementById("kelas").value.trim();
   if(!nama||!kelasInput){ alert("Isi nama & kelas"); return; }
@@ -51,7 +53,9 @@ if(mode==="latihan"){
   document.getElementById("loginPage").classList.add("hidden");
   document.getElementById("quizPage").classList.remove("hidden");
   tampil();
-  timerStart();
+ waktu--;
+saveSession();
+
 }
 
 // TAMPIL
@@ -75,7 +79,9 @@ function tampil(){
 
 // PILIH
 function pilih(i){
-  jawaban[index]=i;
+ jawaban[index]=i;
+saveSession();
+
   if(mode==="latihan"){
     alert(i===soalUjian[index].a?"✔ Benar":"✘ Salah");
   }
@@ -83,8 +89,12 @@ function pilih(i){
 }
 
 // NAV
-function nextSoal(){ if(index<soalUjian.length-1){ index++; tampil(); } }
-function prevSoal(){ if(index>0){ index--; tampil(); } }
+function nextSoal(){ if(index<soalUjian.length-1)index++;
+saveSession();
+ } }
+function prevSoal(){ if(index>0)index++;
+saveSession();
+; } }
 
 // PROGRESS
 function updateProgress(){
@@ -96,12 +106,17 @@ function updateProgress(){
 function updateGrid(){
   let html="";
   for(let i=0;i<soalUjian.length;i++){
-    let done=jawaban[i]!=null?"gridDone":"";
-    html+=`<div class="gridBtn ${done}" onclick="lompat(${i})">${i+1}</div>`;
+    let cls="";
+
+    if(i===index) cls="gridActive";
+    else if(jawaban[i]!=null) cls="gridDone";
+    else cls="gridEmpty";
+
+    html+=`<div class="gridBtn ${cls}" onclick="lompat(${i})">${i+1}</div>`;
   }
   document.getElementById("gridSoal").innerHTML=html;
 }
-function lompat(i){ index=i; tampil(); }
+
 
 // TIMER
 function timerStart(){
@@ -119,11 +134,16 @@ function timerStart(){
 function selesai(){
   clearInterval(timer);
 
-  let skor=0;
-  let benar=0;
-  soalUjian.forEach((s,i)=>{
-    if(jawaban[i]===s.a){ skor+=2; benar++; }
-  });
+  let salah=0;
+let kosong=0;
+
+soalUjian.forEach((s,i)=>{
+ if(jawaban[i]===null) kosong++;
+ else if(jawaban[i]===s.a){
+   skor+=2; benar++;
+ }else salah++;
+});
+
 
   document.getElementById("quizPage").classList.add("hidden");
   document.getElementById("resultPage").classList.remove("hidden");
@@ -138,6 +158,82 @@ function selesai(){
   if(skor>=80){ frame.classList.add("lulus"); frame.classList.remove("gagal"); }
   else{ frame.classList.add("gagal"); frame.classList.remove("lulus"); }
 }
+function konfirmasiSelesai(){
+  let belum = jawaban.filter(j => j === null).length;
 
+  let msg = belum > 0
+    ? `Masih ada ${belum} soal belum dijawab.\nYakin ingin mengakhiri?`
+    : "Yakin ingin menyelesaikan ujian?";
 
+  if(confirm(msg)){
+    selesai();
+    function saveSession(){
+  localStorage.setItem("cbtSession",JSON.stringify({
+    peserta,
+    kelas,
+    mode,
+    index,
+    waktu,
+    jawaban,
+    soalUjian
+  }));
+}
+  }
+}
+function drawChart(benar,salah,kosong){
+ const c=document.getElementById("chart");
+ const x=c.getContext("2d");
 
+ let total=benar+salah+kosong;
+ let data=[benar,salah,kosong];
+
+ let start=0;
+ data.forEach(v=>{
+  let slice=(v/total)*Math.PI*2;
+  x.beginPath();
+  x.moveTo(150,100);
+  x.arc(150,100,80,start,start+slice);
+  x.fill();
+  start+=slice;
+ });
+}
+
+window.onload=()=>{
+  let s=localStorage.getItem("cbtSession");
+  if(s){
+    if(confirm("Lanjutkan ujian sebelumnya?")){
+      restoreSession(JSON.parse(s));
+    }else{
+      localStorage.removeItem("cbtSession");
+    }
+  }
+};
+function restoreSession(d){
+  peserta=d.peserta;
+  kelas=d.kelas;
+  mode=d.mode;
+  index=d.index;
+  waktu=d.waktu;
+  jawaban=d.jawaban;
+  soalUjian=d.soalUjian;
+
+  document.getElementById("loginPage").classList.add("hidden");
+  document.getElementById("quizPage").classList.remove("hidden");
+
+  tampil();
+  timerStart();
+}
+document.addEventListener("visibilitychange",()=>{
+  if(document.hidden && mode==="ujian"){
+    alert("⚠ Jangan berpindah tab selama ujian!");
+  }
+});
+document.getElementById("hasilSalah").innerText=salah;
+document.getElementById("hasilKosong").innerText=kosong;
+
+let persen=Math.round((skor/(soalUjian.length*2))*100);
+document.getElementById("hasilPersen").innerText=persen;
+
+document.getElementById("hasilWaktu").innerText=
+ Math.floor(waktu/60)+":"+("0"+waktu%60).slice(-2);
+}
