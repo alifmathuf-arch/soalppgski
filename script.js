@@ -240,4 +240,3 @@ function selesai(){
     resultFrame.classList.remove("lulus");
   }
 }
-
