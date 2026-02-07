@@ -310,7 +310,22 @@ function masukKasus(){
   document.getElementById("judulKasus").innerText = kasusAktif.judul;
   document.getElementById("deskripsiKasus").innerText = kasusAktif.deskripsi;
 
+  function login(){
+  const nama = document.getElementById("nama").value.trim();
+  const kelas = document.getElementById("kelas").value.trim();
+
+  if(!nama || !kelas){
+    alert("Nama dan kelas wajib diisi!");
+    return;
+  }
+
+  document.getElementById("loginPage").classList.add("hidden");
+  document.getElementById("menuPage").classList.remove("hidden");
+}
+
+
   document.getElementById("casePage").classList.remove("hidden");
 }
+
 
 
