@@ -367,6 +367,52 @@ button:hover{
     min-height: 130px;
   }
 }
+/* =========================
+   ACCORDION STUDI KASUS
+========================= */
+
+.caseBox {
+  border-radius: 14px;
+  background: rgba(255,255,255,0.08);
+  overflow: hidden;
+}
+
+/* header klik */
+.caseHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  cursor: pointer;
+  background: rgba(0,0,0,0.15);
+}
+
+.caseHeader:hover {
+  background: rgba(0,0,0,0.25);
+}
+
+.caseNum {
+  background: linear-gradient(135deg,#19d3ae,#0ea5e9);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* body hidden default */
+.caseBody {
+  display: none;
+  padding: 18px;
+}
+
+/* open state */
+.caseBox.active .caseBody {
+  display: block;
+}
+
 
 
 
