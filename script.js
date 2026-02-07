@@ -13,7 +13,7 @@ let index = 0;
 let waktu = 120 * 60;
 let timer;
 
-const JUMLAH_LATIHAN = 10;
+const JUMLAH_LATIHAN = 50;
 
 // ===============================
 // LOAD SOAL
@@ -315,4 +315,5 @@ function selesaiKasus(){
   document.getElementById("statusKelulusan").innerText =
     "LULUS (Studi Kasus)";
 }
+
 
