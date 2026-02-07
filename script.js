@@ -192,3 +192,7 @@ window.onload=()=>{
     }
   }
 };
+
+document.addEventListener("contextmenu",e=>{
+ if(mode==="ujian") e.preventDefault();
+});
