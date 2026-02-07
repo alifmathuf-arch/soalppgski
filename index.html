@@ -43,13 +43,19 @@
     <h3 id="judulKasus">Studi Kasus</h3>
     <p id="deskripsiKasus"></p>
 
+    <div class="caseTopBar">
+  <span id="caseTimer">⏳ 30:00</span>
+</div>
+
     <!-- KOTAK 1 -->
   <div class="caseBox">
 
   <div class="caseHeader" onclick="toggleCase(this)">
-    <span class="caseNum">1</span>
-    <h4>Identifikasi Masalah / Kasus Nyata</h4>
-  </div>
+  <span class="caseNum">1</span>
+  <h4>Identifikasi Masalah</h4>
+  <span class="caseArrow">▼</span>
+</div>
+
 
   <div class="caseBody">
     <p class="caseHint">
@@ -68,10 +74,12 @@
     <!-- KOTAK 2 -->
    <div class="caseBox">
 
-  <div class="caseHeader" onclick="toggleCase(this)">
-    <span class="caseNum">2</span>
-      <h4>2. Upaya Penyelesaian</h4>
-    </div>
+ <div class="caseHeader" onclick="toggleCase(this)">
+  <span class="caseNum">2</span>
+  <h4>Upaya Penyelesaian</h4>
+  <span class="caseArrow">▼</span>
+</div>
+
 
   <div class="caseBody">
     <p class="caseHint">
@@ -90,10 +98,12 @@
     <!-- KOTAK 3 -->
    <div class="caseBox">
 
-  <div class="caseHeader" onclick="toggleCase(this)">
-    <span class="caseNum">3</span>
-      <h4>3. Hasil</h4>
-     </div>
+<div class="caseHeader" onclick="toggleCase(this)">
+  <span class="caseNum">3</span>
+  <h4>Hasil</h4>
+  <span class="caseArrow">▼</span>
+</div>
+
 
   <div class="caseBody">
     <p class="caseHint">
@@ -113,10 +123,12 @@
 
   <div class="caseBox">
 
-  <div class="caseHeader" onclick="toggleCase(this)">
-    <span class="caseNum">4</span>
-      <h4>4. Hikmah/Pelajaran Berharga</h4>
-    </div>
+ <div class="caseHeader" onclick="toggleCase(this)">
+  <span class="caseNum">1</span>
+  <h4>Hikmah/Pelajaran Berharga</h4>
+  <span class="caseArrow">▼</span>
+</div>
+
 
   <div class="caseBody">
     <p class="caseHint">
@@ -194,6 +206,16 @@
 
     <div class="resultItem scoreBox">
       <span class="label">SKOR AKHIR:</span>
+      <div class="resultItem">
+  <span class="label">Total Kata:</span>
+  <span id="totalKata"></span>
+</div>
+
+<div class="resultItem">
+  <span class="label">Total Karakter:</span>
+  <span id="totalChar"></span>
+</div>
+
       <span id="hasilSkor"></span>
     </div>
 
@@ -222,18 +244,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
