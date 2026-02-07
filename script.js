@@ -317,3 +317,16 @@ function selesaiKasus(){
   document.getElementById("statusKelulusan").innerText =
     "LULUS (Studi Kasus)";
 }
+
+function toggleCase(step){
+
+  document.querySelectorAll(".caseBox").forEach(box=>{
+
+    if(box.dataset.step == step){
+      box.classList.toggle("active");
+    } else {
+      box.classList.remove("active");
+    }
+
+  });
+}
