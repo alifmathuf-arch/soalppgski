@@ -87,6 +87,9 @@ function tampilSoal() {
   document.getElementById("opsi").innerHTML = html;
 
   updateProgress();
+  document.getElementById("progressPercent").innerText =
+  persen + "%";
+
   updateGrid();
 
   // tombol selesai hanya di soal terakhir
@@ -185,4 +188,5 @@ function selesai() {
     resultFrame.classList.remove("lulus");
   }
 }
+
 
