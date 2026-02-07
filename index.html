@@ -14,6 +14,77 @@
   <h2>LATIHAN SOAL UP PPG</h2>
   <p>Soal SJT & PCK Sesuai Kisi-Kisi UP</p>
 
+  <!-- MENU PAGE -->
+<div id="menuPage" class="card hidden">
+  <h2>Pilih Jenis Soal</h2>
+  <p>Silakan pilih tipe ujian</p>
+
+  <!-- STUDI KASUS PAGE -->
+<div id="casePage" class="hidden">
+
+  <div class="card">
+
+    <h3 id="judulKasus">Studi Kasus</h3>
+    <p id="deskripsiKasus"></p>
+
+    <!-- KOTAK 1 -->
+    <div class="caseBox">
+      <h4>1. Identifikasi Masalah / Kasus Nyata</h4>
+      <p class="caseHint">
+        Jelaskan deskripsi kasus nyata yang Anda alami.
+      </p>
+      <textarea class="caseInput" data-min="150"
+        placeholder="Tuliskan minimal 150 kata..."
+        oninput="hitungKataKasus()"></textarea>
+      <div class="wordCount">0 / 150 kata</div>
+    </div>
+
+    <!-- KOTAK 2 -->
+    <div class="caseBox">
+      <h4>2. Upaya Penyelesaian</h4>
+      <p class="caseHint">
+        Jelaskan upaya Anda dalam menyelesaikan kasus/masalah nyata.
+      </p>
+      <textarea class="caseInput" data-min="150"
+        placeholder="Tuliskan minimal 150 kata..."
+        oninput="hitungKataKasus()"></textarea>
+      <div class="wordCount">0 / 150 kata</div>
+    </div>
+
+    <!-- KOTAK 3 -->
+    <div class="caseBox">
+      <h4>3. Hasil</h4>
+      <p class="caseHint">
+        Jelaskan hasil yang Anda dapatkan setelah upaya tersebut.
+      </p>
+      <textarea class="caseInput" data-min="150"
+        placeholder="Tuliskan minimal 150 kata..."
+        oninput="hitungKataKasus()"></textarea>
+      <div class="wordCount">0 / 150 kata</div>
+    </div>
+
+    <!-- KOTAK 4 -->
+    <div class="caseBox">
+      <h4>4. Hikmah / Pelajaran Berharga</h4>
+      <p class="caseHint">
+        Jelaskan pengalaman berharga yang Anda dapatkan.
+      </p>
+      <textarea class="caseInput" data-min="150"
+        placeholder="Tuliskan minimal 150 kata..."
+        oninput="hitungKataKasus()"></textarea>
+      <div class="wordCount">0 / 150 kata</div>
+    </div>
+
+    <button onclick="selesaiKasus()">Selesai Studi Kasus</button>
+
+  </div>
+</div>
+
+  
+  <button onclick="masukPG()">Soal Pilihan Ganda</button>
+  <button onclick="masukEsai()">Soal Esai</button>
+</div>
+
   <div class="modeWrap">
   <button id="btnLatihan" class="mode" active="setMode('latihan')">
     Mode Latihan
@@ -103,6 +174,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
