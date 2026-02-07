@@ -87,8 +87,7 @@ function tampilSoal() {
   document.getElementById("opsi").innerHTML = html;
 
   updateProgress();
-  document.getElementById("progressPercent").innerText =
-  persen + "%";
+  
 
   updateGrid();
 
@@ -117,6 +116,9 @@ function prevSoal() { if (index > 0) { index--; tampilSoal(); } }
 function updateProgress() {
   let p = ((index + 1) / soalUjian.length) * 100;
   document.getElementById("progressBar").style.width = p + "%";
+  document.getElementById("progressPercent").innerText =
+  persen + "%";
+
 }
 
 // GRID SOAL
@@ -188,5 +190,6 @@ function selesai() {
     resultFrame.classList.remove("lulus");
   }
 }
+
 
 
