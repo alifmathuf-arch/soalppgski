@@ -7,7 +7,7 @@ let jawaban = [];
 
 let peserta = "";
 let kelas = "";
-let mode = "latihan";
+let mode = "ujian";
 
 let index = 0;
 let waktu = 120 * 60;
@@ -315,5 +315,6 @@ function selesaiKasus(){
   document.getElementById("statusKelulusan").innerText =
     "LULUS (Studi Kasus)";
 }
+
 
 
