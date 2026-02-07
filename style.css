@@ -1,3 +1,6 @@
+/* ==============================
+   RESET & UMUM
+============================== */
 *{
   box-sizing:border-box;
   font-family:Segoe UI,Roboto,sans-serif;
@@ -6,7 +9,6 @@
 }
 
 body{
-  margin:0;
   min-height:100vh;
   display:flex;
   flex-direction:column;
@@ -15,9 +17,23 @@ body{
   padding:20px 10px;
   color:white;
   background: linear-gradient(135deg,#0f172a,#1e3a8a,#14b8a6);
+  transition: background 0.3s, color 0.3s;
 }
 
-/* CARD */
+/* BODY MODE SIANG / MALAM */
+body.light {
+  background: linear-gradient(135deg,#0f172a,#1e3a8a,#14b8a6);
+  color: #fff;
+}
+
+body.dark {
+  background: linear-gradient(135deg,#1a1a1a,#333,#555);
+  color: #eee;
+}
+
+/* ==============================
+   CARD / BOX UTAMA
+============================== */
 .card{
   width:95%;
   max-width:420px;
@@ -27,7 +43,8 @@ body{
   backdrop-filter:blur(12px);
   box-shadow:0 20px 40px rgba(0,0,0,.35);
   text-align:center;
-  margin-bottom:20px; /* jarak ke footer */
+  margin-bottom:20px;
+  transition: background 0.3s, color 0.3s;
 }
 
 /* LOGO */
@@ -36,15 +53,16 @@ body{
   margin-bottom:10px;
 }
 
-/* INPUT */
+/* INPUT FORM */
 input{
   width:100%;
   padding:12px;
-  margin:8px 0;
+  margin:6px 0;
   border:none;
   border-radius:10px;
   background:#f8fafc;
   color:#111;
+  font-size:14px;
 }
 
 /* BUTTON UMUM */
@@ -69,26 +87,32 @@ button:hover{
 .modeWrap{
   display:flex;
   gap:8px;
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 
 .mode{
   flex:1;
   background:#334155;
+  color:#fff;
+  padding:10px;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.2s;
 }
 
 .mode.active{
   background:#22c55e;
 }
 
-/* HEADER */
+/* HEADER SOAL */
 .header{
   text-align:center;
   font-weight:bold;
   margin-bottom:10px;
 }
 
-/* PROGRESS */
+/* PROGRESS BAR */
 .progressWrap{
   width:420px;
   max-width:95vw;
@@ -105,7 +129,7 @@ button:hover{
   transition:.3s;
 }
 
-/* GRID WRAP */
+/* GRID SOAL */
 .gridWrap{
   width:420px;
   max-width:95vw;
@@ -131,7 +155,7 @@ button:hover{
   background:#22c55e;
 }
 
-/* OPSI */
+/* OPSI JAWABAN */
 .opsi{
   background:#f8fafc;
   color:#111;
@@ -139,6 +163,7 @@ button:hover{
   margin:6px 0;
   border-radius:10px;
   cursor:pointer;
+  transition:.2s;
 }
 
 .opsi:hover{
@@ -150,7 +175,7 @@ button:hover{
   color:white;
 }
 
-/* NAV */
+/* NAVIGASI SOAL */
 .nav{
   display:flex;
   gap:8px;
@@ -169,23 +194,17 @@ button:hover{
   padding:12px;
   width:100%;
   max-width:420px;
-  margin-top:auto; /* selalu di bawah */
-}
-
-/* RESULT */
-#hasil{
-  white-space:pre-line;
-  margin:10px 0;
+  margin-top:auto;
 }
 
 /* TOMBOL SELESAI */
 .finishBtn{
-  width: 100%;
-  padding: 12px;
-  margin-top: 20px;
+  width:100%;
+  padding:12px;
+  margin-top:20px;
   border:none;
-  border-radius: 12px;
-  background: linear-gradient(135deg,#22c55e,#16a34a); /* hijau */
+  border-radius:12px;
+  background:linear-gradient(135deg,#22c55e,#16a34a);
   color:white;
   font-weight:600;
   cursor:pointer;
@@ -193,331 +212,91 @@ button:hover{
 }
 
 .finishBtn:hover{
-  transform: translateY(-2px);
+  transform:translateY(-2px);
 }
 
-.hidden{
-  display:none;
-}
-
-/* Card Hasil */
+/* ==============================
+   RESULT / HASIL UJIAN
+============================== */
 .resultFrame{
-  background: rgba(255,255,255,0.15); /* lebih terang */
+  background: rgba(255,255,255,0.15);
   backdrop-filter: blur(8px);
-  padding: 20px;
-  border-radius: 20px;
-  border: 2px solid rgba(255,255,255,0.3);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-  text-align: left;
+  padding:20px;
+  border-radius:20px;
+  border:2px solid rgba(255,255,255,0.3);
+  box-shadow:0 6px 15px rgba(0,0,0,0.25);
+  text-align:left;
   transition: all 0.5s ease;
 }
 
 .resultItem{
-  margin-bottom: 15px;
-  font-size: 16px;
+  margin-bottom:15px;
+  font-size:16px;
   display:flex;
-  justify-content: space-between;
-  color: #fff;
+  justify-content:space-between;
 }
 
 .resultItem .label{
-  font-weight: bold;
-  opacity: 0.9;
+  font-weight:bold;
+  opacity:0.9;
 }
 
-/* LULUS / GAGAL */
+.scoreBox{
+  font-size:28px;
+  font-weight:bold;
+  text-align:center;
+  padding:15px;
+  border-radius:15px;
+  box-shadow:inset 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* STATUS LULUS / GAGAL */
 .lulus{
-  border-color: #22c55e;
-  background: rgba(34,197,94,0.15);
+  border-color:#22c55e;
+  background:rgba(34,197,94,0.15);
 }
 
 .lulus .scoreBox, .lulus #statusKelulusan{
-  color: #22c55e;
-  font-weight: bold;
+  color:#22c55e;
+  font-weight:bold;
 }
 
 .gagal{
-  border-color: #ef4444;
-  background: rgba(239,68,68,0.15);
+  border-color:#ef4444;
+  background:rgba(239,68,68,0.15);
 }
 
 .gagal .scoreBox, .gagal #statusKelulusan{
-  color: #ef4444;
-  font-weight: bold;
-}
-/* ===========================
-   CSS LAMA (tidak diganti!)
-   Semua card, tombol, opsi, grid, footer, dll
-=========================== */
-
-/* ... semua CSS asli tetap di sini ... */
-
-/* ===========================
-   CSS BARU UNTUK MODE SIANG / MALAM & TIMER MENGAPUNG
-=========================== */
-
-/* BODY LIGHT / DARK */
-body.light {
-  background: linear-gradient(135deg,#0f172a,#1e3a8a,#14b8a6);
-  color: #fff;
+  color:#ef4444;
+  font-weight:bold;
 }
 
-body.dark {
-  background: linear-gradient(135deg,#1a1a1a,#333,#555);
-  color: #eee;
+/* TIMER STICKY */
+#timer{
+  position:fixed;
+  top:10px;
+  right:10px;
+  background:rgba(0,0,0,0.6);
+  padding:8px 12px;
+  border-radius:12px;
+  font-weight:bold;
+  color:#fff;
+  z-index:1000;
+  font-size:14px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.4);
+  display:none; /* hidden awal */
 }
 
-/* TIMER MENGAPUNG */
-#timer {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  background: rgba(0,0,0,0.6);
-  padding: 8px 12px;
-  border-radius: 12px;
-  font-weight: bold;
-  color: #fff;
-  z-index: 1000;
-  font-size: 14px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+/* HIDDEN */
+.hidden{
+  display:none !important;
 }
 
-/* Responsif untuk HP kecil */
-@media (max-width: 480px){
-  #timer{
-    font-size: 12px;
-    padding: 6px 10px;
-  }
-}
-
-/* ==============================
-   LOGIN PAGE UPDATE
-============================== */
-
-/* Card login */
-#loginPage {
-  width: 95%;
-  max-width: 420px;
-  padding: 30px 20px;   /* lebih longgar atas/bawah */
-  border-radius: 18px;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 20px 40px rgba(0,0,0,.35);
-  text-align: center;
-  margin-bottom: 20px;   /* jarak ke footer */
-}
-
-/* Logo */
-#loginPage .logo {
-  width: 110px;
-  margin-bottom: 15px;
-}
-
-/* Judul login */
-#loginPage h2 {
-  margin-bottom: 12px;   /* jarak ke deskripsi */
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-}
-
-/* Deskripsi dibawah judul */
-#loginPage p {
-  color: #ddd;           /* putih redup, nyaman di mata */
-  font-size: 14px;
-  margin-bottom: 20px;   /* jarak ke mode button */
-  text-align: center;
-  line-height: 1.4;
-}
-
-/* Mode button wrapper */
-#loginPage .modeWrap {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 15px;   /* jarak ke input form */
-}
-
-/* Mode button */
-#loginPage .mode {
-  flex: 1;
-  background: #334155;
-  color: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.2s;
-}
-
-#loginPage .mode.active {
-  background: #22c55e;
-}
-
-/* Input form */
-#loginPage input {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 10px;
-  background: #f8fafc;
-  color: #111;
-  font-size: 14px;
-}
-
-/* Tombol mulai */
-#loginPage button {
-  width: 100%;
-  padding: 12px;
-  margin-top: 12px;
-  border: none;
-  border-radius: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  background: linear-gradient(135deg,#14b8a6,#0ea5e9);
-  color: white;
-  transition: 0.2s;
-}
-
-#loginPage button:hover {
-  transform: translateY(-2px);
-}
-
-/* Responsif HP */
-@media (max-width: 480px) {
-  #loginPage {
-    padding: 25px 15px;
-  }
-
-  #loginPage h2 {
-    font-size: 22px;
-  }
-
-  #loginPage p {
-    font-size: 13px;
-  }
-
-  #loginPage .mode {
-    padding: 8px;
-    font-size: 13px;
-  }
-}
-
-/* Card login */
-#loginPage {
-  width: 95%;
-  max-width: 420px;
-  padding: 25px 20px;
-  border-radius: 18px;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 20px 40px rgba(0,0,0,.35);
-  text-align: center;
-  margin-bottom: 20px;  /* jarak ke footer */
-}
-
-/* Logo */
-#loginPage .logo {
-  width: 110px;
-  margin-bottom: 15px;
-}
-
-/* Judul */
-#loginPage h2 {
-  margin-bottom: 10px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-}
-
-/* Deskripsi */
-#loginPage p {
-  color: #ddd;
-  font-size: 14px;
-  margin-bottom: 20px;   /* jarak ke mode button */
-  text-align: center;
-  line-height: 1.4;
-}
-
-/* Mode button wrapper */
-#loginPage .modeWrap {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 12px;   /* jarak ke input */
-}
-
-/* Mode button */
-#loginPage .mode {
-  flex: 1;
-  background: #334155;
-  color: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.2s;
-}
-
-#loginPage .mode.active {
-  background: #22c55e;
-}
-
-/* Input form */
-#loginPage input {
-  width: 100%;
-  padding: 12px;
-  margin: 6px 0;
-  border: none;
-  border-radius: 10px;
-  background: #f8fafc;
-  color: #111;
-  font-size: 14px;
-}
-
-/* Tombol mulai */
-#loginPage button {
-  width: 100%;
-  padding: 12px;
-  margin-top: 12px;
-  border: none;
-  border-radius: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  background: linear-gradient(135deg,#14b8a6,#0ea5e9);
-  color: white;
-  transition: 0.2s;
-}
-
-#loginPage button:hover {
-  transform: translateY(-2px);
-}
-
-/* Timer sticky */
-#timer {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  background: rgba(0,0,0,0.6);
-  padding: 8px 12px;
-  border-radius: 12px;
-  font-weight: bold;
-  color: #fff;
-  z-index: 1000;
-  font-size: 14px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-}
-
-/* Hidden class */
-.hidden {
-  display: none !important;
-}
-
-/* Responsif HP */
-@media (max-width: 480px) {
-  #loginPage { padding: 25px 15px; }
-  #loginPage h2 { font-size: 22px; }
-  #loginPage p { font-size: 13px; }
-  #loginPage .mode { padding: 8px; font-size: 13px; }
-  #timer { font-size: 12px; padding: 6px 10px; }
+/* RESPONSIF HP */
+@media (max-width:480px){
+  #loginPage { padding:25px 15px; }
+  #loginPage h2 { font-size:22px; }
+  #loginPage p { font-size:13px; }
+  #loginPage .mode { padding:8px; font-size:13px; }
+  #timer { font-size:12px; padding:6px 10px; }
 }
