@@ -81,29 +81,34 @@ button:hover{
   background:#22c55e;
 }
 
-/* HEADER */
-.header{
-  text-align:center;
-  font-weight:bold;
-  margin-bottom:10px;
-}
-
-/* PROGRESS */
-.progressWrap{
+/* TOP INFO (Timer + Progress dalam satu baris) */
+.topInfo{
   width:420px;
   max-width:95vw;
-  margin:auto;
-  background:#1e293b;
-  border-radius:10px;
-  overflow:hidden;
+  margin:0 auto 12px;
+
+  display:flex;
+  align-items:center;
+  gap:12px;
 }
 
-#progressBar{
-  height:8px;
-  width:0%;
-  background:#22c55e;
-  transition:.3s;
+/* Timer */
+#timer{
+  font-weight:bold;
+  font-size:14px;
+  white-space:nowrap;
+  background:rgba(0,0,0,0.25);
+  padding:6px 10px;
+  border-radius:8px;
 }
+
+/* Progress bar ikut melebar */
+.topInfo .progressWrap{
+  flex:1;
+  margin:0;
+  height:10px;
+}
+
 
 /* GRID WRAP */
 .gridWrap{
@@ -217,3 +222,4 @@ button:hover{
 .hidden{
   display:none;
 }
+
