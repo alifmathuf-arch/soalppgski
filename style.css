@@ -170,19 +170,40 @@ button:hover{
   border: 2px solid rgba(255,255,255,0.3);
   box-shadow: 0 6px 15px rgba(0,0,0,0.25);
   text-align:left;
+  max-height:65vh;
+  overflow:auto;
 }
 
 .resultItem{
-  margin-bottom:15px;
-  font-size:16px;
+  margin-bottom:12px;
+  font-size:15px;
   display:flex;
   justify-content:space-between;
+  gap:10px;
   color:#fff;
+  flex-wrap:wrap;
 }
 
 .resultItem .label{
   font-weight:bold;
   opacity:0.9;
+}
+
+/* SCORE BOX */
+.scoreBox{
+  display:block;
+}
+
+.scoreBox p{
+  margin:4px 0;
+}
+
+/* CHART */
+#chart{
+  width:100%;
+  max-width:280px;
+  margin:10px auto 0;
+  display:block;
 }
 
 /* BUTTON SELESAI */
@@ -216,3 +237,4 @@ button:hover{
 .hidden{
   display:none;
 }
+
