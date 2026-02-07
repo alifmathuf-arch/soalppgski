@@ -59,9 +59,7 @@ function login(){
 // ===============================
 // MASUK PG
 // ===============================
-function masukPG(modeDipilih){
-
-  mode = modeDipilih;
+function masukPG(){
 
   showOnly("quizPage");
 
@@ -330,3 +328,4 @@ function toggleCase(step){
 
   });
 }
+
