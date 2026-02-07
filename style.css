@@ -437,6 +437,34 @@ button:hover{
   max-height: 800px;
 }
 
+.caseTopBar{
+  position: sticky;
+  top: 15px;
+  z-index: 20;
+
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 20px;
+}
+
+#caseTimer{
+  background: #0f172a;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  box-shadow: 0 6px 15px rgba(0,0,0,.25);
+}
+
+.quizCard{
+  max-width: 900px;
+  margin: 25px auto;
+}
+
+#quizPage{
+  min-height: 100vh;
+}
 
 
 
