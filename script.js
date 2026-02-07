@@ -5,7 +5,7 @@ let jawaban = [];
 let peserta = "", kelas = "", mode = "latihan";
 let index = 0;
 
-let waktu = 120 * 60; // 120 menit default
+let waktu = 10 * 60; // 120 menit default
 let timer;
 
 // JUMLAH SOAL MODE LATIHAN
@@ -185,3 +185,4 @@ function selesai() {
     resultFrame.classList.remove("lulus");
   }
 }
+
