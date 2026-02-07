@@ -27,21 +27,29 @@
 
 <!-- QUIZ PAGE -->
 <div id="quizPage" class="hidden">
+  <div class="header">
+    <span id="timer">Waktu: 120:00</span>
+  </div>
 
-  <!-- TIMER BIASA -->
-  <div id="timer" class="timerBox">Waktu: 120:00</div>
+  <div class="progressWrap">
+    <div id="progressBar"></div>
+  </div>
 
-  <div class="progressWrap"><div id="progressBar"></div></div>
-  <div class="gridWrap"><div id="gridSoal"></div></div>
+  <div class="gridWrap">
+    <div id="gridSoal"></div>
+  </div>
 
   <div class="card">
     <h3 id="nomor"></h3>
     <p id="soal"></p>
+
     <div id="opsi"></div>
+
     <div class="nav">
       <button onclick="prevSoal()">← Sebelumnya</button>
       <button onclick="nextSoal()">Selanjutnya →</button>
     </div>
+
     <button class="finishBtn" onclick="selesai()">Selesai</button>
   </div>
 </div>
@@ -49,18 +57,38 @@
 <!-- RESULT PAGE -->
 <div id="resultPage" class="card hidden">
   <h2 class="resultTitle">HASIL UJIAN</h2>
+
   <div id="resultFrame" class="resultFrame">
-    <div class="resultItem"><span class="label">Nama Peserta:</span><span id="pesertaNama"></span></div>
-    <div class="resultItem"><span class="label">Kelas:</span><span id="pesertaKelas"></span></div>
-    <div class="resultItem scoreBox"><span class="label">SKOR AKHIR:</span><span id="hasilSkor"></span></div>
-    <div class="resultItem"><span class="label">Jawaban Benar:</span><span id="hasilDetail"></span></div>
-    <div class="resultItem"><span class="label">Status Kelulusan:</span><span id="statusKelulusan"></span></div>
+    <div class="resultItem">
+      <span class="label">Nama Peserta:</span>
+      <span id="pesertaNama"></span>
+    </div>
+    <div class="resultItem">
+      <span class="label">Kelas:</span>
+      <span id="pesertaKelas"></span>
+    </div>
+    <div class="resultItem scoreBox">
+      <span class="label">SKOR AKHIR:</span>
+      <span id="hasilSkor"></span>
+    </div>
+    <div class="resultItem">
+      <span class="label">Jawaban Benar:</span>
+      <span id="hasilDetail"></span>
+    </div>
+    <div class="resultItem">
+      <span class="label">Status Kelulusan:</span>
+      <span id="statusKelulusan"></span>
+    </div>
   </div>
+
   <button onclick="location.reload()" class="finishBtn">Selesai</button>
 </div>
 
 <!-- FOOTER -->
-<div class="footer">© 2026 Designed by<br>Koorlas SKI Batch IV 2025 UIN Syahid</div>
+<div class="footer">
+  © 2026 Designed by<br>
+  Koorlas SKI Batch IV 2025 UIN Syahid
+</div>
 
 <script src="script.js"></script>
 </body>
