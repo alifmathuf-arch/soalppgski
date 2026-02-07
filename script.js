@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("loginPage").classList.remove("hidden");
+  document.getElementById("menuPage").classList.add("hidden");
+  document.getElementById("quizPage").classList.add("hidden");
+  document.getElementById("casePage").classList.add("hidden");
+  document.getElementById("resultPage").classList.add("hidden");
+});
+
 let bankSoal = [];
 let soalUjian = [];
 let jawaban = [];
@@ -326,6 +334,7 @@ function masukKasus(){
 
   document.getElementById("casePage").classList.remove("hidden");
 }
+
 
 
 
