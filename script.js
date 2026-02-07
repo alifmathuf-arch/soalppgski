@@ -5,7 +5,7 @@ let jawaban=[];
 let peserta="",kelas="",mode="latihan";
 let index=0;
 
-let waktu=10*60;
+let waktu=120*60;
 let timer;
 
 
@@ -229,4 +229,3 @@ function selesai(){
     resultFrame.classList.remove("lulus");
   }
 }
-
