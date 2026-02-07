@@ -81,7 +81,8 @@ button:hover{
   background:#22c55e;
 }
 
-/* TOP INFO (Timer + Progress dalam satu baris) */
+
+/* TOP BAR */
 .topInfo{
   width:420px;
   max-width:95vw;
@@ -89,25 +90,33 @@ button:hover{
 
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:10px;
 }
 
-/* Timer */
+/* Timer kiri */
 #timer{
-  font-weight:bold;
-  font-size:14px;
-  white-space:nowrap;
-  background:rgba(0,0,0,0.25);
+  background:rgba(0,0,0,0.35);
   padding:6px 10px;
   border-radius:8px;
+  font-weight:700;
+  font-size:13px;
+  white-space:nowrap;
 }
 
-/* Progress bar ikut melebar */
+/* Progress bar tengah */
 .topInfo .progressWrap{
   flex:1;
+  height:8px;
   margin:0;
-  height:10px;
 }
+
+/* Persen kanan */
+#progressPercent{
+  font-size:13px;
+  font-weight:600;
+  white-space:nowrap;
+}
+
 
 
 /* GRID WRAP */
@@ -222,4 +231,5 @@ button:hover{
 .hidden{
   display:none;
 }
+
 
