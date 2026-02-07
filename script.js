@@ -201,7 +201,7 @@ clearInterval(timer);
 let skor=0;
 
 soalUjian.forEach((s,i)=>{
-if(jawaban[i]===s.a) skor++;
+if(jawaban[i]===s.a) skor+= 2;
 });
 
 document.getElementById("quizPage").classList.add("hidden");
