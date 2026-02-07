@@ -60,15 +60,20 @@ function login(){
 // ===============================
 function masukPG(){
 
-  showOnly("quizPage");
+  mode = "ujian";
 
-  index=0;
-  waktu=120*60;
+  document.getElementById("menuPage").classList.add("hidden");
+  document.getElementById("quizPage").classList.remove("hidden");
 
   acakSoal();
+  index = 0;
+
+  waktu = 120 * 60;
+
   tampilSoal();
-  startTimer();
+  timerStart();
 }
+
 
 
 // ===============================
@@ -254,22 +259,28 @@ let kasusAktif=null;
 
 function masukKasus(){
 
-  hideAll();
+  document.getElementById("menuPage").classList.add("hidden");
+  document.getElementById("quizPage").classList.add("hidden");
+  document.getElementById("resultPage").classList.add("hidden");
 
-  const i = Math.floor(Math.random()*daftarKasus.length);
-  kasusAktif = daftarKasus[i];
+  const index = Math.floor(Math.random() * daftarKasus.length);
+  kasusAktif = daftarKasus[index];
 
   document.getElementById("judulKasus").innerText = kasusAktif.judul;
   document.getElementById("deskripsiKasus").innerText = kasusAktif.deskripsi;
 
-  document.querySelectorAll(".caseInput").forEach(t=>t.value="");
+  document.querySelectorAll(".caseInput").forEach(t=> t.value="");
+
   document.querySelectorAll(".wordCount").forEach(w=>{
     w.innerText="0 / 150 kata";
     w.className="wordCount bad";
   });
 
   document.getElementById("casePage").classList.remove("hidden");
+
+  startTimerKasus(); // <<< INI
 }
+
 
 // hitung kata
 function hitungKataKasus(){
@@ -292,25 +303,35 @@ function hitungKataKasus(){
 
 function selesaiKasus(){
 
-  let lulus=true;
+  clearInterval(timerKasus);
 
-  document.querySelectorAll(".caseBox").forEach(box=>{
-    const t=box.querySelector(".caseInput").value.trim();
-    const j=t?t.split(/\s+/).length:0;
-    if(j<150) lulus=false;
+  let totalKata = 0;
+  let totalChar = 0;
+
+  document.querySelectorAll(".caseInput").forEach(t=>{
+
+    const teks = t.value.trim();
+
+    totalChar += teks.length;
+    totalKata += teks ? teks.split(/\s+/).length : 0;
+
   });
 
-  if(!lulus){
-    alert("Semua kotak wajib minimal 150 kata!");
+  if(totalKata < 600){
+    alert("Semua kolom harus diisi minimal 150 kata!");
     return;
   }
 
-  hideAll();
+  document.getElementById("casePage").classList.add("hidden");
   document.getElementById("resultPage").classList.remove("hidden");
 
+  document.getElementById("totalKata").innerText = totalKata;
+  document.getElementById("totalChar").innerText = totalChar;
+
   document.getElementById("statusKelulusan").innerText =
-    "LULUS (Studi Kasus)";
+    "SELESAI (Studi Kasus)";
 }
+
 
 function toggleCase(step){
 
@@ -338,6 +359,43 @@ function toggleCase(el){
 
   // toggle current
   box.classList.toggle("active");
+}
+
+// =======================
+// TIMER STUDI KASUS
+// =======================
+
+let waktuKasus = 30 * 60;
+let timerKasus;
+
+function startTimerKasus(){
+
+  clearInterval(timerKasus);
+  waktuKasus = 30 * 60;
+
+  updateTimerKasus();
+
+  timerKasus = setInterval(()=>{
+
+    waktuKasus--;
+
+    updateTimerKasus();
+
+    if(waktuKasus <= 0){
+      clearInterval(timerKasus);
+      alert("Waktu studi kasus habis!");
+      selesaiKasus();
+    }
+
+  },1000);
+}
+
+function updateTimerKasus(){
+  let m = Math.floor(waktuKasus / 60);
+  let s = waktuKasus % 60;
+
+  document.getElementById("caseTimer").innerText =
+    `⏳ ${m}:${s < 10 ? "0" : ""}${s}`;
 }
 
 
