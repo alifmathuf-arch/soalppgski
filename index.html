@@ -34,7 +34,7 @@
 
 
 
-  <!-- STUDI KASUS PAGE -->
+ <!-- STUDI KASUS PAGE -->
 <div id="casePage" class="hidden">
 
   <div class="card">
@@ -93,18 +93,22 @@
     <button onclick="selesaiKasus()">Selesai Studi Kasus</button>
 
   </div>
+</div>
+
+
 
 <!-- QUIZ PAGE -->
 <div id="quizPage" class="hidden">
-<div class="topInfo">
-  <span id="timer">Waktu: 120:00</span>
 
-  <div class="progressWrap">
-    <div id="progressBar"></div>
+  <div class="topInfo">
+    <span id="timer">Waktu: 120:00</span>
+
+    <div class="progressWrap">
+      <div id="progressBar"></div>
+    </div>
+
+    <span id="progressPercent">0%</span>
   </div>
-
-  <span id="progressPercent">0%</span>
-</div>
 
   <div class="gridWrap">
     <div id="gridSoal"></div>
@@ -124,35 +128,47 @@
     <button class="finishBtn" onclick="selesai()">Selesai</button>
   </div>
 
+</div>
+
+
+
 <!-- RESULT PAGE -->
 <div id="resultPage" class="card hidden">
+
   <h2 class="resultTitle">HASIL UJIAN</h2>
 
   <div id="resultFrame" class="resultFrame">
+
     <div class="resultItem">
       <span class="label">Nama Peserta:</span>
       <span id="pesertaNama"></span>
     </div>
+
     <div class="resultItem">
       <span class="label">Kelas:</span>
       <span id="pesertaKelas"></span>
     </div>
+
     <div class="resultItem scoreBox">
       <span class="label">SKOR AKHIR:</span>
       <span id="hasilSkor"></span>
     </div>
+
     <div class="resultItem">
       <span class="label">Jawaban Benar:</span>
       <span id="hasilDetail"></span>
     </div>
+
     <div class="resultItem">
       <span class="label">Status Kelulusan:</span>
       <span id="statusKelulusan"></span>
     </div>
+
   </div>
 
   <button onclick="location.reload()" class="finishBtn">Keluar</button>
 </div>
+
 
 <!-- FOOTER -->
 <div class="footer">
@@ -163,6 +179,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
