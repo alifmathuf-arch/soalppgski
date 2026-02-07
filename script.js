@@ -13,7 +13,6 @@ let index = 0;
 let waktu = 120 * 60;
 let timer;
 
-const JUMLAH_LATIHAN = 50;
 
 // ===============================
 // LOAD SOAL
@@ -80,9 +79,6 @@ function acakSoal(){
   let temp = [...bankSoal];
   temp.sort(() => Math.random() - 0.5);
 
-  let jumlah = mode === "latihan"
-    ? Math.min(JUMLAH_LATIHAN, temp.length)
-    : Math.min(120, temp.length);
 
   soalUjian = temp.slice(0, jumlah);
   jawaban = new Array(jumlah).fill(null);
@@ -328,4 +324,5 @@ function toggleCase(step){
 
   });
 }
+
 
