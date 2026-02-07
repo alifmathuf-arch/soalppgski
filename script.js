@@ -281,3 +281,36 @@ function selesaiKasus(){
   document.getElementById("statusKelulusan").innerText =
     "LULUS (Studi Kasus)";
 }
+function login(){
+
+  const nama = document.getElementById("nama").value.trim();
+  const kelas = document.getElementById("kelas").value.trim();
+
+  if(!nama || !kelas){
+    alert("Nama dan kelas wajib diisi!");
+    return;
+  }
+
+  document.getElementById("loginPage").classList.add("hidden");
+  document.getElementById("menuPage").classList.remove("hidden");
+
+}function masukPG(){
+  document.getElementById("menuPage").classList.add("hidden");
+  document.getElementById("quizPage").classList.remove("hidden");
+
+  mulaiTimer();
+  loadSoal();
+}
+function masukKasus(){
+  document.getElementById("menuPage").classList.add("hidden");
+
+  const index = Math.floor(Math.random() * daftarKasus.length);
+  kasusAktif = daftarKasus[index];
+
+  document.getElementById("judulKasus").innerText = kasusAktif.judul;
+  document.getElementById("deskripsiKasus").innerText = kasusAktif.deskripsi;
+
+  document.getElementById("casePage").classList.remove("hidden");
+}
+
+
