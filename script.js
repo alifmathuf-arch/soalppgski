@@ -1,91 +1,167 @@
-let soalUjian=[];
-let jawaban=[];
-let peserta="", kelas="", mode="latihan";
-let index=0;
-let waktu=10*60;
+let soalAll = [];
+let soalUjian = [];
+let jawaban = [];
+let peserta = "", kelas = "", mode = "latihan";
+let index = 0;
+let waktu = 10 * 60;
 let timer;
+let skor = 0;
+let benar = 0;
 
 // LOAD SOAL
 fetch("soal.json")
-  .then(r=>r.json())
-  .then(d=>soalAll=d)
-  .catch(()=>alert("Soal gagal dimuat"));
+  .then(r => r.json())
+  .then(d => soalAll = d)
+  .catch(() => alert("Soal gagal dimuat"));
 
 // MODE SELECT
 function setMode(m){
-  mode=m;
+  mode = m;
   document.getElementById("btnLatihan").classList.remove("active");
   document.getElementById("btnUjian").classList.remove("active");
-  if(m==="latihan") document.getElementById("btnLatihan").classList.add("active");
-  else document.getElementById("btnUjian").classList.add("active");
+  document.getElementById(m === "latihan" ? "btnLatihan" : "btnUjian")
+    .classList.add("active");
 }
 
-// MULAI UJIAN
+// MULAI
 function mulaiUjian(){
-  if(mode==="ujian"){
- document.documentElement.requestFullscreen();
-  let nama=document.getElementById("nama").value.trim();
-  let kelasInput=document.getElementById("kelas").value.trim();
-  if(!nama||!kelasInput){ alert("Isi nama & kelas"); return; }
+  let nama = document.getElementById("nama").value.trim();
+  let kelasInput = document.getElementById("kelas").value.trim();
 
-  peserta=nama; kelas=kelasInput;
-
-  if(mode==="latihan"){
-    // acak 10 soal
-    let temp=[...soalAll];
-    temp.sort(()=>Math.random()-0.5);
-    soalUjian=temp.slice(0,10);
-  }else{
-    // semua soal
-    soalUjian=[...soalAll];
+  if(!nama || !kelasInput){
+    alert("Isi nama & kelas");
+    return;
   }
-  jawaban=new Array(soalUjian.length).fill(null);
-index=0;
 
-// SET DURASI BERDASARKAN MODE
-if(mode==="latihan"){
-  waktu = 10 * 60;   // 10 menit
-}else{
-  waktu = 120 * 60; // 120 menit
-}
+  peserta = nama;
+  kelas = kelasInput;
 
+  if(mode === "latihan"){
+    let temp = [...soalAll];
+    temp.sort(() => Math.random() - 0.5);
+    soalUjian = temp.slice(0, 10);
+    waktu = 10 * 60;
+  } else {
+    document.documentElement.requestFullscreen();
+    soalUjian = [...soalAll];
+    waktu = 120 * 60;
+  }
+
+  jawaban = new Array(soalUjian.length).fill(null);
+  index = 0;
+  skor = 0;
+  benar = 0;
 
   document.getElementById("loginPage").classList.add("hidden");
   document.getElementById("quizPage").classList.remove("hidden");
-  tampil();
- waktu--;
-saveSession();
 
+  tampil();
+  timerStart();
+  saveSession();
 }
 
-// TAMPIL
+// TAMPIL SOAL
 function tampil(){
-  let s=soalUjian[index];
-  document.getElementById("nomor").innerText="Soal "+(index+1)+" / "+soalUjian.length;
-  document.getElementById("soal").innerText=s.q;
+  let s = soalUjian[index];
+  document.getElementById("nomor").innerText =
+    "Soal " + (index + 1) + " / " + soalUjian.length;
+  document.getElementById("soal").innerText = s.q;
 
-  let huruf=["A","B","C","D","E"];
-  let html="";
+  let huruf = ["A","B","C","D","E"];
+  let html = "";
+
   s.o.forEach((o,i)=>{
-    let sel=jawaban[index]===i?"selected":"";
-    html+=`<div class="opsi ${sel}" onclick="pilih(${i})"><b>${huruf[i]}.</b> ${o}</div>`;
+    let sel = jawaban[index] === i ? "selected" : "";
+    html += `<div class="opsi ${sel}" onclick="pilih(${i})">
+      <b>${huruf[i]}.</b> ${o}
+    </div>`;
   });
-  document.getElementById("opsi").innerHTML=html;
 
-  updateProgress();
-  updateGrid();
-  document.querySelector(".finishBtn").style.display=(index===soalUjian.length-1)?"block":"none";
+  document.getElementById("opsi").innerHTML = html;
 }
 
-// PILIH
+// PILIH JAWABAN
 function pilih(i){
- jawaban[index]=i;
-saveSession();
+  jawaban[index] = i;
+  saveSession();
 
-  if(mode==="latihan"){
-    alert(i===soalUjian[index].a?"✔ Benar":"✘ Salah");
+  if(mode === "latihan"){
+    alert(i === soalUjian[index].a ? "✔ Benar" : "✘ Salah");
   }
+
   tampil();
+}
+
+// NAVIGASI
+function nextSoal(){
+  if(index < soalUjian.length - 1) index++;
+  tampil();
+  saveSession();
+}
+
+function prevSoal(){
+  if(index > 0) index--;
+  tampil();
+  saveSession();
+}
+
+// TIMER
+function timerStart(){
+  clearInterval(timer);
+  timer = setInterval(()=>{
+    waktu--;
+
+    let m = Math.floor(waktu/60);
+    let s = waktu%60;
+
+    document.getElementById("timer").innerText =
+      "Waktu: " + m + ":" + (s<10?"0":"") + s;
+
+    if(waktu <= 0){
+      clearInterval(timer);
+      selesai();
+    }
+  },1000);
+}
+
+// SELESAI
+function selesai(){
+  clearInterval(timer);
+
+  let salah = 0;
+  let kosong = 0;
+
+  soalUjian.forEach((s,i)=>{
+    if(jawaban[i] === null) kosong++;
+    else if(jawaban[i] === s.a){
+      skor += 2;
+      benar++;
+    } else salah++;
+  });
+
+  document.getElementById("quizPage").classList.add("hidden");
+  document.getElementById("resultPage").classList.remove("hidden");
+
+  document.getElementById("pesertaNama").innerText = peserta;
+  document.getElementById("pesertaKelas").innerText = kelas;
+  document.getElementById("hasilSkor").innerText = skor;
+  document.getElementById("hasilDetail").innerText = benar;
+  document.getElementById("statusKelulusan").innerText =
+    skor >= 80 ? "Lulus" : "Tidak Lulus";
+}
+
+// SAVE SESSION
+function saveSession(){
+  localStorage.setItem("cbtSession", JSON.stringify({
+    peserta,
+    kelas,
+    mode,
+    index,
+    waktu,
+    jawaban,
+    soalUjian
+  }));
+}  tampil();
 }
 
 // NAV
@@ -237,3 +313,4 @@ document.getElementById("hasilPersen").innerText=persen;
 document.getElementById("hasilWaktu").innerText=
  Math.floor(waktu/60)+":"+("0"+waktu%60).slice(-2);
 }
+
