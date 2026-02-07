@@ -127,8 +127,10 @@ button:hover{
   cursor:pointer;
 }
 
-.gridDone{
-  background:#22c55e;
+.gridActive{ background:#0d6efd; }
+.gridDone{ background:#22c55e; }
+.gridEmpty{ background:#64748b; }
+
 }
 
 /* OPSI */
@@ -217,3 +219,12 @@ button:hover{
 .hidden{
   display:none;
 }
+.timerWrap{
+  position: sticky;
+  top: 15px;
+  z-index: 20;
+}
+document.addEventListener("contextmenu",e=>{
+ if(mode==="ujian") e.preventDefault();
+});
+
