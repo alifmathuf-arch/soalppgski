@@ -30,6 +30,9 @@
   <div class="header">
     <span id="timer">Waktu: 120:00</span>
   </div>
+<div class="timerWrap">
+  <div id="timer"></div>
+</div>
 
   <div class="progressWrap">
     <div id="progressBar"></div>
@@ -70,6 +73,12 @@
     <div class="resultItem scoreBox">
       <span class="label">SKOR AKHIR:</span>
       <span id="hasilSkor"></span>
+      <p>Salah: <span id="hasilSalah"></span></p>
+<p>Kosong: <span id="hasilKosong"></span></p>
+<p>Persentase: <span id="hasilPersen"></span>%</p>
+<p>Sisa Waktu: <span id="hasilWaktu"></span></p>
+<canvas id="chart" width="300" height="200"></canvas>
+
     </div>
     <div class="resultItem">
       <span class="label">Jawaban Benar:</span>
@@ -81,7 +90,7 @@
     </div>
   </div>
 
-  <button onclick="location.reload()" class="finishBtn">Selesai</button>
+  <button onclick="konfirmasiSelesai()" class="finishBtn">Selesai</button>
 </div>
 
 <!-- FOOTER -->
@@ -93,3 +102,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
