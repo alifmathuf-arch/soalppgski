@@ -300,7 +300,73 @@ button:hover{
   to{opacity:1;}
 }
 
+/* ================================
+   RESPONSIVE DESKTOP MODE
+================================ */
 
+/* wrapper utama studi kasus */
+#casePage .card {
+  max-width: 1100px;
+  width: 92%;
+  margin: 40px auto;
+}
+
+/* tiap box */
+.caseBox {
+  padding: 20px;
+  margin-bottom: 18px;
+}
+
+/* textarea gede di laptop */
+.caseInput {
+  width: 100%;
+  min-height: 160px;
+  font-size: 15px;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+/* ================================
+   MODE DESKTOP (>= 900px)
+================================ */
+@media (min-width: 900px) {
+
+  /* grid 2 kolom biar elegan */
+  #casePage .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+
+  #casePage h3,
+  #casePage #deskripsiKasus,
+  #casePage button {
+    grid-column: span 2;
+  }
+
+  .caseBox {
+    margin-bottom: 0;
+  }
+
+  .caseInput {
+    min-height: 200px;
+  }
+}
+
+/* ================================
+   MOBILE (HP)
+================================ */
+@media (max-width: 600px) {
+
+  #casePage .card {
+    width: 95%;
+    padding: 18px;
+  }
+
+  .caseInput {
+    min-height: 130px;
+  }
+}
 
 
 
