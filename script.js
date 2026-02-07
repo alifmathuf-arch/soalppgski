@@ -60,9 +60,15 @@ function login(){
 // ===============================
 function masukPG(){
 
-  mode = "ujian";
+  if(bankSoal.length === 0){
+    alert("Soal belum selesai dimuat!");
+    return;
+  }
 
   document.getElementById("menuPage").classList.add("hidden");
+  document.getElementById("loginPage").classList.add("hidden");
+  document.getElementById("casePage").classList.add("hidden");
+
   document.getElementById("quizPage").classList.remove("hidden");
 
   acakSoal();
@@ -397,5 +403,6 @@ function updateTimerKasus(){
   document.getElementById("caseTimer").innerText =
     `⏳ ${m}:${s < 10 ? "0" : ""}${s}`;
 }
+
 
 
