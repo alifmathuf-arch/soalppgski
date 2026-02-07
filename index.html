@@ -10,10 +10,7 @@
 
 <!-- MODE SIANG / MALAM -->
 <div class="modeToggle">
-  <label>
-    <input type="checkbox" id="toggleMode" onchange="toggleMode()">
-    Mode Malam
-  </label>
+  <label><input type="checkbox" id="toggleMode" onchange="toggleMode()"> Mode Malam</label>
 </div>
 
 <!-- TIMER STICKY, hidden awal -->
@@ -24,39 +21,29 @@
   <img src="logo.png" class="logo" alt="Logo Madrasah">
   <h2>LATIHAN SOAL UP PPG</h2>
   <p>Soal SJT & PCK Sesuai Kisi-Kisi UP</p>
-
   <div class="modeWrap">
     <button id="btnLatihan" class="mode active" onclick="setMode('latihan')">Mode Latihan</button>
     <button id="btnUjian" class="mode" onclick="setMode('ujian')">Mode Ujian</button>
   </div>
-
   <input id="nama" placeholder="Nama Peserta">
   <input id="kelas" placeholder="Kelas">
-
   <button onclick="mulaiUjian()">Mulai Ujian</button>
 </div>
 
 <!-- QUIZ PAGE -->
 <div id="quizPage" class="hidden">
-  <div class="progressWrap">
-    <div id="progressBar"></div>
-  </div>
-
-  <div class="gridWrap">
-    <div id="gridSoal"></div>
-  </div>
+  <div class="header"></div>
+  <div class="progressWrap"><div id="progressBar"></div></div>
+  <div class="gridWrap"><div id="gridSoal"></div></div>
 
   <div class="card">
     <h3 id="nomor"></h3>
     <p id="soal"></p>
-
     <div id="opsi"></div>
-
     <div class="nav">
       <button onclick="prevSoal()">← Sebelumnya</button>
       <button onclick="nextSoal()">Selanjutnya →</button>
     </div>
-
     <button class="finishBtn" onclick="selesai()">Selesai</button>
   </div>
 </div>
@@ -64,38 +51,18 @@
 <!-- RESULT PAGE -->
 <div id="resultPage" class="card hidden">
   <h2 class="resultTitle">HASIL UJIAN</h2>
-
   <div id="resultFrame" class="resultFrame">
-    <div class="resultItem">
-      <span class="label">Nama Peserta:</span>
-      <span id="pesertaNama"></span>
-    </div>
-    <div class="resultItem">
-      <span class="label">Kelas:</span>
-      <span id="pesertaKelas"></span>
-    </div>
-    <div class="resultItem scoreBox">
-      <span class="label">SKOR AKHIR:</span>
-      <span id="hasilSkor"></span>
-    </div>
-    <div class="resultItem">
-      <span class="label">Jawaban Benar:</span>
-      <span id="hasilDetail"></span>
-    </div>
-    <div class="resultItem">
-      <span class="label">Status Kelulusan:</span>
-      <span id="statusKelulusan"></span>
-    </div>
+    <div class="resultItem"><span class="label">Nama Peserta:</span><span id="pesertaNama"></span></div>
+    <div class="resultItem"><span class="label">Kelas:</span><span id="pesertaKelas"></span></div>
+    <div class="resultItem scoreBox"><span class="label">SKOR AKHIR:</span><span id="hasilSkor"></span></div>
+    <div class="resultItem"><span class="label">Jawaban Benar:</span><span id="hasilDetail"></span></div>
+    <div class="resultItem"><span class="label">Status Kelulusan:</span><span id="statusKelulusan"></span></div>
   </div>
-
   <button onclick="location.reload()" class="finishBtn">Selesai</button>
 </div>
 
 <!-- FOOTER -->
-<div class="footer">
-  © 2026 Designed by<br>
-  Koorlas SKI Batch IV 2025 UIN Syahid
-</div>
+<div class="footer">© 2026 Designed by<br>Koorlas SKI Batch IV 2025 UIN Syahid</div>
 
 <script src="script.js"></script>
 </body>
