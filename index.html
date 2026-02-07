@@ -15,13 +15,15 @@
   <p>Soal SJT & PCK Sesuai Kisi-Kisi UP</p>
 
   <div class="modeWrap">
-    <button id="btnLatihan" class="mode active" onclick="setMode('latihan')">
-      Mode Latihan
-    </button>
-    <button id="btnUjian" class="mode" onclick="setMode('ujian')">
-      Mode Ujian
-    </button>
-  </div>
+  <button id="btnLatihan" class="mode" active="setMode('latihan')">
+    Mode Latihan
+  </button>
+
+  <button id="btnUjian" class="mode onclick" onclick="setMode('ujian')">
+    Mode Ujian
+  </button>
+</div>
+
 
   <input id="nama" placeholder="Nama Peserta">
   <input id="kelas" placeholder="Kelas">
@@ -31,13 +33,9 @@
 
 <!-- QUIZ PAGE -->
 <div id="quizPage" class="hidden">
-<div class="headerBar">
-  <div id="timerBox">Waktu: 00:00</div>
-
-  <div class="progressWrap">
-    <div id="progressBar"></div>
+  <div class="header">
+    <span id="timer">Waktu: 120:00</span>
   </div>
-</div>
 
   <div class="progressWrap">
     <div id="progressBar"></div>
@@ -60,7 +58,6 @@
 
     <button class="finishBtn" onclick="selesai()">Selesai</button>
   </div>
-
 </div>
 
 <!-- RESULT PAGE -->
@@ -68,44 +65,29 @@
   <h2 class="resultTitle">HASIL UJIAN</h2>
 
   <div id="resultFrame" class="resultFrame">
-
     <div class="resultItem">
       <span class="label">Nama Peserta:</span>
       <span id="pesertaNama"></span>
     </div>
-
     <div class="resultItem">
       <span class="label">Kelas:</span>
       <span id="pesertaKelas"></span>
     </div>
-
     <div class="resultItem scoreBox">
       <span class="label">SKOR AKHIR:</span>
       <span id="hasilSkor"></span>
-
-      <p>Salah: <span id="hasilSalah"></span></p>
-      <p>Kosong: <span id="hasilKosong"></span></p>
-      <p>Persentase: <span id="hasilPersen"></span>%</p>
-      <p>Sisa Waktu: <span id="hasilWaktu"></span></p>
-
-      <canvas id="chart" width="300" height="200"></canvas>
     </div>
-
     <div class="resultItem">
       <span class="label">Jawaban Benar:</span>
       <span id="hasilDetail"></span>
     </div>
-
     <div class="resultItem">
       <span class="label">Status Kelulusan:</span>
       <span id="statusKelulusan"></span>
     </div>
-
   </div>
 
-  <button onclick="location.reload()" class="finishBtn">
-    Selesai
-  </button>
+  <button onclick="location.reload()" class="finishBtn">Selesai</button>
 </div>
 
 <!-- FOOTER -->
@@ -117,4 +99,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
