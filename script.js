@@ -115,10 +115,7 @@ function prevSoal() { if (index > 0) { index--; tampilSoal(); } }
 // PROGRESS BAR
 function updateProgress() {
   let p = ((index + 1) / soalUjian.length) * 100;
- 
-  document.getElementById("progressPercent").innerText =
-  persen + "%";
-
+  document.getElementById("progressBar").style.width = p + "%";
 }
 
 // GRID SOAL
@@ -190,7 +187,3 @@ function selesai() {
     resultFrame.classList.remove("lulus");
   }
 }
-
-
-
-
