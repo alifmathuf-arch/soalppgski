@@ -194,15 +194,15 @@ selesai();
 
 
 // SELESAI
-function selesai(){
-
-  clearInterval(timerInterval);
+function selesai() {
+  // hentikan timer
+  if(timerInterval) clearInterval(timerInterval);
 
   let skor = 0;
   let benar = 0;
 
-  soalUjian.forEach((s,i)=>{
-    if(jawaban[i] === s.a){
+  soalUjian.forEach((s, i) => {
+    if (jawaban[i] && jawaban[i] === s.a) {
       skor += 2;  // nilai per soal
       benar++;
     }
@@ -210,22 +210,18 @@ function selesai(){
 
   // sembunyikan halaman quiz
   document.getElementById("quizPage").classList.add("hidden");
-  document.getElementById("resultPage").classList.remove("hidden");
 
-  // tampilkan nama & kelas
-  document.getElementById("pesertaNama").innerText = peserta;
-  document.getElementById("pesertaKelas").innerText = kelas;
+  // tampilkan halaman hasil
+  const resultPage = document.getElementById("resultPage");
+  resultPage.classList.remove("hidden");
 
-  // tampilkan skor
-  document.getElementById("hasilSkor").innerText = skor;
+  // tampilkan detail
+  document.getElementById("hasilDetail").innerHTML =
+`${peserta} (${kelas})<br>
+Jawaban benar: ${benar} dari ${soalUjian.length} soal`;
 
-  // tentukan lulus atau gagal
-  const resultFrame = document.getElementById("resultFrame");
-  if(skor >= 80){
-    resultFrame.classList.add("lulus");
-    resultFrame.classList.remove("gagal");
-  } else {
-    resultFrame.classList.add("gagal");
-    resultFrame.classList.remove("lulus");
-  }
+  // tampilkan skor akhir
+  document.getElementById("hasilSkor").innerHTML =
+`<div class="scoreLabel">Nilai Akhir</div>
+${skor}`;
 }
