@@ -466,6 +466,50 @@ button:hover{
   min-height: 100vh;
 }
 
+/* =======================
+   STUDI KASUS TIMER BAR
+======================= */
+
+.caseTopBar{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+#caseTimer{
+  background: #020617;
+  padding: 10px 22px;
+  border-radius: 22px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.4);
+}
+
+/* =======================
+   CARD STUDI KASUS
+======================= */
+
+.caseCard{
+  max-width: 1000px;
+}
+
+/* GRID ACCORDION */
+
+.caseGrid{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .caseGrid{
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 
