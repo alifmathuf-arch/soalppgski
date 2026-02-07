@@ -282,15 +282,16 @@ function drawChart(benar,salah,kosong){
  });
 }
   start+=slice;
- });
+ }start += slice;
+  });
 }
 
-window.onload=()=>{
-  let s=localStorage.getItem("cbtSession");
-  if(s){
-    if(confirm("Lanjutkan ujian sebelumnya?")){
+window.onload = () => {
+  let s = localStorage.getItem("cbtSession");
+  if (s) {
+    if (confirm("Lanjutkan ujian sebelumnya?")) {
       restoreSession(JSON.parse(s));
-    }else{
+    } else {
       localStorage.removeItem("cbtSession");
     }
   }
@@ -325,6 +326,7 @@ document.getElementById("hasilPersen").innerText=persen;
 document.getElementById("hasilWaktu").innerText=
  Math.floor(waktu/60)+":"+("0"+waktu%60).slice(-2);
 }
+
 
 
 
