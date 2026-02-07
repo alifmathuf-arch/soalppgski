@@ -187,3 +187,97 @@ function selesai() {
     resultFrame.classList.remove("lulus");
   }
 }
+const daftarKasus = [
+  {
+    judul: "Studi Kasus: Media Pembelajaran",
+    deskripsi:
+      "Ceritakan pengalaman nyata Anda dalam menggunakan atau mengembangkan media pembelajaran di kelas."
+  },
+  {
+    judul: "Studi Kasus: LKPD",
+    deskripsi:
+      "Ceritakan pengalaman nyata Anda dalam merancang atau menggunakan LKPD untuk membantu proses belajar siswa."
+  },
+  {
+    judul: "Studi Kasus: Strategi Pembelajaran",
+    deskripsi:
+      "Ceritakan pengalaman nyata Anda dalam menerapkan strategi pembelajaran untuk mengatasi masalah di kelas."
+  },
+  {
+    judul: "Studi Kasus: Penilaian / Asesmen",
+    deskripsi:
+      "Ceritakan pengalaman nyata Anda dalam melakukan penilaian atau asesmen untuk meningkatkan pembelajaran."
+  }
+];
+
+let kasusAktif = null;
+
+function masukKasus(){
+  // sembunyikan halaman lain
+  document.getElementById("menuPage").classList.add("hidden");
+  document.getElementById("quizPage").classList.add("hidden");
+
+  const index = Math.floor(Math.random() * daftarKasus.length);
+  kasusAktif = daftarKasus[index];
+
+  document.getElementById("judulKasus").innerText = kasusAktif.judul;
+  document.getElementById("deskripsiKasus").innerText = kasusAktif.deskripsi;
+
+  // reset semua textarea
+  document.querySelectorAll(".caseInput").forEach(t=>{
+    t.value = "";
+  });
+
+  document.querySelectorAll(".wordCount").forEach(w=>{
+    w.innerText = "0 / 150 kata";
+    w.className = "wordCount bad";
+  });
+
+  document.getElementById("casePage").classList.remove("hidden");
+}
+function hitungKataKasus(){
+  document.querySelectorAll(".caseBox").forEach(box=>{
+    const textarea = box.querySelector(".caseInput");
+    const counter = box.querySelector(".wordCount");
+
+    const teks = textarea.value.trim();
+    const jumlah = teks ? teks.split(/\s+/).length : 0;
+
+    const min = 150;
+
+    counter.innerText = `${jumlah} / ${min} kata`;
+
+    if(jumlah >= min){
+      counter.classList.remove("bad");
+      counter.classList.add("good");
+    } else {
+      counter.classList.remove("good");
+      counter.classList.add("bad");
+    }
+  });
+}
+function selesaiKasus(){
+  let lulus = true;
+
+  document.querySelectorAll(".caseBox").forEach(box=>{
+    const textarea = box.querySelector(".caseInput");
+    const teks = textarea.value.trim();
+    const jumlah = teks ? teks.split(/\s+/).length : 0;
+
+    if(jumlah < 150){
+      lulus = false;
+    }
+  });
+
+  if(!lulus){
+    alert("Semua kotak harus minimal 150 kata!");
+    return;
+  }
+
+  // kalau lolos
+  document.getElementById("casePage").classList.add("hidden");
+  document.getElementById("resultPage").classList.remove("hidden");
+
+  document.getElementById("statusKelulusan").innerText =
+    "LULUS (Studi Kasus)";
+}
