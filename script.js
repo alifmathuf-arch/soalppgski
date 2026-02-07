@@ -196,20 +196,36 @@ selesai();
 // SELESAI
 function selesai(){
 
-clearInterval(timer);
+  clearInterval(timerInterval);
 
-let skor=0;
+  let skor = 0;
+  let benar = 0;
 
-soalUjian.forEach((s,i)=>{
-if(jawaban[i]===s.a) skor+= 2;
-});
+  soalUjian.forEach((s,i)=>{
+    if(jawaban[i] === s.a){
+      skor += 2;  // nilai per soal
+      benar++;
+    }
+  });
 
-document.getElementById("quizPage").classList.add("hidden");
-document.getElementById("resultPage").classList.remove("hidden");
+  // sembunyikan halaman quiz
+  document.getElementById("quizPage").classList.add("hidden");
+  document.getElementById("resultPage").classList.remove("hidden");
 
-document.getElementById("hasil").innerText=
-`${peserta} (${kelas})
+  // tampilkan nama & kelas
+  document.getElementById("pesertaNama").innerText = peserta;
+  document.getElementById("pesertaKelas").innerText = kelas;
 
-Skor: ${skor}/${soalUjian.length}`;
+  // tampilkan skor
+  document.getElementById("hasilSkor").innerText = skor;
 
+  // tentukan lulus atau gagal
+  const resultFrame = document.getElementById("resultFrame");
+  if(skor >= 80){
+    resultFrame.classList.add("lulus");
+    resultFrame.classList.remove("gagal");
+  } else {
+    resultFrame.classList.add("gagal");
+    resultFrame.classList.remove("lulus");
+  }
 }
