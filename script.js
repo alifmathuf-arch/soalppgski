@@ -148,19 +148,6 @@ function timerStart() {
   }, 1000);
 }
 
-// TOGGLE MODE SIANG / MALAM
-function toggleMode() {
-  const body = document.body;
-  const chk = document.getElementById("toggleMode");
-  if(chk.checked){
-    body.classList.remove("light");
-    body.classList.add("dark");
-  } else {
-    body.classList.remove("dark");
-    body.classList.add("light");
-  }
-}
-
 // SELESAI
 function selesai() {
   clearInterval(timer);
@@ -175,20 +162,21 @@ function selesai() {
     }
   });
 
+  // sembunyikan quiz
   document.getElementById("quizPage").classList.add("hidden");
   document.getElementById("resultPage").classList.remove("hidden");
 
+  // tampilkan info peserta
   document.getElementById("pesertaNama").innerText = peserta;
   document.getElementById("pesertaKelas").innerText = kelas;
 
+  // skor & jawaban benar
   document.getElementById("hasilSkor").innerText = skor;
-  document.getElementById("hasilDetail").innerText = benar; // angka saja
+  document.getElementById("hasilDetail").innerText =
+    `Jawaban benar: ${benar} dari ${soalUjian.length} soal`;
 
-  // status kelulusan
+  // lulus / gagal
   const resultFrame = document.getElementById("resultFrame");
-  const status = skor >= 80 ? "LULUS" : "TIDAK LULUS";
-  document.getElementById("statusKelulusan").innerText = status;
-
   if (skor >= 80) {
     resultFrame.classList.add("lulus");
     resultFrame.classList.remove("gagal");
@@ -196,31 +184,4 @@ function selesai() {
     resultFrame.classList.add("gagal");
     resultFrame.classList.remove("lulus");
   }
-}
-
-function mulaiUjian() {
-  let nama = document.getElementById("nama").value.trim();
-  let kelasInput = document.getElementById("kelas").value.trim();
-
-  if (!nama || !kelasInput) {
-    alert("Isi nama & kelas");
-    return;
-  }
-
-  peserta = nama;
-  kelas = kelasInput;
-
-  acak();
-  index = 0;
-  waktu = 120 * 60;
-
-  document.getElementById("loginPage").classList.add("hidden");
-  document.getElementById("quizPage").classList.remove("hidden");
-
-  // Tampilkan timer sticky
-  const timerEl = document.getElementById("timer");
-  timerEl.classList.remove("hidden");
-
-  tampil();
-  timerStart();
 }
