@@ -1,6 +1,6 @@
 let soalUjian=[];
 let jawaban=[];
-let peserta="", kelas="", mode="latihan";
+let peserta="", kelas="", mode="ujian";
 let index=0;
 let waktu=120*60;
 let timer;
@@ -131,3 +131,4 @@ function selesai(){
   if(skor>=80){ frame.classList.add("lulus"); frame.classList.remove("gagal"); }
   else{ frame.classList.add("gagal"); frame.classList.remove("lulus"); }
 }
+
