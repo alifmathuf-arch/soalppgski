@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -27,135 +30,96 @@
   <h2>Pilih Jenis Soal</h2>
   <p>Silakan pilih tipe ujian</p>
 
- <button onclick="masukPG('ujian')">Mulai Ujian</button>
-<button onclick="masukKasus()">Studi Kasus</button>
-
+  <button onclick="masukPG()">Mulai Ujian</button>
+  <button onclick="masukKasus()">Studi Kasus</button>
 
 </div>
 
+<!-- ================= STUDI KASUS PAGE ================= -->
 
-
- <!-- STUDI KASUS PAGE -->
 <div id="casePage" class="hidden">
 
-  <!-- TOP BAR TIMER -->
+  <!-- TIMER BAR -->
   <div class="caseTopBar">
     <div id="caseTimer">⏳ 30:00</div>
   </div>
 
-  <div class="card">
+  <div class="card caseCard">
 
-    <h3 id="judulKasus">Studi Kasus</h3>
+    <h3 id="judulKasus"></h3>
     <p id="deskripsiKasus"></p>
 
-    <div class="caseTopBar">
-  
-</div>
+    <!-- ACCORDION GRID -->
+    <div class="caseGrid">
 
-    <!-- KOTAK 1 -->
-  <div class="caseBox">
+      <!-- BOX 1 -->
+      <div class="caseBox">
+        <div class="caseHeader" onclick="toggleCase(this)">
+          <span class="caseNum">1</span>
+          <h4>Identifikasi Masalah</h4>
+          <span class="caseArrow">▼</span>
+        </div>
 
-  <div class="caseHeader" onclick="toggleCase(this)">
-  <span class="caseNum">1</span>
-  <h4>Identifikasi Masalah</h4>
-  <span class="caseArrow">▼</span>
-</div>
+        <div class="caseBody">
+          <p class="caseHint">Jelaskan deskripsi kasus nyata yang Anda alami.</p>
+          <textarea class="caseInput" placeholder="Minimal 150 kata..." oninput="hitungKataKasus()"></textarea>
+          <div class="wordCount bad">0 / 150 kata</div>
+        </div>
+      </div>
 
+      <!-- BOX 2 -->
+      <div class="caseBox">
+        <div class="caseHeader" onclick="toggleCase(this)">
+          <span class="caseNum">2</span>
+          <h4>Upaya Penyelesaian</h4>
+          <span class="caseArrow">▼</span>
+        </div>
 
-  <div class="caseBody">
-    <p class="caseHint">
-      Jelaskan deskripsi kasus nyata yang Anda alami.
-    </p>
+        <div class="caseBody">
+          <p class="caseHint">Jelaskan upaya Anda dalam menyelesaikan kasus.</p>
+          <textarea class="caseInput" placeholder="Minimal 150 kata..." oninput="hitungKataKasus()"></textarea>
+          <div class="wordCount bad">0 / 150 kata</div>
+        </div>
+      </div>
 
-    <textarea class="caseInput"
-      placeholder="Minimal 150 kata..."
-      oninput="hitungKataKasus()"></textarea>
+      <!-- BOX 3 -->
+      <div class="caseBox">
+        <div class="caseHeader" onclick="toggleCase(this)">
+          <span class="caseNum">3</span>
+          <h4>Hasil</h4>
+          <span class="caseArrow">▼</span>
+        </div>
 
-    <div class="wordCount bad">0 / 150 kata</div>
-  </div>
+        <div class="caseBody">
+          <p class="caseHint">Jelaskan hasil yang Anda dapatkan.</p>
+          <textarea class="caseInput" placeholder="Minimal 150 kata..." oninput="hitungKataKasus()"></textarea>
+          <div class="wordCount bad">0 / 150 kata</div>
+        </div>
+      </div>
 
-</div>
+      <!-- BOX 4 -->
+      <div class="caseBox">
+        <div class="caseHeader" onclick="toggleCase(this)">
+          <span class="caseNum">4</span>
+          <h4>Hikmah / Pelajaran</h4>
+          <span class="caseArrow">▼</span>
+        </div>
 
-    <!-- KOTAK 2 -->
-   <div class="caseBox">
+        <div class="caseBody">
+          <p class="caseHint">Jelaskan pengalaman berharga Anda.</p>
+          <textarea class="caseInput" placeholder="Minimal 150 kata..." oninput="hitungKataKasus()"></textarea>
+          <div class="wordCount bad">0 / 150 kata</div>
+        </div>
+      </div>
 
- <div class="caseHeader" onclick="toggleCase(this)">
-  <span class="caseNum">2</span>
-  <h4>Upaya Penyelesaian</h4>
-  <span class="caseArrow">▼</span>
-</div>
-
-
-  <div class="caseBody">
-    <p class="caseHint">
-        Jelaskan upaya Anda dalam menyelesaikan kasus/masalah nyata.
-       </p>
-
-    <textarea class="caseInput"
-      placeholder="Minimal 150 kata..."
-      oninput="hitungKataKasus()"></textarea>
-
-    <div class="wordCount bad">0 / 150 kata</div>
-  </div>
-
-</div>
-
-    <!-- KOTAK 3 -->
-   <div class="caseBox">
-
-<div class="caseHeader" onclick="toggleCase(this)">
-  <span class="caseNum">3</span>
-  <h4>Hasil</h4>
-  <span class="caseArrow">▼</span>
-</div>
-
-
-  <div class="caseBody">
-    <p class="caseHint">
-        Jelaskan hasil yang Anda dapatkan setelah upaya tersebut.
-      </p>
-
-    <textarea class="caseInput"
-      placeholder="Minimal 150 kata..."
-      oninput="hitungKataKasus()"></textarea>
-
-    <div class="wordCount bad">0 / 150 kata</div>
-  </div>
-
-</div>
-    
-    <!-- KOTAK 4 -->
-
-  <div class="caseBox">
-
- <div class="caseHeader" onclick="toggleCase(this)">
-  <span class="caseNum">1</span>
-  <h4>Hikmah/Pelajaran Berharga</h4>
-  <span class="caseArrow">▼</span>
-</div>
-
-
-  <div class="caseBody">
-    <p class="caseHint">
-        Jelaskan pengalaman berharga yang Anda dapatkan.
-      </p>
-
-    <textarea class="caseInput"
-      placeholder="Minimal 150 kata..."
-      oninput="hitungKataKasus()"></textarea>
-
-    <div class="wordCount bad">0 / 150 kata</div>
-  </div>
-
-</div>
-
+    </div>
 
     <button onclick="selesaiKasus()">Selesai Studi Kasus</button>
 
   </div>
 </div>
 
-
+<!-- ================= QUIZ PAGE ================= -->
 
 <div id="quizPage" class="hidden">
 
@@ -191,10 +155,10 @@
 
 </div>
 
+<!-- ================= RESULT PG ================= -->
 
-
-<!-- RESULT PAGE -->
 <div id="resultPG" class="card hidden">
+
   <h2>Hasil Pilihan Ganda</h2>
 
   <div class="resultFrame">
@@ -205,7 +169,11 @@
   </div>
 
   <button onclick="location.reload()">Keluar</button>
+
 </div>
+
+<!-- ================= RESULT KASUS ================= -->
+
 <div id="resultKasus" class="card hidden">
 
   <h2>Hasil Studi Kasus</h2>
@@ -217,9 +185,8 @@
   </div>
 
   <button onclick="location.reload()">Keluar</button>
-</div>
 
-  
+</div>
 
 <!-- FOOTER -->
 <div class="footer">
@@ -230,6 +197,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
