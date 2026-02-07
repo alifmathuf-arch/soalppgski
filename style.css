@@ -69,7 +69,7 @@ button:hover{
 .modeWrap{
   display:flex;
   gap:8px;
-  margin-bottom:15px;
+  margin-bottom:10px;
 }
 
 .mode{
@@ -217,6 +217,3 @@ button:hover{
 .hidden{
   display:none;
 }
-
-
-
