@@ -413,6 +413,30 @@ button:hover{
   display: block;
 }
 
+.caseHeader{
+  justify-content: space-between;
+}
+
+.caseArrow{
+  transition: 0.3s ease;
+  font-size: 18px;
+}
+
+.caseBox.active .caseArrow{
+  transform: rotate(180deg);
+}
+
+/* animasi buka */
+.caseBody{
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.35s ease;
+}
+
+.caseBox.active .caseBody{
+  max-height: 800px;
+}
+
 
 
 
