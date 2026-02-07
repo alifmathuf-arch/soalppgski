@@ -325,4 +325,19 @@ function toggleCase(step){
   });
 }
 
+function toggleCase(el){
+
+  const box = el.closest(".caseBox");
+
+  // tutup semua dulu
+  document.querySelectorAll(".caseBox").forEach(b=>{
+    if(b !== box){
+      b.classList.remove("active");
+    }
+  });
+
+  // toggle current
+  box.classList.toggle("active");
+}
+
 
