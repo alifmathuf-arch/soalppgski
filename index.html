@@ -45,52 +45,76 @@
     <p id="deskripsiKasus"></p>
 
     <!-- KOTAK 1 -->
-    <div class="caseBox">
-      <h4>1. Identifikasi Masalah / Kasus Nyata</h4>
-      <p class="caseHint">
-        Jelaskan deskripsi kasus nyata yang Anda alami.
-      </p>
-      <textarea class="caseInput" data-min="150"
-        placeholder="Tuliskan minimal 150 kata..."
-        oninput="hitungKataKasus()"></textarea>
-      <div class="wordCount">0 / 150 kata</div>
-    </div>
+   <div class="caseBox" data-step="1">
+
+  <div class="caseHeader" onclick="toggleCase(1)">
+    <span class="caseNumber">1</span>
+    <h4>Identifikasi Masalah / Kasus Nyata</h4>
+  </div>
+
+  <div class="caseContent">
+
+    <p class="caseHint">
+      Jelaskan deskripsi kasus nyata yang Anda alami.
+    </p>
+
+    <textarea class="caseInput"
+      oninput="hitungKataKasus()"
+      placeholder="Minimal 150 kata..."></textarea>
+
+    <div class="wordCount">0 / 150 kata</div>
+
+  </div>
+</div>
+
 
     <!-- KOTAK 2 -->
-    <div class="caseBox">
+    <div class="caseBox" data-step="2">
+  <div class="caseHeader" onclick="toggleCase(2)">
+    <span class="caseNumber">2</span>
       <h4>2. Upaya Penyelesaian</h4>
       <p class="caseHint">
         Jelaskan upaya Anda dalam menyelesaikan kasus/masalah nyata.
-      </p>
-      <textarea class="caseInput" data-min="150"
-        placeholder="Tuliskan minimal 150 kata..."
-        oninput="hitungKataKasus()"></textarea>
-      <div class="wordCount">0 / 150 kata</div>
-    </div>
+      <</p>
+    
+    <textarea class="caseInput"
+      oninput="hitungKataKasus()"
+      placeholder="Minimal 150 kata..."></textarea>
+
+    <div class="wordCount">0 / 150 kata</div>
+
+  </div>
+</div>
 
     <!-- KOTAK 3 -->
-    <div class="caseBox">
+    <div class="caseBox" data-step="3">
+  <div class="caseHeader" onclick="toggleCase(3)">
+    <span class="caseNumber">3</span>
       <h4>3. Hasil</h4>
       <p class="caseHint">
         Jelaskan hasil yang Anda dapatkan setelah upaya tersebut.
       </p>
-      <textarea class="caseInput" data-min="150"
-        placeholder="Tuliskan minimal 150 kata..."
-        oninput="hitungKataKasus()"></textarea>
-      <div class="wordCount">0 / 150 kata</div>
+      <textarea class="caseInput"
+      oninput="hitungKataKasus()"
+      placeholder="Minimal 150 kata..."></textarea>
+
+    <div class="wordCount">0 / 150 kata</div>
+
     </div>
 
     <!-- KOTAK 4 -->
-    <div class="caseBox">
-      <h4>4. Hikmah / Pelajaran Berharga</h4>
-      <p class="caseHint">
+    <div class="caseBox" data-step="4">
+
+  <div class="caseHeader" onclick="toggleCase(4)">
+    <span class="caseNumber">4</span>
         Jelaskan pengalaman berharga yang Anda dapatkan.
       </p>
-      <textarea class="caseInput" data-min="150"
-        placeholder="Tuliskan minimal 150 kata..."
-        oninput="hitungKataKasus()"></textarea>
-      <div class="wordCount">0 / 150 kata</div>
-    </div>
+     <textarea class="caseInput"
+      oninput="hitungKataKasus()"
+      placeholder="Minimal 150 kata..."></textarea>
+
+    <div class="wordCount">0 / 150 kata</div>
+
 
     <button onclick="selesaiKasus()">Selesai Studi Kasus</button>
 
@@ -181,6 +205,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
