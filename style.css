@@ -220,9 +220,8 @@ button:hover{
   transform: translateY(-2px);
 }
 
-.hidden{
-  display:none;
-}
+
+
 
 /* ============================= */
 /* STUDI KASUS */
@@ -254,5 +253,8 @@ button:hover{
 .case
 
 
+.hidden{
+  display:none !important;
+}
 
 
