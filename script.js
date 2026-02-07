@@ -59,18 +59,20 @@ function login(){
 // ===============================
 // MASUK PG
 // ===============================
-function masukPG(){
+function masukPG(modeDipilih){
 
-  hideAll();
-  document.getElementById("quizPage").classList.remove("hidden");
+  mode = modeDipilih;
 
-  index = 0;
-  waktu = 120 * 60;
+  showOnly("quizPage");
+
+  index=0;
+  waktu=120*60;
 
   acakSoal();
   tampilSoal();
-  timerStart();
+  startTimer();
 }
+
 
 // ===============================
 // ACAK SOAL
@@ -315,6 +317,7 @@ function selesaiKasus(){
   document.getElementById("statusKelulusan").innerText =
     "LULUS (Studi Kasus)";
 }
+
 
 
 
