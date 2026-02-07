@@ -13,7 +13,6 @@ let index = 0;
 let waktu = 120 * 60;
 let timer;
 
-const JUMLAH_LATIHAN = 50;
 
 // ===============================
 // LOAD SOAL
@@ -79,16 +78,13 @@ function masukPG(modeDipilih){
 // ===============================
 function acakSoal(){
 
-  let temp = [...bankSoal];
+  const temp = [...bankSoal];
   temp.sort(() => Math.random() - 0.5);
 
-  let jumlah = mode === "latihan"
-    ? Math.min(JUMLAH_LATIHAN, temp.length)
-    : Math.min(120, temp.length);
-
-  soalUjian = temp.slice(0, jumlah);
-  jawaban = new Array(jumlah).fill(null);
+  soalUjian = temp;
+  jawaban = new Array(temp.length).fill(null);
 }
+
 
 // ===============================
 // TAMPILKAN SOAL
@@ -127,13 +123,7 @@ function tampilSoal(){
 // PILIH JAWABAN
 // ===============================
 function pilihJawaban(i){
-
-  jawaban[index] = i;
-
-  if(mode === "latihan"){
-    alert(i === soalUjian[index].a ? "✔ Benar" : "✘ Salah");
-  }
-
+ jawaban[index] = i;
   tampilSoal();
 }
 
@@ -317,6 +307,7 @@ function selesaiKasus(){
   document.getElementById("statusKelulusan").innerText =
     "LULUS (Studi Kasus)";
 }
+
 
 
 
