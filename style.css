@@ -6,18 +6,17 @@
 }
 
 body{
-  margin:0;
   min-height:100vh;
   display:flex;
   flex-direction:column;
   align-items:center;
-  justify-content:flex-start;
   padding:20px 10px;
   color:white;
-  background: linear-gradient(135deg,#0f172a,#1e3a8a,#14b8a6);
+  background:linear-gradient(135deg,#0f172a,#1e3a8a,#14b8a6);
 }
 
-/* CARD */
+/* ================= CARD ================= */
+
 .card{
   width:95%;
   max-width:420px;
@@ -30,13 +29,15 @@ body{
   margin-bottom:20px;
 }
 
-/* LOGO */
+/* ================= LOGO ================= */
+
 .logo{
   width:110px;
   margin-bottom:10px;
 }
 
-/* INPUT */
+/* ================= INPUT ================= */
+
 input{
   width:100%;
   padding:12px;
@@ -47,7 +48,8 @@ input{
   color:#111;
 }
 
-/* BUTTON UMUM */
+/* ================= BUTTON ================= */
+
 button{
   width:100%;
   padding:12px;
@@ -61,57 +63,50 @@ button{
   transition:.2s;
 }
 
-button:hover{
-  transform:translateY(-2px);
-}
+button:hover{transform:translateY(-2px);}
 
-#menuPage{
-  animation: fadeIn .4s ease;
-}
+.hidden{display:none}
 
-@keyframes fadeIn{
-  from{opacity:0; transform:translateY(10px);}
-  to{opacity:1; transform:none;}
-}
+/* ================= QUIZ TOP ================= */
 
-/* TOP BAR */
 .topInfo{
   width:420px;
   max-width:95vw;
   margin:0 auto 12px;
-
   display:flex;
   align-items:center;
   gap:10px;
 }
 
-/* Timer kiri */
 #timer{
   background:rgba(0,0,0,0.35);
   padding:6px 10px;
   border-radius:8px;
   font-weight:700;
   font-size:13px;
-  white-space:nowrap;
 }
 
-/* Progress bar tengah */
-.topInfo .progressWrap{
+.progressWrap{
   flex:1;
   height:8px;
-  margin:0;
+  background:#1e293b;
+  border-radius:6px;
+  overflow:hidden;
 }
 
-/* Persen kanan */
+#progressBar{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#22c55e,#0ea5e9);
+}
+
 #progressPercent{
   font-size:13px;
   font-weight:600;
-  white-space:nowrap;
 }
 
+/* ================= GRID ================= */
 
-
-/* GRID WRAP */
 .gridWrap{
   width:420px;
   max-width:95vw;
@@ -122,7 +117,6 @@ button:hover{
   display:grid;
   grid-template-columns:repeat(10,1fr);
   gap:5px;
-  margin:10px 0;
 }
 
 .gridBtn{
@@ -133,11 +127,10 @@ button:hover{
   cursor:pointer;
 }
 
-.gridDone{
-  background:#22c55e;
-}
+.gridDone{background:#22c55e}
 
-/* OPSI */
+/* ================= OPSI ================= */
+
 .opsi{
   background:#f8fafc;
   color:#111;
@@ -147,27 +140,25 @@ button:hover{
   cursor:pointer;
 }
 
-.opsi:hover{
-  background:#e0f2fe;
-}
+.opsi:hover{background:#e0f2fe}
 
 .selected{
   background:#14b8a6!important;
   color:white;
 }
 
-/* NAV */
+/* ================= NAV ================= */
+
 .nav{
   display:flex;
   gap:8px;
   margin-top:10px;
 }
 
-.nav button{
-  flex:1;
-}
+.nav button{flex:1}
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 .footer{
   text-align:center;
   font-size:12px;
@@ -178,338 +169,112 @@ button:hover{
   margin-top:auto;
 }
 
-.hidden{
+/* ================= RESULT ================= */
+
+.resultFrame{
+  background:rgba(255,255,255,0.15);
+  padding:20px;
+  border-radius:20px;
+  border:2px solid rgba(255,255,255,0.3);
+  box-shadow:0 6px 15px rgba(0,0,0,0.25);
+  text-align:left;
+}
+
+/* ================= STUDI KASUS ================= */
+
+.caseTopBar{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  margin-bottom:18px;
+  position:sticky;
+  top:15px;
+  z-index:20;
+}
+
+#caseTimer{
+  background:#020617;
+  padding:10px 22px;
+  border-radius:22px;
+  font-weight:600;
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+.caseCard{max-width:1000px}
+
+.caseGrid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+  margin-top:20px;
+}
+
+/* ACCORDION */
+
+.caseBox{
+  background:rgba(255,255,255,0.1);
+  border-radius:14px;
+  overflow:hidden;
+}
+
+.caseHeader{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+  padding:18px;
+  cursor:pointer;
+  background:rgba(0,0,0,0.18);
+}
+
+.caseHeader:hover{background:rgba(0,0,0,0.28)}
+
+.caseNum{
+  background:linear-gradient(135deg,#19d3ae,#0ea5e9);
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-weight:bold;
+}
+
+.caseArrow{transition:.3s}
+
+.caseBody{
+  padding:18px;
   display:none;
 }
 
-/* RESULT */
-.resultFrame{
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(8px);
-  padding: 20px;
-  border-radius: 20px;
-  border: 2px solid rgba(255,255,255,0.3);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-  text-align:left;
-}
-
-.resultItem{
-  margin-bottom:15px;
-  font-size:16px;
-  display:flex;
-  justify-content:space-between;
-  color:#fff;
-}
-
-.resultItem .label{
-  font-weight:bold;
-  opacity:0.9;
-}
-
-/* Tombol selesai hijau */
-.finishBtn{
-  width: 100%;
-  padding: 12px;
-  margin-top: 20px;
-  border:none;
-  border-radius: 12px;
-  background: linear-gradient(135deg,#22c55e,#16a34a);
-  color:white;
-  font-weight:600;
-  cursor:pointer;
-  transition:.2s;
-}
-
-.finishBtn:hover{
-  transform: translateY(-2px);
-}
-
-
-
-
-/* ============================= */
-/* STUDI KASUS */
-/* ============================= */
-
-.caseBox{
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(8px);
-  border-radius: 16px;
-  padding: 15px;
-  margin: 14px 0;
-  border: 1px solid rgba(255,255,255,0.25);
-  text-align:left;
-}
-
-.caseBox h4{
-  margin-bottom:4px;
-  font-size:15px;
-  font-weight:700;
-}
+.caseBox.active .caseBody{display:block}
+.caseBox.active .caseArrow{transform:rotate(180deg)}
 
 .caseHint{
   font-size:12px;
-  opacity:0.85;
+  opacity:.85;
   margin-bottom:6px;
 }
 
-/* textarea studi kasus */
-.case
-
-/* ===== ACCORDION STUDI KASUS ===== */
-
-.caseHeader{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  cursor:pointer;
+.caseInput{
+  width:100%;
+  min-height:160px;
+  font-size:15px;
+  line-height:1.6;
+  resize:vertical;
+  border-radius:10px;
+  padding:12px;
 }
 
-.caseNumber{
-  width:34px;
-  height:34px;
-  background:#14b8a6;
-  color:white;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:bold;
-}
-
-.caseContent{
-  display:none;
-  margin-top:12px;
-}
-
-.caseBox.active .caseContent{
-  display:block;
-}
-
-.caseBox.active{
-  outline:2px solid rgba(34,197,94,.5);
-}
-
-/* smooth */
-.caseContent{
-  animation:fadeIn .25s ease;
-}
-
-@keyframes fadeIn{
-  from{opacity:0; transform:translateY(-5px);}
-  to{opacity:1;}
-}
-
-/* ================================
-   RESPONSIVE DESKTOP MODE
-================================ */
-
-/* wrapper utama studi kasus */
-#casePage .card {
-  max-width: 1100px;
-  width: 92%;
-  margin: 40px auto;
-}
-
-/* tiap box */
-.caseBox {
-  padding: 20px;
-  margin-bottom: 18px;
-}
-
-/* textarea gede di laptop */
-.caseInput {
-  width: 100%;
-  min-height: 160px;
-  font-size: 15px;
-  line-height: 1.6;
-  resize: vertical;
-}
-
-/* ================================
-   MODE DESKTOP (>= 900px)
-================================ */
-@media (min-width: 900px) {
-
-  /* grid 2 kolom biar elegan */
-  #casePage .card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
-  }
-
-  #casePage h3,
-  #casePage #deskripsiKasus,
-  #casePage button {
-    grid-column: span 2;
-  }
-
-  .caseBox {
-    margin-bottom: 0;
-  }
-
-  .caseInput {
-    min-height: 200px;
-  }
-}
-
-/* ================================
-   MOBILE (HP)
-================================ */
-@media (max-width: 600px) {
-
-  #casePage .card {
-    width: 95%;
-    padding: 18px;
-  }
-
-  .caseInput {
-    min-height: 130px;
-  }
-}
-/* =========================
-   ACCORDION STUDI KASUS
-========================= */
-
-.caseBox {
-  border-radius: 14px;
-  background: rgba(255,255,255,0.08);
-  overflow: hidden;
-}
-
-/* header klik */
-.caseHeader {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 18px;
-  cursor: pointer;
-  background: rgba(0,0,0,0.15);
-}
-
-.caseHeader:hover {
-  background: rgba(0,0,0,0.25);
-}
-
-.caseNum {
-  background: linear-gradient(135deg,#19d3ae,#0ea5e9);
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* body hidden default */
-.caseBody {
-  display: none;
-  padding: 18px;
-}
-
-/* open state */
-.caseBox.active .caseBody {
-  display: block;
-}
-
-.caseHeader{
-  justify-content: space-between;
-}
-
-.caseArrow{
-  transition: 0.3s ease;
-  font-size: 18px;
-}
-
-.caseBox.active .caseArrow{
-  transform: rotate(180deg);
-}
-
-/* animasi buka */
-.caseBody{
-  max-height: 0;
-  overflow: hidden;
-  transition: 0.35s ease;
-}
-
-.caseBox.active .caseBody{
-  max-height: 800px;
-}
-
-.caseTopBar{
-  position: sticky;
-  top: 15px;
-  z-index: 20;
-
-  display: flex;
-  justify-content: center;
-
-  margin-bottom: 20px;
-}
-
-#caseTimer{
-  background: #0f172a;
-  color: white;
-  padding: 8px 18px;
-  border-radius: 20px;
-  font-weight: 600;
-  box-shadow: 0 6px 15px rgba(0,0,0,.25);
-}
+/* ================= RESPONSIVE ================= */
 
 .quizCard{
-  max-width: 900px;
-  margin: 25px auto;
+  max-width:900px;
+  margin:25px auto;
 }
 
-#quizPage{
-  min-height: 100vh;
-}
+#quizPage{min-height:100vh}
 
-/* =======================
-   STUDI KASUS TIMER BAR
-======================= */
-
-.caseTopBar{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 18px;
-}
-
-#caseTimer{
-  background: #020617;
-  padding: 10px 22px;
-  border-radius: 22px;
-  font-weight: 600;
-  letter-spacing: .5px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.4);
-}
-
-/* =======================
-   CARD STUDI KASUS
-======================= */
-
-.caseCard{
-  max-width: 1000px;
-}
-
-/* GRID ACCORDION */
-
-.caseGrid{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 18px;
-  margin-top: 20px;
-}
-
-/* MOBILE */
 @media(max-width:768px){
-  .caseGrid{
-    grid-template-columns: 1fr;
-  }
+  .caseGrid{grid-template-columns:1fr}
 }
-
-
-
-
