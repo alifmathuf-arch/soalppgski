@@ -2,7 +2,7 @@ let soalUjian=[], jawaban=[], peserta="", kelas="", mode="latihan", index=0;
 let waktu=0, timer;
 
 // Contoh soal langsung (10 soal)
-soalUjian = [
+soalLatihan = [
   {q:"Contoh Soal 1?", o:["A1","B1","C1","D1"], a:0},
   {q:"Contoh Soal 2?", o:["A2","B2","C2","D2"], a:1},
   {q:"Contoh Soal 3?", o:["A3","B3","C3","D3"], a:2},
@@ -93,3 +93,4 @@ function selesai(){
     rDiv.classList.add(skor>=70?"lulus":"gagal");
     document.getElementById("quizPage").classList.add("hidden");
 }
+
