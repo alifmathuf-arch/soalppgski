@@ -1,50 +1,219 @@
-*{box-sizing:border-box;font-family:Segoe UI,Roboto,sans-serif;margin:0;padding:0;}
-body{margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:20px 10px;color:white;background: linear-gradient(135deg,#0f172a,#1e3a8a,#14b8a6);}
+*{
+  box-sizing:border-box;
+  font-family:Segoe UI,Roboto,sans-serif;
+  margin:0;
+  padding:0;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  padding:20px 10px;
+  color:white;
+  background: linear-gradient(135deg,#0f172a,#1e3a8a,#14b8a6);
+}
 
 /* CARD */
-.card{width:95%;max-width:420px;padding:25px;border-radius:18px;background:rgba(255,255,255,0.08);backdrop-filter:blur(12px);box-shadow:0 20px 40px rgba(0,0,0,.35);text-align:center;margin-bottom:20px;}
-.logo{width:110px;margin-bottom:15px;}
-h2{margin-bottom:12px;font-size:24px;font-weight:bold;color:#fff;}
-p{color:#ddd;font-size:14px;margin-bottom:20px;text-align:center;line-height:1.4;}
-input{width:100%;padding:12px;margin:6px 0;border:none;border-radius:10px;background:#f8fafc;color:#111;font-size:14px;}
-button{width:100%;padding:12px;margin-top:12px;border:none;border-radius:12px;font-weight:600;cursor:pointer;background:linear-gradient(135deg,#14b8a6,#0ea5e9);color:white;transition:0.2s;}
-button:hover{transform:translateY(-2px);}
-.modeWrap{display:flex;gap:8px;margin-bottom:12px;}
-.mode{flex:1;background:#334155;color:#fff;padding:10px;border-radius:10px;cursor:pointer;font-weight:600;transition:0.2s;}
-.mode.active{background:#22c55e;}
+.card{
+  width:95%;
+  max-width:420px;
+  padding:25px;
+  border-radius:18px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  box-shadow:0 20px 40px rgba(0,0,0,.35);
+  text-align:center;
+  margin-bottom:20px;
+}
 
-/* TIMER BIASA */
-.timerBox{background: rgba(0,0,0,0.6);padding:8px 12px;border-radius:10px;font-weight:bold;color:white;font-size:14px;margin-bottom:10px;display:inline-block;text-align:center;}
+/* LOGO */
+.logo{
+  width:110px;
+  margin-bottom:10px;
+}
+
+/* INPUT */
+input{
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border:none;
+  border-radius:10px;
+  background:#f8fafc;
+  color:#111;
+}
+
+/* BUTTON UMUM */
+button{
+  width:100%;
+  padding:12px;
+  margin-top:12px;
+  border:none;
+  border-radius:12px;
+  font-weight:600;
+  cursor:pointer;
+  background:linear-gradient(135deg,#14b8a6,#0ea5e9);
+  color:white;
+  transition:.2s;
+}
+
+button:hover{
+  transform:translateY(-2px);
+}
+
+/* MODE BUTTON */
+.modeWrap{
+  display:flex;
+  gap:8px;
+  margin-bottom:10px;
+}
+
+.mode{
+  flex:1;
+  background:#334155;
+}
+
+.mode.active{
+  background:#22c55e;
+}
+
+/* HEADER */
+.header{
+  text-align:center;
+  font-weight:bold;
+  margin-bottom:10px;
+}
 
 /* PROGRESS */
-.progressWrap{width:420px;max-width:95vw;margin:auto;background:#1e293b;border-radius:10px;overflow:hidden;margin-bottom:10px;}
-#progressBar{height:8px;width:0%;background:#22c55e;transition:.3s;}
+.progressWrap{
+  width:420px;
+  max-width:95vw;
+  margin:auto;
+  background:#1e293b;
+  border-radius:10px;
+  overflow:hidden;
+}
 
-/* GRID */
-.gridWrap{width:420px;max-width:95vw;margin:auto;}
-#gridSoal{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;margin:10px 0;}
-.gridBtn{background:#334155;padding:6px;border-radius:6px;font-size:12px;cursor:pointer;}
-.gridDone{background:#22c55e;}
+#progressBar{
+  height:8px;
+  width:0%;
+  background:#22c55e;
+  transition:.3s;
+}
+
+/* GRID WRAP */
+.gridWrap{
+  width:420px;
+  max-width:95vw;
+  margin:auto;
+}
+
+#gridSoal{
+  display:grid;
+  grid-template-columns:repeat(10,1fr);
+  gap:5px;
+  margin:10px 0;
+}
+
+.gridBtn{
+  background:#334155;
+  padding:6px;
+  border-radius:6px;
+  font-size:12px;
+  cursor:pointer;
+}
+
+.gridDone{
+  background:#22c55e;
+}
 
 /* OPSI */
-.opsi{background:#f8fafc;color:#111;padding:12px;margin:6px 0;border-radius:10px;cursor:pointer;}
-.opsi:hover{background:#e0f2fe;}
-.selected{background:#14b8a6!important;color:white;}
+.opsi{
+  background:#f8fafc;
+  color:#111;
+  padding:12px;
+  margin:6px 0;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.opsi:hover{
+  background:#e0f2fe;
+}
+
+.selected{
+  background:#14b8a6!important;
+  color:white;
+}
 
 /* NAV */
-.nav{display:flex;gap:8px;margin-top:10px;}
-.nav button{flex:1;}
+.nav{
+  display:flex;
+  gap:8px;
+  margin-top:10px;
+}
 
-/* RESULT */
-.resultFrame{background: rgba(255,255,255,0.15);backdrop-filter: blur(8px);padding: 20px;border-radius: 20px;border: 2px solid rgba(255,255,255,0.3);box-shadow: 0 6px 15px rgba(0,0,0,0.25);text-align: left;transition: all 0.5s ease;}
-.resultItem{margin-bottom: 15px;font-size: 16px;display:flex;justify-content: space-between;color: #fff;}
-.resultItem .label{font-weight:bold;opacity:0.9;}
-.lulus{border-color:#22c55e;background: rgba(34,197,94,0.15);}
-.lulus .scoreBox, .lulus #statusKelulusan{color:#22c55e;font-weight:bold;}
-.gagal{border-color:#ef4444;background: rgba(239,68,68,0.15);}
-.gagal .scoreBox, .gagal #statusKelulusan{color:#ef4444;font-weight:bold;}
+.nav button{
+  flex:1;
+}
 
 /* FOOTER */
-.footer{text-align:center;font-size:12px;color:#ddd;padding:12px;width:100%;max-width:420px;margin-top:auto;}
-.hidden{display:none;}
-@media(max-width:480px){.timerBox{font-size:12px;padding:6px 10px;}}
+.footer{
+  text-align:center;
+  font-size:12px;
+  color:#ddd;
+  padding:12px;
+  width:100%;
+  max-width:420px;
+  margin-top:auto;
+}
+
+/* RESULT */
+.resultFrame{
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  text-align:left;
+}
+
+.resultItem{
+  margin-bottom:15px;
+  font-size:16px;
+  display:flex;
+  justify-content:space-between;
+  color:#fff;
+}
+
+.resultItem .label{
+  font-weight:bold;
+  opacity:0.9;
+}
+
+/* Tombol selesai hijau */
+.finishBtn{
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border:none;
+  border-radius: 12px;
+  background: linear-gradient(135deg,#22c55e,#16a34a);
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.finishBtn:hover{
+  transform: translateY(-2px);
+}
+
+.hidden{
+  display:none;
+}
