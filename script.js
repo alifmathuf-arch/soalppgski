@@ -197,3 +197,30 @@ function selesai() {
     resultFrame.classList.remove("lulus");
   }
 }
+
+function mulaiUjian() {
+  let nama = document.getElementById("nama").value.trim();
+  let kelasInput = document.getElementById("kelas").value.trim();
+
+  if (!nama || !kelasInput) {
+    alert("Isi nama & kelas");
+    return;
+  }
+
+  peserta = nama;
+  kelas = kelasInput;
+
+  acak();
+  index = 0;
+  waktu = 120 * 60;
+
+  document.getElementById("loginPage").classList.add("hidden");
+  document.getElementById("quizPage").classList.remove("hidden");
+
+  // Tampilkan timer sticky
+  const timerEl = document.getElementById("timer");
+  timerEl.classList.remove("hidden");
+
+  tampil();
+  timerStart();
+}
