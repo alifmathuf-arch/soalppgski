@@ -61,13 +61,13 @@ function login(){
 function masukPG(){
 
   if(bankSoal.length === 0){
-    alert("Soal belum selesai dimuat!");
+    alert("Soal belum siap.");
     return;
   }
 
   document.getElementById("menuPage").classList.add("hidden");
-  document.getElementById("loginPage").classList.add("hidden");
   document.getElementById("casePage").classList.add("hidden");
+  document.getElementById("resultPage").classList.add("hidden");
 
   document.getElementById("quizPage").classList.remove("hidden");
 
@@ -79,6 +79,7 @@ function masukPG(){
   tampilSoal();
   timerStart();
 }
+
 
 
 
@@ -234,7 +235,8 @@ function selesai(){
   });
 
   hideAll();
-  document.getElementById("resultPage").classList.remove("hidden");
+ document.getElementById("resultPG").classList.remove("hidden");
+document.getElementById("quizPage").classList.add("hidden");
 
   document.getElementById("pesertaNama").innerText = peserta;
   document.getElementById("pesertaKelas").innerText = kelas;
@@ -329,7 +331,8 @@ function selesaiKasus(){
   }
 
   document.getElementById("casePage").classList.add("hidden");
-  document.getElementById("resultPage").classList.remove("hidden");
+ document.getElementById("resultKasus").classList.remove("hidden");
+
 
   document.getElementById("totalKata").innerText = totalKata;
   document.getElementById("totalChar").innerText = totalChar;
@@ -403,6 +406,7 @@ function updateTimerKasus(){
   document.getElementById("caseTimer").innerText =
     `⏳ ${m}:${s < 10 ? "0" : ""}${s}`;
 }
+
 
 
 
