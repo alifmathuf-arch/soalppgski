@@ -13,7 +13,7 @@ let index = 0;
 let waktu = 120 * 60;
 let timer;
 
-const JUMLAH_SOAL = 40;
+const JUMLAH_SOAL = 50;
 
 // ===============================
 // LOAD SOAL
@@ -395,3 +395,4 @@ function updateTimerKasus(){
   document.getElementById("caseTimer").innerText =
     `⏳ ${m}:${s < 10 ? "0" : ""}${s}`;
 }
+
