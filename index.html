@@ -15,11 +15,14 @@
     Mode Malam
   </label>
 </div>
-  <span id="timer">Waktu: 120:00</span> <!-- ini untuk sticky timer -->
+
+<!-- TIMER STICKY -->
+<span id="timer" class="hidden">Waktu: 120:00</span>
+
 <!-- LOGIN PAGE -->
 <div id="loginPage" class="card">
-
   <img src="logo.png" class="logo" alt="Logo Madrasah">
+
   <h2>LATIHAN SOAL UP PPG</h2>
   <p>Soal SJT & PCK Sesuai Kisi-Kisi UP</p>
 
@@ -36,11 +39,6 @@
 
 <!-- QUIZ PAGE -->
 <div id="quizPage" class="hidden">
-
-  <div class="header">
-    <span id="timer">Waktu: 120:00</span>
-  </div>
-
   <div class="progressWrap">
     <div id="progressBar"></div>
   </div>
@@ -101,32 +99,5 @@
 </div>
 
 <script src="script.js"></script>
-  <!-- LOGIN -->
-<div id="loginPage" class="card">
-
-  <img src="logo.png" class="logo">
-
-  <h2>LATIHAN SOAL UP PPG</h2>
-  <p>Soal SJT & PCK Sesuai Kisi-Kisi UP</p>
-
-  <div class="modeWrap">
-    <button id="btnLatihan" class="mode active" onclick="setMode('latihan')">Mode Latihan</button>
-    <button id="btnUjian" class="mode" onclick="setMode('ujian')">Mode Ujian</button>
-  </div>
-
-  <input id="nama" placeholder="Nama Peserta">
-  <input id="kelas" placeholder="Kelas">
-
-  <button onclick="mulaiUjian()">Mulai Ujian</button>
-
-</div>
-
-<!-- TIMER STICKY, hidden awalnya -->
-<span id="timer" class="hidden">Waktu: 120:00</span>
 </body>
-  
-
 </html>
-
-
-
