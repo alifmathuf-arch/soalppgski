@@ -105,7 +105,7 @@ button:hover{
   transition:.3s;
 }
 
-/* GRID */
+/* GRID WRAP */
 .gridWrap{
   width:420px;
   max-width:95vw;
@@ -127,9 +127,9 @@ button:hover{
   cursor:pointer;
 }
 
-.gridActive{ background:#0d6efd; }
-.gridDone{ background:#22c55e; }
-.gridEmpty{ background:#64748b; }
+.gridDone{
+  background:#22c55e;
+}
 
 /* OPSI */
 .opsi{
@@ -161,68 +161,6 @@ button:hover{
   flex:1;
 }
 
-/* RESULT */
-.resultFrame{
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(8px);
-  padding: 20px;
-  border-radius: 20px;
-  border: 2px solid rgba(255,255,255,0.3);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-  text-align:left;
-  max-height:65vh;
-  overflow:auto;
-}
-
-.resultItem{
-  margin-bottom:12px;
-  font-size:15px;
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
-  color:#fff;
-  flex-wrap:wrap;
-}
-
-.resultItem .label{
-  font-weight:bold;
-  opacity:0.9;
-}
-
-/* SCORE BOX */
-.scoreBox{
-  display:block;
-}
-
-.scoreBox p{
-  margin:4px 0;
-}
-
-/* CHART */
-#chart{
-  width:100%;
-  max-width:280px;
-  margin:10px auto 0;
-  display:block;
-}
-
-/* BUTTON SELESAI */
-.finishBtn{
-  width:100%;
-  padding:12px;
-  margin-top:20px;
-  border:none;
-  border-radius:12px;
-  background: linear-gradient(135deg,#22c55e,#16a34a);
-  color:white;
-  font-weight:600;
-  cursor:pointer;
-}
-
-.finishBtn:hover{
-  transform: translateY(-2px);
-}
-
 /* FOOTER */
 .footer{
   text-align:center;
@@ -234,7 +172,48 @@ button:hover{
   margin-top:auto;
 }
 
+/* RESULT */
+.resultFrame{
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  text-align:left;
+}
+
+.resultItem{
+  margin-bottom:15px;
+  font-size:16px;
+  display:flex;
+  justify-content:space-between;
+  color:#fff;
+}
+
+.resultItem .label{
+  font-weight:bold;
+  opacity:0.9;
+}
+
+/* Tombol selesai hijau */
+.finishBtn{
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border:none;
+  border-radius: 12px;
+  background: linear-gradient(135deg,#22c55e,#16a34a);
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.finishBtn:hover{
+  transform: translateY(-2px);
+}
+
 .hidden{
   display:none;
 }
-
