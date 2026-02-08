@@ -131,6 +131,9 @@ function tampilSoal(){
 
   document.querySelector(".finishBtn").style.display =
     index === soalUjian.length-1 ? "block" : "none";
+  document.querySelector(".finishBtn").disabled =
+  index !== soalUjian.length - 1;
+
 }
 
 // ===============================
@@ -395,4 +398,5 @@ function updateTimerKasus(){
   document.getElementById("caseTimer").innerText =
     `⏳ ${m}:${s < 10 ? "0" : ""}${s}`;
 }
+
 
