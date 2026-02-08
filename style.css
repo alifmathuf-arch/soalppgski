@@ -1,123 +1,110 @@
-/* CENTER SEMUA PAGE */
 body{
-  margin:0;
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:linear-gradient(135deg,#0f172a,#1e3a8a,#14b8a6);
-  font-family:Segoe UI,sans-serif;
+font-family:Arial;
+background:#f4f6fb;
+margin:0;
 }
 
-/* CARD UTAMA */
-.card{
-  width:90%;
-  max-width:420px;
-  background:rgba(255,255,255,.12);
-  padding:28px;
-  border-radius:22px;
-  text-align:center;
-  box-shadow:0 20px 40px rgba(0,0,0,.3);
+.page{
+max-width:900px;
+margin:auto;
+padding:20px;
 }
 
-/* TOMBOL */
+.hidden{display:none}
+
 button{
-  width:100%;
-  padding:14px;
-  border:none;
-  border-radius:14px;
-  background:linear-gradient(135deg,#22c55e,#0ea5e9);
-  color:white;
-  font-size:16px;
-  font-weight:600;
-  margin-top:12px;
-  cursor:pointer;
-  transition:.25s;
+padding:10px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+background:#2563eb;
+color:white;
 }
 
-button:hover{
-  transform:scale(1.03);
-  opacity:.9;
+.finishBtn,.finishGreen{
+background:#16a34a;
 }
 
-/* PAGE STACK FIX */
-#menuPage,
-#mapelPage,
-#loginPage{
-  position:relative;
-  z-index:5;
+textarea{
+width:100%;
+min-height:120px;
 }
-
-/* MENU BUTTON WRAP */
-#menuPage button{
-  margin:15px 0;
-}
-
-/* FINISH BUTTON */
-.finishBtn{
-  background:linear-gradient(135deg,#22c55e,#16a34a);
-}
-
-/* HIDDEN */
-.hidden{
-  display:none !important;
-}
-
-
-.quizCard{max-width:900px;}
 
 .opsi{
-  background:#fff;
-  color:#000;
-  padding:10px;
-  border-radius:10px;
-  margin:6px 0;
-  cursor:pointer;
+padding:10px;
+border:1px solid #ddd;
+margin:8px 0;
+cursor:pointer;
+border-radius:8px;
 }
 
-.selected{background:#14b8a6;color:white;}
+.opsi.selected{
+background:#dbeafe;
+border-color:#2563eb;
+}
 
-.topInfo{
-  max-width:900px;
-  width:95%;
-  display:flex;
-  gap:8px;
-  align-items:center;
+.topBar{
+display:flex;
+justify-content:space-between;
 }
 
 .progressWrap{
-  flex:1;
-  height:8px;
-  background:#334155;
-  border-radius:10px;
+flex:1;
+background:#ddd;
+margin-left:20px;
+border-radius:10px;
+overflow:hidden;
 }
 
 #progressBar{
-  height:100%;
-  width:0;
-  background:#22c55e;
-  border-radius:10px;
+height:12px;
+width:0%;
+background:#16a34a;
 }
 
-.finishBtn{
-  background:linear-gradient(135deg,#22c55e,#16a34a);
+.gridBtn{
+display:inline-block;
+padding:6px;
+border:1px solid #999;
+margin:4px;
+width:32px;
+text-align:center;
+cursor:pointer;
 }
 
-.menuWrap{
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-  margin-top:20px;
-}
-#casePage,
-#quizPage{
-  width:100%;
-  display:flex;
-  justify-content:center;
+.gridDone{background:#16a34a;color:white}
+
+.caseBox{
+border:1px solid #ddd;
+margin:10px 0;
+border-radius:10px;
+overflow:hidden;
 }
 
-#casePage .card,
-#quizPage .card{
-  z-index:10;
+.caseHeader{
+padding:12px;
+background:#2563eb;
+color:white;
+cursor:pointer;
 }
 
+.caseBox textarea,
+.caseBox .wordCount{
+display:none;
+padding:10px;
+}
+
+.caseBox.active textarea,
+.caseBox.active .wordCount{
+display:block;
+}
+
+.wordCount.good{color:green}
+.wordCount.bad{color:red}
+
+#leaderboardList div{
+background:white;
+padding:10px;
+margin:5px;
+border-radius:8px;
+}
