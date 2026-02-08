@@ -1,117 +1,175 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>CBT PPG</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>LATIHAN SOAL PPG</title>
+
+<link rel="stylesheet" href="style.css" />
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 
 <body>
 
+<!-- ================= LOGIN ================= -->
+
 <div id="loginPage" class="page">
-<h2>Login Peserta</h2>
-<input id="nama" placeholder="Nama">
-<input id="kelas" placeholder="Kelas">
-<button onclick="login()">Masuk</button>
+
+  <div style="text-align:center;margin-bottom:20px">
+    <img src="logo.png" alt="Logo" style="max-width:120px;margin-bottom:10px">
+    <h2>Login Peserta</h2>
+  </div>
+
+  <input id="nama" placeholder="Nama Peserta" />
+  <input id="kelas" placeholder="Kelas (SKI / FIQIH / dll)" />
+
+  <div style="margin-top:15px;text-align:center">
+    <button onclick="login()">Masuk</button>
+  </div>
+
 </div>
 
+<!-- ================= MENU ================= -->
+
 <div id="menuPage" class="page hidden">
-<h2>Menu</h2>
-<button onclick="masukPG()">Mulai PG</button>
-<button onclick="masukKasus()">Mulai Studi Kasus</button>
-<button onclick="showLeaderboard()">Leaderboard</button>
+
+  <div style="text-align:center;margin-bottom:20px">
+    <img src="logo.png" alt="Logo" style="max-width:90px;margin-bottom:10px">
+    <h2>Menu Ujian</h2>
+  </div>
+
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+    <button onclick="masukPG()">Mulai PG</button>
+    <button onclick="masukKasus()">Mulai Studi Kasus</button>
+    <button onclick="showLeaderboard()">Leaderboard</button>
+  </div>
+
 </div>
 
 <!-- ================= PG ================= -->
+
 <div id="quizPage" class="page hidden">
 
-<div class="topBar">
-<div id="timer"></div>
-<div class="progressWrap">
-<div id="progressBar"></div>
-</div>
-</div>
+  <div class="topBar">
+    <div id="timer"></div>
 
-<h3 id="nomor"></h3>
-<div id="soal"></div>
-<div id="opsi"></div>
+    <div class="progressWrap">
+      <div id="progressBar"></div>
+    </div>
+  </div>
 
-<div class="nav">
-<button onclick="prevSoal()">Prev</button>
-<button onclick="nextSoal()">Next</button>
-<button class="finishBtn" onclick="confirmSelesaiPG()">SELESAI</button>
-</div>
+  <h3 id="nomor"></h3>
 
-<div id="gridSoal"></div>
+  <div id="soal"></div>
+  <div id="opsi"></div>
+
+  <div class="nav" style="margin-top:15px;display:flex;gap:10px;flex-wrap:wrap">
+    <button onclick="prevSoal()">Prev</button>
+    <button onclick="nextSoal()">Next</button>
+    <button class="finishBtn" onclick="confirmSelesaiPG()">SELESAI</button>
+  </div>
+
+  <div id="gridSoal" style="margin-top:15px"></div>
+
 </div>
 
 <!-- ================= RESULT PG ================= -->
+
 <div id="resultPG" class="page hidden">
-<h2>Hasil PG</h2>
-<p id="pgNama"></p>
-<p id="pgKelas"></p>
-<p>Skor: <span id="pgSkor"></span></p>
-<p>Status: <span id="pgStatus"></span></p>
-<button onclick="exportPDFPG()">Export PDF</button>
-<button onclick="kembaliMenu()">Menu</button>
+
+  <h2>Hasil Pilihan Ganda</h2>
+
+  <p id="pgNama"></p>
+  <p id="pgKelas"></p>
+
+  <p>Skor: <b><span id="pgSkor"></span></b></p>
+  <p>Status: <b><span id="pgStatus"></span></b></p>
+
+  <div style="margin-top:15px">
+    <button onclick="exportPDFPG()">Export PDF</button>
+    <button onclick="kembaliMenu()">Menu</button>
+  </div>
+
 </div>
 
 <!-- ================= STUDI KASUS ================= -->
+
 <div id="casePage" class="page hidden">
 
-<div id="caseTimer"></div>
+  <div id="caseTimer"></div>
 
-<h2 id="judulKasus"></h2>
-<p id="deskripsiKasus"></p>
+  <h2 id="judulKasus">Studi Kasus</h2>
+  <p id="deskripsiKasus"></p>
 
-<div class="caseBox active">
-<div class="caseHeader" onclick="toggleCase(this)">Kasus 1</div>
-<textarea class="caseInput" oninput="hitungKataKasus()"></textarea>
-<div class="wordCount">0 / 150 kata</div>
-</div>
+  <!-- CASE 1 -->
+  <div class="caseBox active">
+    <div class="caseHeader" onclick="toggleCase(this)">Kasus 1</div>
+    <textarea class="caseInput" oninput="hitungKataKasus()"></textarea>
+    <div class="wordCount">0 / 150 kata</div>
+  </div>
 
-<div class="caseBox">
-<div class="caseHeader" onclick="toggleCase(this)">Kasus 2</div>
-<textarea class="caseInput" oninput="hitungKataKasus()"></textarea>
-<div class="wordCount">0 / 150 kata</div>
-</div>
+  <!-- CASE 2 -->
+  <div class="caseBox">
+    <div class="caseHeader" onclick="toggleCase(this)">Kasus 2</div>
+    <textarea class="caseInput" oninput="hitungKataKasus()"></textarea>
+    <div class="wordCount">0 / 150 kata</div>
+  </div>
 
-<div class="caseBox">
-<div class="caseHeader" onclick="toggleCase(this)">Kasus 3</div>
-<textarea class="caseInput" oninput="hitungKataKasus()"></textarea>
-<div class="wordCount">0 / 150 kata</div>
-</div>
+  <!-- CASE 3 -->
+  <div class="caseBox">
+    <div class="caseHeader" onclick="toggleCase(this)">Kasus 3</div>
+    <textarea class="caseInput" oninput="hitungKataKasus()"></textarea>
+    <div class="wordCount">0 / 150 kata</div>
+  </div>
 
-<div class="caseBox">
-<div class="caseHeader" onclick="toggleCase(this)">Kasus 4</div>
-<textarea class="caseInput" oninput="hitungKataKasus()"></textarea>
-<div class="wordCount">0 / 150 kata</div>
-</div>
+  <!-- CASE 4 -->
+  <div class="caseBox">
+    <div class="caseHeader" onclick="toggleCase(this)">Kasus 4</div>
+    <textarea class="caseInput" oninput="hitungKataKasus()"></textarea>
+    <div class="wordCount">0 / 150 kata</div>
+  </div>
 
-<button class="finishGreen" onclick="confirmSelesaiKasus()">SELESAI STUDI KASUS</button>
+  <div style="margin-top:20px">
+    <button class="finishGreen" onclick="confirmSelesaiKasus()">
+      SELESAI STUDI KASUS
+    </button>
+  </div>
 
 </div>
 
 <!-- ================= RESULT KASUS ================= -->
-<div id="resultKasus" class="page hidden">
-<h2>Hasil Studi Kasus</h2>
-<p>Total Kata: <span id="totalKata"></span></p>
-<p>Total Karakter: <span id="totalKarakter"></span></p>
 
-<button onclick="exportPDFKasus()">Export PDF</button>
-<button onclick="kembaliMenu()">Menu</button>
+<div id="resultKasus" class="page hidden">
+
+  <h2>Hasil Studi Kasus</h2>
+
+  <p>Total Kata: <span id="totalKata"></span></p>
+  <p>Total Karakter: <span id="totalKarakter"></span></p>
+
+  <div style="margin-top:15px">
+    <button onclick="exportPDFKasus()">Export PDF</button>
+    <button onclick="kembaliMenu()">Menu</button>
+  </div>
+
 </div>
 
 <!-- ================= LEADERBOARD ================= -->
+
 <div id="leaderboardPage" class="page hidden">
-<h2>Leaderboard</h2>
-<div id="leaderboardList"></div>
-<button onclick="kembaliMenu()">Menu</button>
+
+  <h2>Leaderboard</h2>
+
+  <div id="leaderboardList"></div>
+
+  <div style="margin-top:15px">
+    <button onclick="kembaliMenu()">Menu</button>
+  </div>
+
 </div>
 
 <script src="script.js"></script>
 
 </body>
 </html>
-
