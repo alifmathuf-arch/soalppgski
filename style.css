@@ -1,44 +1,68 @@
+/* CENTER SEMUA PAGE */
 body{
-  background:linear-gradient(135deg,#0f172a,#1e3a8a,#14b8a6);
+  margin:0;
   min-height:100vh;
   display:flex;
-  flex-direction:column;
+  justify-content:center;
   align-items:center;
-  padding:20px;
-  color:white;
+  background:linear-gradient(135deg,#0f172a,#1e3a8a,#14b8a6);
   font-family:Segoe UI,sans-serif;
 }
 
+/* CARD UTAMA */
 .card{
-  width:95%;
+  width:90%;
   max-width:420px;
-  background:rgba(255,255,255,.1);
-  padding:25px;
-  border-radius:20px;
+  background:rgba(255,255,255,.12);
+  padding:28px;
+  border-radius:22px;
   text-align:center;
-  margin-bottom:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.3);
 }
 
-input,select{
-  width:100%;
-  padding:12px;
-  border-radius:10px;
-  border:none;
-  margin:8px 0;
-}
-
+/* TOMBOL */
 button{
   width:100%;
-  padding:12px;
+  padding:14px;
   border:none;
-  border-radius:12px;
+  border-radius:14px;
   background:linear-gradient(135deg,#22c55e,#0ea5e9);
   color:white;
+  font-size:16px;
   font-weight:600;
+  margin-top:12px;
   cursor:pointer;
+  transition:.25s;
 }
 
-.hidden{display:none;}
+button:hover{
+  transform:scale(1.03);
+  opacity:.9;
+}
+
+/* PAGE STACK FIX */
+#menuPage,
+#mapelPage,
+#loginPage{
+  position:relative;
+  z-index:5;
+}
+
+/* MENU BUTTON WRAP */
+#menuPage button{
+  margin:15px 0;
+}
+
+/* FINISH BUTTON */
+.finishBtn{
+  background:linear-gradient(135deg,#22c55e,#16a34a);
+}
+
+/* HIDDEN */
+.hidden{
+  display:none !important;
+}
+
 
 .quizCard{max-width:900px;}
 
@@ -78,3 +102,4 @@ button{
 .finishBtn{
   background:linear-gradient(135deg,#22c55e,#16a34a);
 }
+
