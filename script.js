@@ -95,10 +95,9 @@ function acakSoal(){
   let temp = [...bankSoal];
   temp.sort(() => Math.random() - 0.5);
 
-const jumlah = Math.min(JUMLAH_SOAL, temp.length);
-
-soalUjian = temp.slice(0, jumlah);
-jawaban = new Array(jumlah).fill(null);
+  soalUjian = temp.slice(0, JUMLAH_SOAL);
+  jawaban = new Array(soalUjian.length).fill(null);
+}
 
 // ===============================
 // TAMPILKAN SOAL
@@ -130,18 +129,13 @@ function tampilSoal(){
   updateProgress();
   updateGrid();
 
-  const btnFinish = document.querySelector(".finishBtn");
+  document.querySelector(".finishBtn").style.display =
+    index === soalUjian.length-1 ? "block" : "none";
+  document.querySelector(".finishBtn").disabled =
+  index !== soalUjian.length - 1;
 
-if(btnFinish){
-
-  if(index === soalUjian.length - 1){
-    btnFinish.style.display = "block";
-    btnFinish.disabled = false;
-  } else {
-    btnFinish.style.display = "none";
-    btnFinish.disabled = true;
-  }
 }
+
 // ===============================
 // PILIH JAWABAN
 // ===============================
@@ -404,8 +398,4 @@ function updateTimerKasus(){
   document.getElementById("caseTimer").innerText =
     `⏳ ${m}:${s < 10 ? "0" : ""}${s}`;
 }
-
-
-
-
 
