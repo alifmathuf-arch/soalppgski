@@ -1,110 +1,201 @@
-body{
-font-family:Arial;
-background:#f4f6fb;
-margin:0;
+/* =====================
+   GLOBAL
+===================== */
+
+* {
+  box-sizing: border-box;
 }
 
-.page{
-max-width:900px;
-margin:auto;
-padding:20px;
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+  margin: 0;
+  min-height: 100vh;
 }
 
-.hidden{display:none}
+/* =====================
+   PAGE WRAPPER
+===================== */
 
-button{
-padding:10px 20px;
-border:none;
-border-radius:8px;
-cursor:pointer;
-background:#2563eb;
-color:white;
+.page {
+  max-width: 900px;
+  margin: auto;
+  padding: 24px;
 }
 
-.finishBtn,.finishGreen{
-background:#16a34a;
+/* =====================
+   UTIL
+===================== */
+
+.hidden {
+  display: none !important;
 }
 
-textarea{
-width:100%;
-min-height:120px;
+/* =====================
+   BUTTON
+===================== */
+
+button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  transition: 0.2s ease;
 }
 
-.opsi{
-padding:10px;
-border:1px solid #ddd;
-margin:8px 0;
-cursor:pointer;
-border-radius:8px;
+button:hover {
+  opacity: 0.9;
 }
 
-.opsi.selected{
-background:#dbeafe;
-border-color:#2563eb;
+.finishBtn,
+.finishGreen {
+  background: #16a34a !important;
 }
 
-.topBar{
-display:flex;
-justify-content:space-between;
+/* =====================
+   INPUT
+===================== */
+
+textarea {
+  width: 100%;
+  min-height: 140px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
-.progressWrap{
-flex:1;
-background:#ddd;
-margin-left:20px;
-border-radius:10px;
-overflow:hidden;
+/* =====================
+   OPSI PG
+===================== */
+
+.opsi {
+  padding: 12px;
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 10px;
+  background: white;
 }
 
-#progressBar{
-height:12px;
-width:0%;
-background:#16a34a;
+.opsi:hover {
+  background: #eef2ff;
 }
 
-.gridBtn{
-display:inline-block;
-padding:6px;
-border:1px solid #999;
-margin:4px;
-width:32px;
-text-align:center;
-cursor:pointer;
+.opsi.selected {
+  background: #dbeafe;
+  border-color: #2563eb;
 }
 
-.gridDone{background:#16a34a;color:white}
+/* =====================
+   TOP BAR
+===================== */
 
-.caseBox{
-border:1px solid #ddd;
-margin:10px 0;
-border-radius:10px;
-overflow:hidden;
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
-.caseHeader{
-padding:12px;
-background:#2563eb;
-color:white;
-cursor:pointer;
+.progressWrap {
+  flex: 1;
+  background: #ddd;
+  margin-left: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 12px;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #16a34a;
+  transition: width 0.25s ease;
+}
+
+/* =====================
+   GRID
+===================== */
+
+.gridBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border: 1px solid #999;
+  margin: 4px;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 6px;
+  background: white;
+}
+
+.gridDone {
+  background: #16a34a;
+  color: white;
+}
+
+/* =====================
+   STUDI KASUS
+===================== */
+
+.caseBox {
+  border: 1px solid #ddd;
+  margin: 12px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+}
+
+.caseHeader {
+  padding: 14px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
 }
 
 .caseBox textarea,
-.caseBox .wordCount{
-display:none;
-padding:10px;
+.caseBox .wordCount {
+  display: none;
+  padding: 12px;
 }
 
 .caseBox.active textarea,
-.caseBox.active .wordCount{
-display:block;
+.caseBox.active .wordCount {
+  display: block;
 }
 
-.wordCount.good{color:green}
-.wordCount.bad{color:red}
+/* =====================
+   WORD COUNT
+===================== */
 
-#leaderboardList div{
-background:white;
-padding:10px;
-margin:5px;
-border-radius:8px;
+.wordCount {
+  font-size: 13px;
+}
+
+.wordCount.good {
+  color: green;
+}
+
+.wordCount.bad {
+  color: red;
+}
+
+/* =====================
+   LEADERBOARD
+===================== */
+
+#leaderboardList div {
+  background: white;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
 }
