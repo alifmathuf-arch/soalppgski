@@ -103,3 +103,21 @@ button:hover{
   background:linear-gradient(135deg,#22c55e,#16a34a);
 }
 
+.menuWrap{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  margin-top:20px;
+}
+#casePage,
+#quizPage{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+
+#casePage .card,
+#quizPage .card{
+  z-index:10;
+}
+
