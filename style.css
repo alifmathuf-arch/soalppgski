@@ -1,5 +1,5 @@
 /* =====================
-   GLOBAL
+   RESET & GLOBAL
 ===================== */
 
 * {
@@ -19,8 +19,11 @@ body {
 
 .page {
   max-width: 900px;
-  margin: auto;
+  margin: 40px auto;
   padding: 24px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
 }
 
 /* =====================
@@ -56,15 +59,17 @@ button:hover {
 }
 
 /* =====================
-   INPUT
+   INPUT & TEXTAREA
 ===================== */
 
+input,
 textarea {
   width: 100%;
-  min-height: 140px;
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 /* =====================
@@ -97,6 +102,7 @@ textarea {
   display: flex;
   align-items: center;
   gap: 14px;
+  margin-bottom: 14px;
 }
 
 .progressWrap {
@@ -116,8 +122,12 @@ textarea {
 }
 
 /* =====================
-   GRID
+   GRID SOAL
 ===================== */
+
+#gridSoal {
+  margin-top: 14px;
+}
 
 .gridBtn {
   display: inline-flex;
@@ -128,10 +138,13 @@ textarea {
   margin: 4px;
   width: 32px;
   height: 32px;
-  text-align: center;
   cursor: pointer;
   border-radius: 6px;
   background: white;
+}
+
+.gridBtn:hover {
+  background: #eef2ff;
 }
 
 .gridDone {
@@ -142,6 +155,13 @@ textarea {
 /* =====================
    STUDI KASUS
 ===================== */
+
+#caseTimer {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 12px;
+  text-align: right;
+}
 
 .caseBox {
   border: 1px solid #ddd;
@@ -159,6 +179,15 @@ textarea {
   font-weight: 600;
   display: flex;
   justify-content: space-between;
+}
+
+.caseHeader::after {
+  content: "▼";
+  font-size: 12px;
+}
+
+.caseBox.active .caseHeader::after {
+  content: "▲";
 }
 
 .caseBox textarea,
@@ -197,5 +226,20 @@ textarea {
   padding: 12px;
   margin: 8px 0;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 640px) {
+  .topBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .progressWrap {
+    margin-left: 0;
+  }
 }
