@@ -1,232 +1,400 @@
-// ================= GLOBAL =================
-
-let peserta = "";
-let kelasPeserta = "";
+// ===============================
+// GLOBAL
+// ===============================
 
 let bankSoal = [];
 let soalUjian = [];
 let jawaban = [];
 
+let peserta = "";
+let kelas = "";
+
 let index = 0;
 let waktu = 120 * 60;
-let timer = null;
+let timer;
 
 const JUMLAH_SOAL = 50;
 
-// ================= LOAD =================
+// ===============================
+// LOAD SOAL
+// ===============================
 
 fetch("soal.json")
   .then(r => r.json())
   .then(d => bankSoal = d)
-  .catch(() => alert("Gagal load soal.json"));
+  .catch(() => alert("Soal gagal dimuat"));
 
 document.addEventListener("DOMContentLoaded", () => {
-  restoreState();
+  hideAll();
+  document.getElementById("loginPage")?.classList.remove("hidden");
 });
 
-// ================= PAGE =================
-
-function show(id) {
-  document.querySelectorAll(".page").forEach(p =>
-    p.classList.add("hidden")
-  );
-
-  document.getElementById(id)?.classList.remove("hidden");
+function hideAll(){
+  [
+    "loginPage",
+    "menuPage",
+    "quizPage",
+    "casePage",
+    "resultPG",
+    "resultKasus"
+  ].forEach(id=>{
+    document.getElementById(id)?.classList.add("hidden");
+  });
 }
 
-// ================= LOGIN =================
+// ===============================
+// LOGIN
+// ===============================
 
-function login() {
+function login(){
 
-  const namaInput = document.getElementById("nama");
-  const kelasInput = document.getElementById("kelas");
+  const namaVal = document.getElementById("nama").value.trim();
+  const kelasVal = document.getElementById("kelas").value.trim();
 
-  peserta = namaInput.value.trim();
-  kelasPeserta = kelasInput.value.trim();
-
-  if (!peserta || !kelasPeserta) {
-    alert("Lengkapi data!");
+  if(!namaVal || !kelasVal){
+    alert("Nama dan kelas wajib diisi!");
     return;
   }
 
-  localStorage.setItem("user", JSON.stringify({
-    peserta,
-    kelas: kelasPeserta
-  }));
+  peserta = namaVal;
+  kelas = kelasVal;
 
-  show("menuPage");
+  hideAll();
+  document.getElementById("menuPage").classList.remove("hidden");
 }
 
-// ================= PG =================
+// ===============================
+// MASUK PG
+// ===============================
 
-function masukPG() {
+function masukPG(){
 
-  if (!bankSoal.length) {
-    alert("Soal belum siap");
+  if(bankSoal.length === 0){
+    alert("Soal belum siap.");
     return;
   }
+
+  hideAll();
+  document.getElementById("quizPage").classList.remove("hidden");
 
   acakSoal();
-
   index = 0;
+
+  waktu = 120 * 60;
+
+  tampilSoal();
+  timerStart();
+}
+
+// ===============================
+// ACAK SOAL
+// ===============================
+
+function acakSoal(){
+
+  let temp = [...bankSoal];
+  temp.sort(() => Math.random() - 0.5);
+
+  soalUjian = temp.slice(0, JUMLAH_SOAL);
   jawaban = new Array(soalUjian.length).fill(null);
-
-  show("quizPage");
-
-  timerStart();
-  tampilSoal();
-
-  saveState("pg");
 }
 
-function confirmSelesaiPG() {
-  if (confirm("Yakin menyelesaikan ujian PG?")) {
-    selesaiPG();
-  }
-}
+// ===============================
+// TAMPILKAN SOAL
+// ===============================
 
-function selesaiPG() {
+function tampilSoal(){
 
-  clearInterval(timer);
+  const s = soalUjian[index];
+  if(!s) return;
 
-  let skor = 0;
+  document.getElementById("nomor").innerText =
+    `Soal ${index+1} / ${soalUjian.length}`;
 
-  soalUjian.forEach((s, i) => {
-    if (jawaban[i] === s.a) skor += 2;
+  document.getElementById("soal").innerText = s.q;
+
+  const huruf = ["A","B","C","D","E"];
+  let html = "";
+
+  s.o.forEach((o,i)=>{
+    let sel = jawaban[index] === i ? "selected" : "";
+    html += `
+      <div class="opsi ${sel}" onclick="pilihJawaban(${i})">
+        <b>${huruf[i]}.</b> ${o}
+      </div>`;
   });
 
-  saveLeaderboard(skor);
+  document.getElementById("opsi").innerHTML = html;
 
-  document.getElementById("pgNama").innerText = peserta;
-  document.getElementById("pgKelas").innerText = kelasPeserta;
-  document.getElementById("pgSkor").innerText = skor;
-  document.getElementById("pgStatus").innerText =
-    skor >= 80 ? "LULUS" : "TIDAK LULUS";
+  updateProgress();
+  updateGrid();
 
-  localStorage.removeItem("state");
+  document.querySelector(".finishBtn").style.display =
+    index === soalUjian.length-1 ? "block" : "none";
+  document.querySelector(".finishBtn").disabled =
+  index !== soalUjian.length - 1;
 
-  show("resultPG");
 }
 
-// ================= PDF =================
+// ===============================
+// PILIH JAWABAN
+// ===============================
 
-function exportPDFPG() {
-
-  const { jsPDF } = window.jspdf;
-
-  const pdf = new jsPDF();
-
-  pdf.text(`Nama: ${peserta}`, 10, 15);
-  pdf.text(`Kelas: ${kelasPeserta}`, 10, 25);
-  pdf.text(`Skor: ${document.getElementById("pgSkor").innerText}`, 10, 35);
-
-  pdf.save("hasil_pg.pdf");
-}
-
-// ================= LEADERBOARD =================
-
-function saveLeaderboard(score) {
-
-  let data = JSON.parse(localStorage.getItem("leaderboard") || "[]");
-
-  data.push({
-    peserta,
-    kelas: kelasPeserta,
-    score
-  });
-
-  data.sort((a, b) => b.score - a.score);
-
-  localStorage.setItem("leaderboard", JSON.stringify(data));
-}
-
-function showLeaderboard() {
-
-  const list = document.getElementById("leaderboardList");
-
-  let data = JSON.parse(localStorage.getItem("leaderboard") || "[]");
-
-  list.innerHTML = "";
-
-  data.forEach((d, i) => {
-    list.innerHTML += `<div>${i + 1}. ${d.peserta} (${d.score})</div>`;
-  });
-
-  show("leaderboardPage");
-}
-
-// ================= STATE =================
-
-function saveState(mode) {
-
-  localStorage.setItem("state", JSON.stringify({
-    mode,
-    index,
-    jawaban,
-    waktu,
-    soalUjian,
-    peserta,
-    kelasPeserta
-  }));
-}
-
-function restoreState() {
-
-  const state = JSON.parse(localStorage.getItem("state"));
-  const user = JSON.parse(localStorage.getItem("user"));
-
-  if (user) {
-    peserta = user.peserta;
-    kelasPeserta = user.kelas;
-  }
-
-  if (!state) {
-    show("loginPage");
-    return;
-  }
-
-  index = state.index;
-  jawaban = state.jawaban;
-  waktu = state.waktu;
-  soalUjian = state.soalUjian;
-
-  peserta = state.peserta || peserta;
-  kelasPeserta = state.kelasPeserta || kelasPeserta;
-
-  show("quizPage");
-
-  timerStart();
+function pilihJawaban(i){
+  jawaban[index] = i;
   tampilSoal();
 }
 
-// ================= MENU =================
+// ===============================
+// NAV
+// ===============================
 
-function kembaliMenu() {
-  show("menuPage");
+function nextSoal(){
+  if(index < soalUjian.length-1){
+    index++;
+    tampilSoal();
+  }
 }
 
-// ================= TIMER =================
+function prevSoal(){
+  if(index > 0){
+    index--;
+    tampilSoal();
+  }
+}
 
-function timerStart() {
+// ===============================
+// PROGRESS
+// ===============================
+
+function updateProgress(){
+
+  let p = ((index+1)/soalUjian.length)*100;
+
+  document.getElementById("progressBar").style.width = p+"%";
+  document.getElementById("progressPercent").innerText =
+    Math.round(p)+"%";
+}
+
+// ===============================
+// GRID
+// ===============================
+
+function updateGrid(){
+
+  let html = "";
+
+  for(let i=0;i<soalUjian.length;i++){
+    let done = jawaban[i]!=null ? "gridDone" : "";
+    html += `<div class="gridBtn ${done}"
+      onclick="lompatSoal(${i})">${i+1}</div>`;
+  }
+
+  document.getElementById("gridSoal").innerHTML = html;
+}
+
+function lompatSoal(i){
+  index=i;
+  tampilSoal();
+}
+
+// ===============================
+// TIMER PG
+// ===============================
+
+function timerStart(){
 
   clearInterval(timer);
 
-  timer = setInterval(() => {
+  timer = setInterval(()=>{
 
     waktu--;
 
-    const m = Math.floor(waktu / 60);
-    const s = waktu % 60;
+    let m = Math.floor(waktu/60);
+    let s = waktu%60;
 
     document.getElementById("timer").innerText =
-      `Waktu: ${m}:${s < 10 ? "0" : ""}${s}`;
+      `Waktu: ${m}:${s<10?"0"+s:s}`;
 
-    saveState("pg");
-
-    if (waktu <= 0) {
+    if(waktu<=0){
       clearInterval(timer);
       selesaiPG();
     }
 
-  }, 1000);
+  },1000);
+}
+
+// ===============================
+// SELESAI PG
+// ===============================
+
+function selesaiPG(){
+
+  clearInterval(timer);
+
+  let skor=0;
+
+  soalUjian.forEach((s,i)=>{
+    if(jawaban[i]===s.a){
+      skor+=2;
+    }
+  });
+
+  hideAll();
+  document.getElementById("resultPG").classList.remove("hidden");
+
+  document.getElementById("pgNama").innerText = peserta;
+  document.getElementById("pgKelas").innerText = kelas;
+  document.getElementById("pgSkor").innerText = skor;
+  document.getElementById("pgStatus").innerText =
+    skor>=80 ? "LULUS" : "TIDAK LULUS";
+}
+
+// ===============================
+// STUDI KASUS
+// ===============================
+
+const daftarKasus = [
+  {judul:"Media Pembelajaran",
+   deskripsi:"Ceritakan pengalaman nyata Anda dalam menggunakan media pembelajaran di kelas."},
+  {judul:"LKPD",
+   deskripsi:"Ceritakan pengalaman nyata Anda dalam merancang LKPD."},
+  {judul:"Strategi Pembelajaran",
+   deskripsi:"Ceritakan strategi yang pernah Anda terapkan."},
+  {judul:"Penilaian",
+   deskripsi:"Ceritakan pengalaman melakukan asesmen."}
+];
+
+let kasusAktif=null;
+
+function masukKasus(){
+
+  hideAll();
+
+  const idx = Math.floor(Math.random() * daftarKasus.length);
+  kasusAktif = daftarKasus[idx];
+
+  document.getElementById("judulKasus").innerText = kasusAktif.judul;
+  document.getElementById("deskripsiKasus").innerText = kasusAktif.deskripsi;
+
+  document.querySelectorAll(".caseInput").forEach(t=> t.value="");
+
+  document.querySelectorAll(".wordCount").forEach(w=>{
+    w.innerText="0 / 150 kata";
+    w.className="wordCount bad";
+  });
+
+  document.getElementById("casePage").classList.remove("hidden");
+
+  startTimerKasus();
+}
+
+// ===============================
+// WORD COUNT
+// ===============================
+
+function hitungKataKasus(){
+
+  document.querySelectorAll(".caseBox").forEach(box=>{
+
+    const ta = box.querySelector(".caseInput");
+    const wc = box.querySelector(".wordCount");
+
+    const teks = ta.value.trim();
+    const jumlah = teks ? teks.split(/\s+/).length : 0;
+
+    wc.innerText = `${jumlah} / 150 kata`;
+
+    wc.className =
+      jumlah>=150 ? "wordCount good" : "wordCount bad";
+
+  });
+}
+
+// ===============================
+// SELESAI KASUS
+// ===============================
+
+function selesaiKasus(){
+
+  clearInterval(timerKasus);
+
+  let totalKata = 0;
+  let totalChar = 0;
+
+  document.querySelectorAll(".caseInput").forEach(t=>{
+
+    const teks = t.value.trim();
+
+    totalChar += teks.length;
+    totalKata += teks ? teks.split(/\s+/).length : 0;
+
+  });
+
+  if(totalKata < 600){
+    alert("Semua kolom harus diisi minimal 150 kata!");
+    return;
+  }
+
+  hideAll();
+  document.getElementById("resultKasus").classList.remove("hidden");
+
+  document.getElementById("totalKata").innerText = totalKata;
+  document.getElementById("totalKarakter").innerText = totalChar;
+  document.getElementById("statusKasus").innerText = "SELESAI";
+}
+
+// ===============================
+// ACCORDION
+// ===============================
+
+function toggleCase(el){
+
+  const box = el.closest(".caseBox");
+
+  document.querySelectorAll(".caseBox").forEach(b=>{
+    if(b !== box){
+      b.classList.remove("active");
+    }
+  });
+
+  box.classList.toggle("active");
+}
+
+// ===============================
+// TIMER STUDI KASUS
+// ===============================
+
+let waktuKasus = 30 * 60;
+let timerKasus;
+
+function startTimerKasus(){
+
+  clearInterval(timerKasus);
+  waktuKasus = 30 * 60;
+
+  updateTimerKasus();
+
+  timerKasus = setInterval(()=>{
+
+    waktuKasus--;
+
+    updateTimerKasus();
+
+    if(waktuKasus <= 0){
+      clearInterval(timerKasus);
+      alert("Waktu studi kasus habis!");
+      selesaiKasus();
+    }
+
+  },1000);
+}
+
+function updateTimerKasus(){
+
+  let m = Math.floor(waktuKasus / 60);
+  let s = waktuKasus % 60;
+
+  document.getElementById("caseTimer").innerText =
+    `⏳ ${m}:${s < 10 ? "0" : ""}${s}`;
 }
