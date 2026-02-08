@@ -95,9 +95,10 @@ function acakSoal(){
   let temp = [...bankSoal];
   temp.sort(() => Math.random() - 0.5);
 
-  soalUjian = temp.slice(0, JUMLAH_SOAL);
-  jawaban = new Array(soalUjian.length).fill(null);
-}
+const jumlah = Math.min(JUMLAH_SOAL, temp.length);
+
+soalUjian = temp.slice(0, jumlah);
+jawaban = new Array(jumlah).fill(null);
 
 // ===============================
 // TAMPILKAN SOAL
@@ -403,6 +404,7 @@ function updateTimerKasus(){
   document.getElementById("caseTimer").innerText =
     `⏳ ${m}:${s < 10 ? "0" : ""}${s}`;
 }
+
 
 
 
