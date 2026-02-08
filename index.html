@@ -2,87 +2,114 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LATIHAN PPG</title>
+<title>ALITAH UP PPG UIN JAKARTA</title>
 <link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
+
 <body>
 
-<!-- LOGIN -->
-<div id="loginPage" class="card">
-  <h2>LATIHAN PPG</h2>
-  <input id="nama" placeholder="Nama Peserta">
-  <input id="kelasPeserta" placeholder="Kelas Peserta">
-  <button onclick="login()">Login</button>
+<div id="loginPage" class="page">
+<h2>Login Peserta</h2>
+<input id="nama" placeholder="Nama">
+<input id="kelas" placeholder="Kelas">
+<button onclick="login()">Masuk</button>
 </div>
 
-<!-- PILIH MAPEL -->
-<div id="mapelPage" class="card hidden">
-  <h2>Pilih Mapel</h2>
-
-  <select id="mapelSelect">
-    <option value="">-- Pilih Mapel --</option>
-    <option>SKI</option>
-    <option>AQIDAH</option>
-    <option>QURDIST</option>
-    <option>FIQIH</option>
-    <option>GKMI</option>
-    <option>GKRA</option>
-    <option>PAI</option>
-    <option>BAHASA ARAB</option>
-  </select>
-
-  <button onclick="konfirmasiMapel()">Lanjut</button>
+<div id="menuPage" class="page hidden">
+<h2>Menu</h2>
+<button onclick="masukPG()">Mulai PG</button>
+<button onclick="masukKasus()">Mulai Studi Kasus</button>
+<button onclick="showLeaderboard()">Leaderboard</button>
 </div>
 
-<!-- MENU -->
-<div id="menuPage" class="card hidden">
-  <h2>Menu Ujian</h2>
+<!-- ================= PG ================= -->
+<div id="quizPage" class="page hidden">
 
-  <div class="menuWrap">
-    <button onclick="masukPG()">Pilihan Ganda</button>
-    <button onclick="masukKasus()">Studi Kasus</button>
-  </div>
+<div class="topBar">
+<div id="timer"></div>
+<div class="progressWrap">
+<div id="progressBar"></div>
+</div>
 </div>
 
+<h3 id="nomor"></h3>
+<div id="soal"></div>
+<div id="opsi"></div>
 
-<!-- QUIZ -->
-<div id="quizPage" class="hidden">
+<div class="nav">
+<button onclick="prevSoal()">Prev</button>
+<button onclick="nextSoal()">Next</button>
+<button class="finishBtn" onclick="confirmSelesaiPG()">SELESAI</button>
+</div>
 
-  <div class="topInfo">
-    <span id="timer">120:00</span>
-    <div class="progressWrap"><div id="progressBar"></div></div>
-    <span id="progressPercent">0%</span>
-  </div>
+<div id="gridSoal"></div>
+</div>
 
-  <div id="gridSoal"></div>
+<!-- ================= RESULT PG ================= -->
+<div id="resultPG" class="page hidden">
+<h2>Hasil PG</h2>
+<p id="pgNama"></p>
+<p id="pgKelas"></p>
+<p>Skor: <span id="pgSkor"></span></p>
+<p>Status: <span id="pgStatus"></span></p>
+<button onclick="exportPDFPG()">Export PDF</button>
+<button onclick="kembaliMenu()">Menu</button>
+</div>
 
-  <div class="card quizCard">
-    <h3 id="nomor"></h3>
-    <p id="soal"></p>
-    <div id="opsi"></div>
+<!-- ================= STUDI KASUS ================= -->
+<div id="casePage" class="page hidden">
 
-    <div class="nav">
-      <button onclick="prevSoal()">←</button>
-      <button onclick="nextSoal()">→</button>
-    </div>
+<div id="caseTimer"></div>
 
-    <button class="finishBtn" onclick="selesaiPG()">Selesai</button>
-  </div>
+<h2 id="judulKasus"></h2>
+<p id="deskripsiKasus"></p>
+
+<div class="caseBox active">
+<div class="caseHeader" onclick="toggleCase(this)">Kasus 1</div>
+<textarea class="caseInput" oninput="hitungKataKasus()"></textarea>
+<div class="wordCount">0 / 150 kata</div>
+</div>
+
+<div class="caseBox">
+<div class="caseHeader" onclick="toggleCase(this)">Kasus 2</div>
+<textarea class="caseInput" oninput="hitungKataKasus()"></textarea>
+<div class="wordCount">0 / 150 kata</div>
+</div>
+
+<div class="caseBox">
+<div class="caseHeader" onclick="toggleCase(this)">Kasus 3</div>
+<textarea class="caseInput" oninput="hitungKataKasus()"></textarea>
+<div class="wordCount">0 / 150 kata</div>
+</div>
+
+<div class="caseBox">
+<div class="caseHeader" onclick="toggleCase(this)">Kasus 4</div>
+<textarea class="caseInput" oninput="hitungKataKasus()"></textarea>
+<div class="wordCount">0 / 150 kata</div>
+</div>
+
+<button class="finishGreen" onclick="confirmSelesaiKasus()">SELESAI STUDI KASUS</button>
 
 </div>
 
-<!-- RESULT PG -->
-<div id="resultPG" class="card hidden">
-  <h2>Hasil PG</h2>
-  <p>Nama: <span id="pgNama"></span></p>
-  <p>Kelas: <span id="pgKelas"></span></p>
-  <p>Mapel: <span id="pgMapel"></span></p>
-  <p>Skor: <span id="pgSkor"></span></p>
-  <button onclick="location.reload()">Keluar</button>
+<!-- ================= RESULT KASUS ================= -->
+<div id="resultKasus" class="page hidden">
+<h2>Hasil Studi Kasus</h2>
+<p>Total Kata: <span id="totalKata"></span></p>
+<p>Total Karakter: <span id="totalKarakter"></span></p>
+
+<button onclick="exportPDFKasus()">Export PDF</button>
+<button onclick="kembaliMenu()">Menu</button>
+</div>
+
+<!-- ================= LEADERBOARD ================= -->
+<div id="leaderboardPage" class="page hidden">
+<h2>Leaderboard</h2>
+<div id="leaderboardList"></div>
+<button onclick="kembaliMenu()">Menu</button>
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
-
