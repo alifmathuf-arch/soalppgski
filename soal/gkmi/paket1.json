@@ -1,1 +1,597 @@
+{
+  "q": "Disajikan deskripsi materi tentang Pengenalan Huruf dan Kata. Seorang guru kelas 1 MI ingin merumuskan tujuan pembelajaran ranah sikap untuk menumbuhkan keimanan dan ketakwaan siswa. Manakah rumusan tujuan yang paling tepat?",
+  "o": [
+    "Siswa mampu menyebutkan huruf dan kata dengan benar.",
+    "Siswa menunjukkan rasa senang dalam belajar huruf dan kata.",
+    "Siswa mampu membaca huruf dan kata dengan lafal yang tepat.",
+    "Siswa menunjukkan rasa syukur atas nikmat Allah berupa kemampuan membaca.",
+    "Siswa menghafal huruf hijaiyah dan kata sederhana."
+  ],
+  "a": 3
+}
+
+{
+  "q": "Disajikan pernyataan materi tentang Pancasila dan peran keluarga dalam kehidupan sehari-hari. Guru kelas 4 MI ingin merumuskan tujuan pembelajaran ranah pengetahuan agar peserta didik mampu berpikir kritis. Rumusan tujuan yang paling tepat adalah…",
+  "o": [
+    "Peserta didik menyebutkan sila-sila Pancasila.",
+    "Peserta didik menjelaskan pengertian keluarga.",
+    "Peserta didik menganalisis peran keluarga dalam menerapkan nilai Pancasila.",
+    "Peserta didik menghafal contoh perilaku keluarga.",
+    "Peserta didik menirukan contoh sikap dalam keluarga."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan deskripsi pembelajaran PAUD tentang kegiatan bermain. Guru ingin menilai sikap, pengetahuan, dan keterampilan anak secara autentik. Teknik penilaian yang paling tepat adalah…",
+  "o": [
+    "Tes tertulis di akhir pembelajaran.",
+    "Penilaian hasil akhir saja.",
+    "Observasi dan catatan anekdot selama kegiatan bermain.",
+    "Ulangan harian.",
+    "Penilaian kecepatan menyelesaikan tugas."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan deskripsi materi tentang pembelajaran berbasis proyek. Prinsip utama Project Based Learning (PjBL) yang paling tepat adalah…",
+  "o": [
+    "Pembelajaran berpusat pada guru.",
+    "Pembelajaran berbasis hafalan.",
+    "Pembelajaran diawali dengan masalah nyata yang relevan dengan kehidupan peserta didik.",
+    "Pembelajaran menekankan ceramah.",
+    "Pembelajaran berfokus pada hasil akhir saja."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan praktik pedagogi tentang perencanaan pembelajaran Bahasa Indonesia dengan pendekatan Problem Based Learning (PBL). Rumusan tujuan pembelajaran yang paling sesuai dengan struktur keilmuan dan karakteristik peserta didik kelas II MI adalah…",
+  "o": [
+    "Siswa mampu menyebutkan kata benda dalam kalimat sederhana.",
+    "Siswa mampu menyalin kalimat sederhana dengan tulisan rapi.",
+    "Siswa mampu membaca teks pendek dengan lafal dan intonasi benar.",
+    "Siswa mampu menjawab pertanyaan berdasarkan bacaan.",
+    "Siswa mampu menyusun kalimat sederhana melalui diskusi kelompok."
+  ],
+  "a": 4
+}
+
+{
+  "q": "Disajikan deskripsi aktivitas guru dalam pembelajaran PPKn dengan pendekatan Project Based Learning (PjBL). Aktivitas yang paling mencerminkan tujuan pembelajaran sesuai struktur keilmuan dan karakteristik peserta didik adalah…",
+  "o": [
+    "Siswa menonton video tentang kehidupan sosial.",
+    "Siswa mendengarkan penjelasan guru.",
+    "Siswa berdiskusi tentang pengalaman pribadi.",
+    "Siswa membuat proyek laporan hasil observasi kehidupan sosial di lingkungan sekitar.",
+    "Siswa menjawab pertanyaan dari bacaan."
+  ],
+  "a": 3
+}
+
+{
+  "q": "Disajikan pernyataan praktik pedagogi tentang perencanaan materi ajar IPS dengan pendekatan TPACK. Alur materi ajar yang paling sesuai adalah…",
+  "o": [
+    "Menyampaikan materi melalui ceramah.",
+    "Menyusun materi berdasarkan urutan buku cetak.",
+    "Menggabungkan konten sosial budaya, diskusi kelompok, dan media digital interaktif.",
+    "Memberikan tugas membaca tanpa diskusi.",
+    "Memutar film tanpa aktivitas lanjutan."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan praktik pedagogi tentang pelaksanaan materi ajar matematika dengan pendekatan Deep Learning (DL). Alur materi Bilangan Pecahan yang paling tepat adalah…",
+  "o": [
+    "Memberikan definisi dan latihan soal.",
+    "Menyajikan pecahan melalui gambar konkret dan situasi nyata sebelum simbolik.",
+    "Menugaskan siswa menghafal jenis pecahan.",
+    "Memberikan soal ujian sejak awal.",
+    "Menjelaskan rumus tanpa ilustrasi."
+  ],
+  "a": 1
+}
+
+{
+  "q": "Disajikan pernyataan praktik pedagogi tentang perencanaan materi ajar IPS dengan pendekatan TPACK. Tujuan utama penerapan pendekatan tersebut adalah…",
+  "o": [
+    "Menyamakan metode pembelajaran.",
+    "Mengintegrasikan teknologi tanpa mempertimbangkan peserta didik.",
+    "Menyesuaikan konten, pedagogi, dan teknologi dengan karakteristik peserta didik.",
+    "Mengganti seluruh pembelajaran menjadi daring.",
+    "Fokus pada buku teks."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan deskripsi karakteristik Generasi Z dan Alpha dalam pembelajaran. Strategi pembelajaran yang paling tepat untuk memenuhi kebutuhan belajar mereka adalah…",
+  "o": [
+    "Ceramah panjang satu arah.",
+    "Pembelajaran berbasis hafalan.",
+    "Pembelajaran interaktif, digital, dan kolaboratif.",
+    "Penugasan individu tanpa teknologi.",
+    "Tes tertulis sebagai kegiatan utama."
+  ],
+  "a": 2
+},
+{
+  "q": "Disajikan deskripsi pembelajaran Kurikulum Merdeka di MI. Guru ingin menyusun tujuan pembelajaran yang berorientasi pada Profil Pelajar Pancasila. Rumusan tujuan yang paling tepat adalah…",
+  "o": [
+    "Siswa mampu menghafal materi pelajaran.",
+    "Siswa mampu menyelesaikan soal pilihan ganda.",
+    "Siswa menunjukkan sikap gotong royong dan tanggung jawab dalam kegiatan belajar.",
+    "Siswa mampu menyalin materi dari papan tulis.",
+    "Siswa mampu menjawab pertanyaan guru."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan tentang asesmen dalam Kurikulum Merdeka. Prinsip asesmen yang paling tepat diterapkan guru adalah…",
+  "o": [
+    "Asesmen hanya dilakukan di akhir pembelajaran.",
+    "Asesmen berfokus pada hasil akhir.",
+    "Asesmen sebagai proses untuk mendukung pembelajaran.",
+    "Asesmen digunakan untuk memberi peringkat siswa.",
+    "Asesmen dilakukan secara tertulis saja."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan deskripsi pembelajaran diferensiasi di kelas MI. Tujuan utama penerapan pembelajaran diferensiasi adalah…",
+  "o": [
+    "Menyamakan kemampuan semua siswa.",
+    "Memberikan perlakuan berbeda tanpa perencanaan.",
+    "Memenuhi kebutuhan belajar siswa yang beragam.",
+    "Mempercepat penyampaian materi.",
+    "Mengurangi beban belajar siswa."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan tentang penyusunan modul ajar. Komponen yang wajib ada dalam modul ajar Kurikulum Merdeka adalah…",
+  "o": [
+    "Identitas sekolah dan guru.",
+    "Tujuan pembelajaran, kegiatan pembelajaran, dan asesmen.",
+    "Daftar nilai siswa.",
+    "Rangkuman materi saja.",
+    "Kunci jawaban soal."
+  ],
+  "a": 1
+}
+
+{
+  "q": "Disajikan deskripsi pembelajaran berbasis masalah (Problem Based Learning). Langkah awal yang paling tepat dalam model tersebut adalah…",
+  "o": [
+    "Memberikan penjelasan materi secara lengkap.",
+    "Menyajikan masalah kontekstual kepada peserta didik.",
+    "Memberikan latihan soal.",
+    "Melakukan evaluasi akhir.",
+    "Menyimpulkan materi."
+  ],
+  "a": 1
+}
+
+{
+  "q": "Disajikan pernyataan tentang peran guru dalam pembelajaran abad 21. Peran guru yang paling tepat adalah…",
+  "o": [
+    "Sumber utama informasi.",
+    "Pusat pembelajaran.",
+    "Fasilitator dan pembimbing belajar.",
+    "Penentu seluruh aktivitas siswa.",
+    "Pemberi tugas semata."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan deskripsi pembelajaran berbasis literasi dan numerasi. Tujuan utama integrasi literasi dan numerasi adalah…",
+  "o": [
+    "Meningkatkan kemampuan menghafal.",
+    "Meningkatkan skor ujian.",
+    "Mengembangkan kemampuan berpikir kritis dan pemecahan masalah.",
+    "Mengurangi beban materi.",
+    "Menyederhanakan pembelajaran."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan tentang penggunaan media digital dalam pembelajaran MI. Prinsip pemilihan media yang paling tepat adalah…",
+  "o": [
+    "Media yang sedang tren.",
+    "Media yang paling mahal.",
+    "Media yang sesuai tujuan dan karakteristik peserta didik.",
+    "Media yang digunakan sekolah lain.",
+    "Media yang mudah diperoleh guru."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan deskripsi pembelajaran kolaboratif. Indikator keberhasilan pembelajaran kolaboratif adalah…",
+  "o": [
+    "Siswa bekerja secara individu.",
+    "Siswa menyelesaikan tugas lebih cepat.",
+    "Siswa mampu bekerja sama dan saling menghargai pendapat.",
+    "Siswa memperoleh nilai tinggi.",
+    "Siswa mengikuti instruksi guru."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan tentang refleksi pembelajaran oleh guru. Manfaat utama refleksi pembelajaran adalah…",
+  "o": [
+    "Menilai kesalahan siswa.",
+    "Menentukan peringkat kelas.",
+    "Memperbaiki kualitas pembelajaran selanjutnya.",
+    "Mengurangi jam mengajar.",
+    "Mengganti seluruh metode pembelajaran."
+  ],
+  "a": 2
+},
+{
+  "q": "Disajikan deskripsi pembelajaran berbasis Profil Pelajar Pancasila di MI. Kegiatan yang paling mencerminkan dimensi bernalar kritis adalah…",
+  "o": [
+    "Siswa menghafal materi dari buku.",
+    "Siswa menyalin catatan guru.",
+    "Siswa menganalisis permasalahan sederhana dan memberikan alasan atas jawabannya.",
+    "Siswa mengerjakan soal pilihan ganda.",
+    "Siswa mendengarkan penjelasan guru."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan tentang pembelajaran berbasis proyek (PjBL). Ciri utama asesmen dalam PjBL adalah…",
+  "o": [
+    "Menilai hasil akhir saja.",
+    "Menilai proses dan produk secara berkelanjutan.",
+    "Menggunakan tes tertulis.",
+    "Memberi nilai berdasarkan kecepatan kerja.",
+    "Menilai secara individu tanpa kolaborasi."
+  ],
+  "a": 1
+}
+
+{
+  "q": "Disajikan deskripsi pembelajaran berdiferensiasi konten. Contoh penerapan yang tepat adalah…",
+  "o": [
+    "Semua siswa mengerjakan soal yang sama.",
+    "Guru memberikan materi dengan tingkat kesulitan yang sama.",
+    "Guru menyediakan bacaan dengan tingkat kompleksitas berbeda sesuai kemampuan siswa.",
+    "Guru hanya menggunakan buku paket.",
+    "Guru mempercepat pembelajaran."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan tentang perencanaan pembelajaran MI berbasis Kurikulum Merdeka. Langkah awal yang paling tepat dilakukan guru adalah…",
+  "o": [
+    "Menyusun soal evaluasi.",
+    "Menentukan metode pembelajaran.",
+    "Menganalisis capaian pembelajaran dan karakteristik peserta didik.",
+    "Menyiapkan media pembelajaran.",
+    "Menentukan sumber belajar."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan deskripsi pembelajaran literasi membaca di kelas rendah MI. Aktivitas yang paling tepat untuk menumbuhkan minat baca adalah…",
+  "o": [
+    "Memberikan tes membaca.",
+    "Mewajibkan siswa menghafal bacaan.",
+    "Membacakan cerita menarik dan mendiskusikannya bersama siswa.",
+    "Menugaskan siswa menyalin teks panjang.",
+    "Memberikan soal pilihan ganda."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan tentang numerasi dalam pembelajaran MI. Contoh aktivitas numerasi yang tepat adalah…",
+  "o": [
+    "Menghafal rumus matematika.",
+    "Menyelesaikan soal tanpa konteks.",
+    "Menggunakan permasalahan sehari-hari yang melibatkan perhitungan sederhana.",
+    "Menyalin soal dari buku.",
+    "Mengerjakan ulangan harian."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan deskripsi penggunaan teknologi dalam pembelajaran MI. Prinsip utama pemanfaatan teknologi adalah…",
+  "o": [
+    "Teknologi sebagai tujuan pembelajaran.",
+    "Teknologi menggantikan peran guru.",
+    "Teknologi mendukung ketercapaian tujuan pembelajaran.",
+    "Teknologi digunakan setiap saat.",
+    "Teknologi mengikuti tren."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan tentang pembelajaran kolaboratif di kelas MI. Peran guru yang paling tepat adalah…",
+  "o": [
+    "Mengontrol seluruh aktivitas siswa.",
+    "Menjadi pusat diskusi.",
+    "Memfasilitasi kerja sama dan interaksi antarsiswa.",
+    "Memberikan jawaban langsung.",
+    "Menentukan hasil kerja siswa."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan deskripsi pembelajaran berbasis karakter. Indikator keberhasilan pembelajaran tersebut adalah…",
+  "o": [
+    "Siswa memperoleh nilai tinggi.",
+    "Siswa mampu menghafal materi.",
+    "Siswa menunjukkan perilaku jujur dan bertanggung jawab dalam keseharian.",
+    "Siswa cepat menyelesaikan tugas.",
+    "Siswa mampu menjawab soal."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan tentang refleksi peserta didik dalam pembelajaran MI. Tujuan utama refleksi bagi peserta didik adalah…",
+  "o": [
+    "Menilai kesalahan teman.",
+    "Mengetahui nilai akhir.",
+    "Menyadari proses dan hasil belajar yang telah dilalui.",
+    "Membandingkan nilai antar siswa.",
+    "Mengulang materi."
+  ],
+  "a": 2
+},
+{
+  "q": "Disajikan deskripsi pembelajaran berbasis proyek di MI. Tahap akhir yang paling tepat dalam model Project Based Learning adalah…",
+  "o": [
+    "Menentukan topik proyek.",
+    "Menyusun jadwal kegiatan.",
+    "Melakukan refleksi dan evaluasi hasil proyek.",
+    "Mengumpulkan informasi awal.",
+    "Merumuskan pertanyaan pemantik."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan tentang pembelajaran abad 21 di MI. Keterampilan 4C yang paling tampak ketika siswa berdiskusi dan menyampaikan ide adalah…",
+  "o": [
+    "Creativity dan Collaboration.",
+    "Communication dan Critical Thinking.",
+    "Critical Thinking dan Creativity.",
+    "Collaboration dan Creativity.",
+    "Communication dan Collaboration."
+  ],
+  "a": 1
+}
+
+{
+  "q": "Disajikan deskripsi pembelajaran tematik integratif di MI. Tujuan utama penerapan pembelajaran tematik adalah…",
+  "o": [
+    "Memisahkan mata pelajaran.",
+    "Menyampaikan materi sebanyak mungkin.",
+    "Memberikan pengalaman belajar yang bermakna dan utuh.",
+    "Mempermudah penilaian guru.",
+    "Menghemat waktu pembelajaran."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan tentang asesmen diagnostik dalam Kurikulum Merdeka. Tujuan utama asesmen diagnostik adalah…",
+  "o": [
+    "Menentukan nilai rapor.",
+    "Mengetahui capaian akhir pembelajaran.",
+    "Mengidentifikasi kebutuhan dan kemampuan awal peserta didik.",
+    "Membandingkan kemampuan antar siswa.",
+    "Menentukan peringkat kelas."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan deskripsi pembelajaran berbasis masalah di MI. Peran peserta didik yang paling tepat dalam model Problem Based Learning adalah…",
+  "o": [
+    "Mendengarkan penjelasan guru.",
+    "Menghafal materi pelajaran.",
+    "Aktif mencari informasi dan solusi atas masalah yang diberikan.",
+    "Menunggu instruksi guru.",
+    "Mencatat penjelasan."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan tentang penggunaan LKPD dalam pembelajaran MI. Fungsi utama LKPD adalah…",
+  "o": [
+    "Sebagai alat evaluasi akhir.",
+    "Sebagai bahan hafalan siswa.",
+    "Memandu aktivitas belajar siswa secara sistematis.",
+    "Sebagai pengganti buku teks.",
+    "Sebagai kumpulan soal."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan deskripsi pembelajaran berbasis HOTS di MI. Indikator soal HOTS yang paling tepat adalah…",
+  "o": [
+    "Menuntut siswa menghafal definisi.",
+    "Menuntut siswa memilih jawaban benar.",
+    "Menuntut siswa menganalisis dan memecahkan masalah kontekstual.",
+    "Menuntut siswa mengingat kembali materi.",
+    "Menuntut siswa menyalin jawaban."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan tentang peran orang tua dalam pembelajaran MI. Bentuk keterlibatan orang tua yang paling tepat adalah…",
+  "o": [
+    "Mengerjakan tugas anak.",
+    "Menentukan nilai anak.",
+    "Mendampingi dan memberi motivasi belajar di rumah.",
+    "Menggantikan peran guru.",
+    "Mengatur seluruh aktivitas belajar."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan deskripsi pembelajaran berbasis lingkungan di MI. Manfaat utama pembelajaran berbasis lingkungan adalah…",
+  "o": [
+    "Mengurangi beban belajar.",
+    "Membatasi ruang belajar siswa.",
+    "Mengaitkan materi dengan pengalaman nyata siswa.",
+    "Mempermudah guru mengajar.",
+    "Menghemat waktu."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan tentang pembelajaran inklusif di MI. Prinsip utama pembelajaran inklusif adalah…",
+  "o": [
+    "Memisahkan siswa berkebutuhan khusus.",
+    "Memberikan perlakuan yang sama tanpa penyesuaian.",
+    "Menghargai keberagaman dan memberikan dukungan sesuai kebutuhan siswa.",
+    "Fokus pada siswa berprestasi.",
+    "Mengurangi target pembelajaran."
+  ],
+  "a": 2
+},
+{
+  "q": "Disajikan deskripsi pembelajaran berbasis karakter di MI. Strategi guru yang paling efektif untuk menanamkan nilai disiplin adalah…",
+  "o": [
+    "Memberikan hukuman setiap pelanggaran.",
+    "Menjelaskan aturan secara lisan.",
+    "Memberi teladan dan membiasakan perilaku disiplin.",
+    "Memberikan tugas tambahan.",
+    "Menegur siswa di depan kelas."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan tentang pembelajaran berdiferensiasi proses. Contoh penerapan yang paling tepat adalah…",
+  "o": [
+    "Semua siswa mengerjakan tugas dengan cara yang sama.",
+    "Guru memberikan waktu belajar yang sama.",
+    "Siswa memilih cara belajar berbeda seperti diskusi, praktik, atau membaca.",
+    "Guru hanya menggunakan metode ceramah.",
+    "Guru mempercepat penjelasan materi."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan deskripsi penggunaan asesmen formatif di MI. Manfaat utama asesmen formatif adalah…",
+  "o": [
+    "Menentukan nilai akhir siswa.",
+    "Membandingkan kemampuan antar siswa.",
+    "Memberikan umpan balik untuk perbaikan pembelajaran.",
+    "Mengisi administrasi guru.",
+    "Menentukan kelulusan siswa."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan tentang pembelajaran berbasis literasi digital. Tujuan utama literasi digital bagi siswa MI adalah…",
+  "o": [
+    "Menguasai sebanyak mungkin aplikasi.",
+    "Menggunakan gawai setiap hari.",
+    "Menggunakan teknologi secara bijak, aman, dan bertanggung jawab.",
+    "Mengikuti tren media sosial.",
+    "Meningkatkan kecepatan mengetik."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan deskripsi pembelajaran tematik di kelas rendah MI. Peran guru yang paling tepat adalah…",
+  "o": [
+    "Penyampai materi utama.",
+    "Sumber informasi tunggal.",
+    "Fasilitator yang mengaitkan berbagai muatan pelajaran.",
+    "Penguji hasil belajar.",
+    "Pengawas kegiatan siswa."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan tentang penggunaan media konkret dalam pembelajaran MI. Keunggulan utama media konkret adalah…",
+  "o": [
+    "Mudah disiapkan guru.",
+    "Menarik perhatian sesaat.",
+    "Membantu siswa memahami konsep abstrak secara nyata.",
+    "Menghemat waktu pembelajaran.",
+    "Menggantikan peran guru."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan deskripsi pembelajaran berbasis refleksi di MI. Kegiatan refleksi yang paling tepat dilakukan siswa adalah…",
+  "o": [
+    "Menyalin kembali materi.",
+    "Mengerjakan soal latihan.",
+    "Mengungkapkan pengalaman dan pemahaman setelah belajar.",
+    "Mendengarkan penjelasan ulang guru.",
+    "Membaca buku teks."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan tentang kolaborasi guru dan orang tua. Tujuan utama kolaborasi tersebut adalah…",
+  "o": [
+    "Menggantikan peran guru.",
+    "Menambah beban orang tua.",
+    "Mendukung perkembangan belajar dan karakter peserta didik.",
+    "Mengontrol seluruh aktivitas siswa.",
+    "Menentukan nilai rapor."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan deskripsi pembelajaran kontekstual di MI. Ciri utama pembelajaran kontekstual adalah…",
+  "o": [
+    "Berpusat pada buku teks.",
+    "Menekankan hafalan.",
+    "Mengaitkan materi dengan kehidupan nyata siswa.",
+    "Berfokus pada tes akhir.",
+    "Menggunakan ceramah."
+  ],
+  "a": 2
+}
+
+{
+  "q": "Disajikan pernyataan tentang tujuan akhir pembelajaran MI dalam Kurikulum Merdeka. Tujuan yang paling tepat adalah…",
+  "o": [
+    "Siswa memperoleh nilai tinggi.",
+    "Siswa menyelesaikan seluruh materi.",
+    "Mengembangkan potensi, karakter, dan kompetensi siswa secara utuh.",
+    "Siswa lulus ujian sekolah.",
+    "Siswa menguasai teori."
+  ],
+  "a": 2
+}
+]
 
