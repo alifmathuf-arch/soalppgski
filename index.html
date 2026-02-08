@@ -8,194 +8,76 @@
 </head>
 <body>
 
-<!-- LOGIN PAGE -->
+<!-- LOGIN -->
 <div id="loginPage" class="card">
-
-  <img src="logo.png" class="logo" alt="Logo">
-  <h2>LATIHAN SOAL UP PPG</h2>
-
+  <h2>LATIHAN PPG</h2>
   <input id="nama" placeholder="Nama Peserta">
-  <input id="kelas" placeholder="Kelas">
-
+  <input id="kelasPeserta" placeholder="Kelas Peserta">
   <button onclick="login()">Login</button>
-
 </div>
 
-<!-- MENU PAGE -->
+<!-- PILIH MAPEL -->
+<div id="mapelPage" class="card hidden">
+  <h2>Pilih Mapel</h2>
+
+  <select id="mapelSelect">
+    <option value="">-- Pilih Mapel --</option>
+    <option>SKI</option>
+    <option>AQIDAH</option>
+    <option>QURDIST</option>
+    <option>FIQIH</option>
+    <option>GKMI</option>
+    <option>GKRA</option>
+    <option>PAI</option>
+    <option>BAHASA ARAB</option>
+  </select>
+
+  <button onclick="konfirmasiMapel()">Lanjut</button>
+</div>
+
+<!-- MENU -->
 <div id="menuPage" class="card hidden">
-
-  <h2>Pilih Jenis Soal</h2>
-  <p>Silakan pilih tipe soal ujian</p>
-
-  <button onclick="masukPG()">Pilihan Ganda</button>
+  <h2>Menu Ujian</h2>
+  <button onclick="masukPG()">Mulai PG</button>
   <button onclick="masukKasus()">Studi Kasus</button>
-
 </div>
 
-<!-- ================= STUDI KASUS PAGE ================= -->
-
-<div id="casePage" class="hidden">
-
-  <!-- TIMER BAR -->
-  <div class="caseTopBar">
-    <div id="caseTimer">⏳ 30:00</div>
-  </div>
-
-  <div class="card caseCard">
-
-    <h3 id="judulKasus"></h3>
-    <p id="deskripsiKasus"></p>
-
-    <!-- ACCORDION GRID -->
-    <div class="caseGrid">
-
-      <!-- BOX 1 -->
-      <div class="caseBox">
-        <div class="caseHeader" onclick="toggleCase(this)">
-          <span class="caseNum">1</span>
-          <h4>Identifikasi Masalah</h4>
-          <span class="caseArrow">▼</span>
-        </div>
-
-        <div class="caseBody">
-          <p class="caseHint">Jelaskan deskripsi kasus nyata yang Anda alami.</p>
-          <textarea class="caseInput" placeholder="Minimal 150 kata..." oninput="hitungKataKasus()"></textarea>
-          <div class="wordCount bad">0 / 150 kata</div>
-        </div>
-      </div>
-
-      <!-- BOX 2 -->
-      <div class="caseBox">
-        <div class="caseHeader" onclick="toggleCase(this)">
-          <span class="caseNum">2</span>
-          <h4>Upaya Penyelesaian</h4>
-          <span class="caseArrow">▼</span>
-        </div>
-
-        <div class="caseBody">
-          <p class="caseHint">Jelaskan upaya Anda dalam menyelesaikan kasus.</p>
-          <textarea class="caseInput" placeholder="Minimal 150 kata..." oninput="hitungKataKasus()"></textarea>
-          <div class="wordCount bad">0 / 150 kata</div>
-        </div>
-      </div>
-
-      <!-- BOX 3 -->
-      <div class="caseBox">
-        <div class="caseHeader" onclick="toggleCase(this)">
-          <span class="caseNum">3</span>
-          <h4>Hasil</h4>
-          <span class="caseArrow">▼</span>
-        </div>
-
-        <div class="caseBody">
-          <p class="caseHint">Jelaskan hasil yang Anda dapatkan.</p>
-          <textarea class="caseInput" placeholder="Minimal 150 kata..." oninput="hitungKataKasus()"></textarea>
-          <div class="wordCount bad">0 / 150 kata</div>
-        </div>
-      </div>
-
-      <!-- BOX 4 -->
-      <div class="caseBox">
-        <div class="caseHeader" onclick="toggleCase(this)">
-          <span class="caseNum">4</span>
-          <h4>Hikmah / Pelajaran</h4>
-          <span class="caseArrow">▼</span>
-        </div>
-
-        <div class="caseBody">
-          <p class="caseHint">Jelaskan pengalaman berharga Anda.</p>
-          <textarea class="caseInput" placeholder="Minimal 150 kata..." oninput="hitungKataKasus()"></textarea>
-          <div class="wordCount bad">0 / 150 kata</div>
-        </div>
-      </div>
-
-    </div>
-
-    <button onclick="selesaiKasus()">Selesai Studi Kasus</button>
-
-  </div>
-</div>
-
-<!-- ================= QUIZ PAGE ================= -->
-
+<!-- QUIZ -->
 <div id="quizPage" class="hidden">
 
   <div class="topInfo">
-    <span id="timer">Waktu: 120:00</span>
-
-    <div class="progressWrap">
-      <div id="progressBar"></div>
-    </div>
-
+    <span id="timer">120:00</span>
+    <div class="progressWrap"><div id="progressBar"></div></div>
     <span id="progressPercent">0%</span>
   </div>
 
-  <div class="gridWrap">
-    <div id="gridSoal"></div>
-  </div>
+  <div id="gridSoal"></div>
 
   <div class="card quizCard">
-
     <h3 id="nomor"></h3>
     <p id="soal"></p>
-
     <div id="opsi"></div>
 
     <div class="nav">
-      <button onclick="prevSoal()">← Sebelumnya</button>
-      <button onclick="nextSoal()">Selanjutnya →</button>
+      <button onclick="prevSoal()">←</button>
+      <button onclick="nextSoal()">→</button>
     </div>
 
     <button class="finishBtn" onclick="selesaiPG()">Selesai</button>
-
   </div>
 
 </div>
 
-<!-- ================= RESULT PG ================= -->
-
+<!-- RESULT PG -->
 <div id="resultPG" class="card hidden">
-
-  <h2>Hasil Pilihan Ganda</h2>
-
-  <div class="resultFrame">
-    <p>Nama: <span id="pgNama"></span></p>
-    <p>Kelas: <span id="pgKelas"></span></p>
-    <p>Skor: <span id="pgSkor"></span></p>
-    <p id="pgStatus"></p>
-  </div>
-
+  <h2>Hasil PG</h2>
+  <p>Nama: <span id="pgNama"></span></p>
+  <p>Kelas: <span id="pgKelas"></span></p>
+  <p>Mapel: <span id="pgMapel"></span></p>
+  <p>Skor: <span id="pgSkor"></span></p>
   <button onclick="location.reload()">Keluar</button>
-
-</div>
-
-<!-- ================= RESULT KASUS ================= -->
-
-<div id="resultKasus" class="card hidden">
-
-  <h2>Hasil Studi Kasus</h2>
-
-  <div class="resultFrame">
-    <p>Total Kata: <span id="totalKata"></span></p>
-    <p>Total Karakter: <span id="totalKarakter"></span></p>
-    <p>Status: <span id="statusKasus"></span></p>
-  </div>
-
-  <button onclick="location.reload()">Keluar</button>
-
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-  © 2026 Designed by<br>
-  Koorlas SKI Batch IV 2025 UIN Syahid
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
