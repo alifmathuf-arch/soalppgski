@@ -140,7 +140,7 @@ if(btnFinish){
     btnFinish.style.display = "none";
     btnFinish.disabled = true;
   }
-
+}
 // ===============================
 // PILIH JAWABAN
 // ===============================
@@ -403,6 +403,7 @@ function updateTimerKasus(){
   document.getElementById("caseTimer").innerText =
     `⏳ ${m}:${s < 10 ? "0" : ""}${s}`;
 }
+
 
 
 
